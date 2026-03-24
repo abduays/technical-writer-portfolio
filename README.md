@@ -50,7 +50,7 @@ Product Documentation · UX Writing · Knowledge Base · Integration Documentati
 ### 🧩 Hotel Booking System — Product & System Documentation
 **Domain:** SaaS · Booking Platform  
 
-- Documented a multi-module booking system (60+ pages)  
+- Documented a multi-module booking system 
 - Covered pricing logic, tax handling, booking workflows, and configuration systems  
 - Structured documentation for operational teams managing live booking environments  
 - Created step-by-step workflows for bookings, availability, and pricing control  
@@ -63,7 +63,7 @@ Product Documentation · Software Documentation · Configuration Guides · Syste
 ### ⚙️ Field Service CRM — Operations Documentation (Bitrix24)
 **Domain:** SaaS · CRM  
 
-- Built a 24-page operations manual covering 19 workflows  
+- Built operations manual covering 19 workflows  
 - Documented full lifecycle: lead intake → dispatch → invoicing → payment  
 - Designed for non-technical users to reduce CRM handling errors  
 - Delivered deployment-ready documentation used in live operations  
