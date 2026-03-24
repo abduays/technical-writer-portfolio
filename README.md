@@ -2,7 +2,7 @@
 
 > **Senior Technical Writer** — B2B SaaS · CRM · AdTech · Digital Marketing
 
-Live Portfolio → [abduays.github.io/technical-writer-portfolio](https://abduays.github.io/technical-writer-portfolio)
+Live Portfolio → [abduays.github.io/technical-writer-portfolio](https://abduays.github.io/technical-writer-portfolio/)
 
 ---
 
@@ -86,7 +86,7 @@ Currently open to full-time opportunities in:
 
 📧 [abduays2@gmail.com](mailto:abduays2@gmail.com)
 🔗 [linkedin.com/in/abdul-basith](https://www.linkedin.com/in/abdul-basith/)
-🌐 [abduays.github.io/technical-writer-portfolio](https://abduays.github.io/technical-writer-portfolio)
+🌐 [abduays.github.io/technical-writer-portfolio](https://abduays.github.io/technical-writer-portfolio/)
 
 ---
 
