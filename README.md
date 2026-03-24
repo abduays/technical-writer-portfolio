@@ -78,7 +78,7 @@ Currently open to full-time opportunities in:
 - Senior Technical Writer
 - Lead Technical Writer
 
-**Preferred markets:** UK · Europe · USA · Canada · Australia (Remote & On-site)
+**Preferred markets:** UK · Europe · USA · Canada · Australia · India (Remote & On-site)
 
 ---
 
@@ -90,4 +90,4 @@ Currently open to full-time opportunities in:
 
 ---
 
-*Portfolio built and maintained by Abdul Basith — 2025*
+*Portfolio built and maintained by Abdul Basith — 2026*
