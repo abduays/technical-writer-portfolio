@@ -4,525 +4,389 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="google-site-verification" content="HzxRCkZQNnztszCPqjHv6kPiaXxziDrTJY_wfGBvGIg" />
-<title>Abdul Basith — Senior Technical Writer | SaaS & API Documentation Portfolio</title>
-<meta name="description" content="Senior Technical Writer portfolio — Product Documentation, SaaS Documentation, API Documentation, Developer Documentation, Knowledge Base, CRM, UX Writing."/>
+<title>Abdul Basith — Senior Technical Writer · AI Builder · Developer Content</title>
+<meta name="description" content="Senior Technical Writer and AI Builder with 5+ years of production documentation experience. API docs, SaaS documentation, developer guides, and self-built AI products. Open to Senior/Lead TW and Developer Advocate roles globally."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap');
-
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-
 :root{
-  --white:#ffffff;
-  --off:#f8f7f4;
-  --off2:#f0eeea;
-  --ink:#111318;
-  --ink2:#2d3142;
-  --mid:#5a5f73;
-  --light:#9099b0;
-  --blue:#1d4ed8;
-  --blue2:#2563eb;
-  --blue-light:#eff6ff;
-  --blue-mid:#bfdbfe;
-  --teal:#0d9488;
-  --teal-light:#f0fdfa;
-  --coral:#e53e3e;
-  --border:#e4e7ef;
-  --border2:#d0d5e8;
-  --shadow:0 2px 16px rgba(29,78,216,0.07);
-  --shadow2:0 8px 40px rgba(17,19,24,0.10);
+  --bg:#f7f7f5;--white:#fff;--ink:#0d0c14;--ink2:#2e2c42;
+  --muted:#6e6b85;--muted2:#9a98b2;--border:#e6e4f0;--border2:#d0cee5;
+  --navy:#1840c0;--navy-light:#eef1fd;--navy-mid:#c5d0f8;--navy-dark:#0f2880;
+  --green:#059669;--green-light:#ecfdf5;--green-mid:#a7f3d0;--green-dark:#047857;
+  --shadow-sm:0 1px 6px rgba(14,12,40,0.06);--shadow:0 4px 24px rgba(14,12,40,0.09);--shadow-lg:0 12px 48px rgba(14,12,40,0.12);
+  --serif:'Instrument Serif',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
 }
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;overflow-x:hidden;}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--navy)}
 
-body{
-  background:var(--white);
-  color:var(--ink);
-  font-family:'Plus Jakarta Sans',sans-serif;
-  font-weight:400;
-  line-height:1.7;
-  overflow-x:hidden;
-}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;justify-content:space-between;align-items:center;padding:1rem 5rem;background:rgba(247,247,245,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.logo{font-family:var(--serif);font-size:1.1rem;color:var(--ink);text-decoration:none;white-space:nowrap;}
+.logo em{font-style:italic;color:var(--navy);}
+.nav-links{display:flex;gap:1.6rem;list-style:none;align-items:center;}
+.nav-links a{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;white-space:nowrap;}
+.nav-links a:hover{color:var(--ink);}
+.nav-hire{background:var(--ink)!important;color:var(--white)!important;padding:0.4rem 1rem!important;}
+.nav-hire:hover{background:var(--navy)!important;}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.25rem;flex-direction:column;gap:4px;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:all 0.3s;}
+.mobile-nav{display:none;position:fixed;top:57px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:899;padding:1.5rem 1.5rem;flex-direction:column;gap:0;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{font-family:var(--mono);font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:0.85rem 0;border-bottom:1px solid var(--border);transition:color 0.2s;}
+.mobile-nav a:last-child{border-bottom:none;}
+.mobile-nav a:hover{color:var(--navy);}
 
-/* ── NAV ── */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:999;
-  display:flex;justify-content:space-between;align-items:center;
-  padding:1.1rem 5rem;
-  background:rgba(255,255,255,0.96);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-}
-.logo{
-  font-family:'Playfair Display',serif;
-  font-size:1.15rem;font-weight:700;
-  color:var(--ink);text-decoration:none;
-  letter-spacing:-0.01em;
-}
-.logo span{color:var(--blue2);}
-.nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;}
-.nav-links a{
-  font-size:0.75rem;font-weight:500;
-  letter-spacing:0.05em;text-transform:uppercase;
-  color:var(--mid);text-decoration:none;
-  transition:color 0.2s;
-}
-.nav-links a:hover{color:var(--blue2);}
-.nav-cta{
-  background:var(--blue2);color:white!important;
-  padding:0.45rem 1.2rem;
-  font-size:0.72rem!important;font-weight:600!important;
-  transition:background 0.2s!important;
-}
-.nav-cta:hover{background:var(--blue)!important;color:white!important;}
-
-/* ── HERO ── */
-.hero{
-  min-height:100vh;
-  display:grid;grid-template-columns:1fr 1fr;
-  align-items:center;
-  padding:8rem 5rem 4rem;
-  position:relative;
-  background:var(--white);
-  gap:4rem;
-}
-.hero::after{
-  content:'';position:absolute;
-  top:0;right:0;width:45%;height:100%;
-  background:linear-gradient(135deg,var(--blue-light) 0%,#e0eaff 100%);
-  z-index:0;clip-path:polygon(8% 0,100% 0,100% 100%,0 100%);
-}
-.hero-left{position:relative;z-index:1;}
-.hero-right{position:relative;z-index:1;display:flex;flex-direction:column;gap:1.5rem;}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:0.5rem;
-  background:var(--blue-light);color:var(--blue2);
-  font-family:'Fira Code',monospace;
-  font-size:0.68rem;font-weight:500;
-  padding:0.35rem 0.9rem;border-radius:2rem;
-  border:1px solid var(--blue-mid);
-  margin-bottom:1.4rem;letter-spacing:0.05em;
-}
-.hero-badge::before{content:'';width:6px;height:6px;background:var(--teal);border-radius:50%;}
-.hero h1{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(2.4rem,4.5vw,4rem);
-  font-weight:700;line-height:1.1;
-  letter-spacing:-0.02em;
-  margin-bottom:1.2rem;color:var(--ink);
-}
-.hero h1 em{font-style:italic;color:var(--blue2);}
-.hero-desc{
-  font-size:1rem;color:var(--mid);
-  max-width:480px;margin-bottom:2rem;line-height:1.85;
-}
-.hero-pills{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2.2rem;}
-.pill{
-  font-size:0.7rem;font-weight:500;
-  padding:0.3rem 0.85rem;
-  border:1px solid var(--border2);
-  color:var(--ink2);border-radius:2rem;
-  background:var(--white);
-}
-.pill.blue{background:var(--blue-light);border-color:var(--blue-mid);color:var(--blue2);}
-.pill.teal{background:var(--teal-light);border-color:#99f6e4;color:var(--teal);}
-.hero-btns{display:flex;gap:1rem;flex-wrap:wrap;}
-.btn{
-  display:inline-flex;align-items:center;gap:0.5rem;
-  padding:0.8rem 1.8rem;
-  font-size:0.78rem;font-weight:600;
-  letter-spacing:0.03em;text-decoration:none;
-  transition:all 0.25s;
-}
-.btn-primary{background:var(--ink);color:white;}
-.btn-primary:hover{background:var(--blue2);transform:translateY(-2px);}
-.btn-outline{border:1.5px solid var(--border2);color:var(--ink2);}
-.btn-outline:hover{border-color:var(--blue2);color:var(--blue2);transform:translateY(-2px);}
-
-/* hero right cards */
-.hero-card{
-  background:var(--white);border:1px solid var(--border);
-  padding:1.5rem 1.8rem;
-  box-shadow:var(--shadow);
-}
-.hc-label{
-  font-family:'Fira Code',monospace;
-  font-size:0.6rem;color:var(--blue2);
-  letter-spacing:0.15em;text-transform:uppercase;
-  margin-bottom:0.5rem;
-}
-.hc-val{
-  font-family:'Playfair Display',serif;
-  font-size:2rem;font-weight:700;color:var(--ink);
-  line-height:1;margin-bottom:0.3rem;
-}
-.hc-sub{font-size:0.75rem;color:var(--mid);}
-.hero-cards-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-
-/* ── SECTIONS ── */
-section{padding:6rem 5rem;}
-.sec-header{
-  display:flex;align-items:flex-start;
-  flex-direction:column;gap:0.5rem;
-  margin-bottom:3.5rem;
-}
-.sec-kicker{
-  font-family:'Fira Code',monospace;
-  font-size:0.65rem;font-weight:500;
-  color:var(--blue2);letter-spacing:0.2em;
-  text-transform:uppercase;
-}
-.sec-title{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(1.8rem,3vw,2.8rem);
-  font-weight:700;color:var(--ink);
-  letter-spacing:-0.02em;line-height:1.15;
-}
-.sec-title em{font-style:italic;color:var(--blue2);}
-.sec-desc{font-size:0.92rem;color:var(--mid);max-width:560px;margin-top:0.5rem;line-height:1.8;}
-
-/* ── WHAT I DOCUMENT ── */
-#what{background:var(--off);}
-.doc-types-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1.5rem;
-}
-.doc-type{
-  background:var(--white);
-  border:1px solid var(--border);
-  padding:2.2rem 2rem;
-  transition:all 0.3s;
-  position:relative;
-  overflow:hidden;
-}
-.doc-type::after{
-  content:'';position:absolute;
-  bottom:0;left:0;right:0;height:3px;
-  background:var(--blue2);
-  transform:scaleX(0);transform-origin:left;
-  transition:transform 0.35s;
-}
-.doc-type:hover::after{transform:scaleX(1);}
-.doc-type:hover{box-shadow:var(--shadow2);transform:translateY(-4px);}
-.dt-icon{
-  width:44px;height:44px;
-  background:var(--blue-light);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.3rem;margin-bottom:1.2rem;
-}
-.dt-name{
-  font-family:'Playfair Display',serif;
-  font-size:1.15rem;font-weight:600;
-  color:var(--ink);margin-bottom:0.6rem;
-}
-.dt-desc{font-size:0.8rem;color:var(--mid);line-height:1.75;}
-.dt-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:1rem;}
-.dt-tag{
-  font-family:'Fira Code',monospace;
-  font-size:0.58rem;padding:0.18rem 0.5rem;
-  background:var(--blue-light);color:var(--blue2);
-  border-radius:2px;
-}
-
-/* ── TOOLS ── */
-.tools-section-inner{
-  display:grid;grid-template-columns:1fr 1fr;
-  gap:4rem;align-items:start;
-}
-.tools-left p{font-size:0.92rem;color:var(--mid);line-height:1.9;margin-bottom:1.2rem;}
-.tools-grid{
-  display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;
-}
-.tool-card{
-  border:1px solid var(--border);
-  padding:1.4rem 1.5rem;background:var(--white);
-  transition:all 0.25s;
-}
-.tool-card:hover{border-color:var(--blue2);box-shadow:var(--shadow);}
-.tool-card.featured{
-  border-color:var(--blue-mid);
-  background:var(--blue-light);
-  grid-column:span 2;
-  display:grid;grid-template-columns:auto 1fr;
-  gap:1.5rem;align-items:center;
-}
-.tool-icon{
-  width:40px;height:40px;
-  background:var(--blue2);color:white;
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Fira Code',monospace;
-  font-size:0.65rem;font-weight:500;
-  flex-shrink:0;
-}
-.tool-icon.teal{background:var(--teal);}
-.tool-icon.ink{background:var(--ink);}
-.tool-name{
-  font-weight:600;font-size:0.88rem;
-  color:var(--ink);margin-bottom:0.2rem;
-}
-.tool-use{font-size:0.75rem;color:var(--mid);}
-
-/* ── PROJECTS ── */
-#projects{background:var(--off);}
-.projects-list{display:flex;flex-direction:column;gap:2rem;}
-.proj-card{
-  background:var(--white);
-  border:1px solid var(--border);
-  display:grid;grid-template-columns:1fr 2fr;
-  transition:all 0.3s;
-  overflow:hidden;
-}
-.proj-card:hover{box-shadow:var(--shadow2);border-color:var(--blue-mid);}
-.proj-card.featured-proj{grid-template-columns:1fr 1.5fr;}
-.proj-left{
-  background:var(--ink);
-  padding:2.5rem 2rem;
-  display:flex;flex-direction:column;
-  justify-content:space-between;
-}
-.proj-left.blue{background:var(--blue2);}
-.proj-left.teal{background:var(--teal);}
-.proj-num{
-  font-family:'Fira Code',monospace;
-  font-size:0.6rem;color:rgba(255,255,255,0.5);
-  letter-spacing:0.2em;margin-bottom:auto;
-}
-.proj-type-label{
-  font-family:'Fira Code',monospace;
-  font-size:0.58rem;color:rgba(255,255,255,0.6);
-  letter-spacing:0.15em;text-transform:uppercase;
-  margin-bottom:0.75rem;margin-top:2rem;
-}
-.proj-left-title{
-  font-family:'Playfair Display',serif;
-  font-size:1.25rem;font-weight:600;
-  color:white;line-height:1.3;
-  margin-bottom:1rem;
-}
-.proj-year-badge{
-  display:inline-flex;
-  font-family:'Fira Code',monospace;
-  font-size:0.6rem;color:rgba(255,255,255,0.7);
-  border:1px solid rgba(255,255,255,0.2);
-  padding:0.2rem 0.6rem;
-  align-self:flex-start;
-}
-.proj-right{padding:2.5rem 3rem;}
-.proj-desc{
-  font-size:0.88rem;color:var(--mid);
-  line-height:1.85;margin-bottom:1.5rem;
-}
-.proj-highlights{
-  list-style:none;
-  display:flex;flex-direction:column;gap:0.6rem;
-  margin-bottom:1.5rem;
-}
-.proj-highlights li{
-  font-size:0.8rem;color:var(--ink2);
-  padding-left:1.2rem;position:relative;line-height:1.6;
-}
-.proj-highlights li::before{
-  content:'→';position:absolute;left:0;
-  color:var(--blue2);font-size:0.7rem;
-}
-.proj-doc-types{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;}
-.pdt{
-  font-size:0.65rem;font-weight:600;
-  padding:0.22rem 0.65rem;
-  background:var(--off);
-  border:1px solid var(--border);
-  color:var(--ink2);letter-spacing:0.04em;
-}
-.proj-link{
-  display:inline-flex;align-items:center;gap:0.45rem;
-  font-size:0.72rem;font-weight:600;
-  color:var(--blue2);text-decoration:none;
-  border-bottom:1.5px solid var(--blue-mid);
-  padding-bottom:0.1rem;
-  transition:border-color 0.2s;
-}
-.proj-link:hover{border-color:var(--blue2);}
-
-/* small project cards */
-.proj-small-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1.5rem;margin-top:2rem;
-}
-.proj-small{
-  background:var(--white);
-  border:1px solid var(--border);
-  padding:2rem 1.8rem;
-  transition:all 0.25s;
-  position:relative;
-}
-.proj-small::before{
-  content:'';position:absolute;
-  top:0;left:0;right:0;height:3px;
-  background:transparent;
-  transition:background 0.3s;
-}
-.proj-small:hover::before{background:var(--blue2);}
-.proj-small:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
-.ps-kicker{
-  font-family:'Fira Code',monospace;
-  font-size:0.58rem;color:var(--blue2);
-  letter-spacing:0.15em;text-transform:uppercase;
-  margin-bottom:0.8rem;
-}
-.ps-title{
-  font-family:'Playfair Display',serif;
-  font-size:1.1rem;font-weight:600;
-  color:var(--ink);margin-bottom:0.7rem;line-height:1.3;
-}
-.ps-desc{font-size:0.78rem;color:var(--mid);line-height:1.75;margin-bottom:1rem;}
-.ps-tags{display:flex;flex-wrap:wrap;gap:0.35rem;}
-.ps-tag{
-  font-size:0.6rem;padding:0.18rem 0.55rem;
-  background:var(--blue-light);color:var(--blue2);
-  font-weight:500;
-}
-
-/* ── SKILLS ── */
-.skills-outer{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1.5rem;
-}
-.skill-block{
-  border:1px solid var(--border);
-  padding:2rem;background:var(--white);
-  transition:box-shadow 0.25s;
-}
-.skill-block:hover{box-shadow:var(--shadow);}
-.sb-title{
-  font-weight:700;font-size:0.8rem;
-  color:var(--ink);margin-bottom:1.1rem;
-  padding-bottom:0.7rem;border-bottom:2px solid var(--blue2);
-  letter-spacing:0.03em;
-}
-.sb-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
-.sb-tag{
-  font-size:0.68rem;padding:0.25rem 0.65rem;
-  border:1px solid var(--border);color:var(--ink2);
-  transition:all 0.2s;
-}
-.sb-tag:hover{border-color:var(--blue2);color:var(--blue2);background:var(--blue-light);}
-
-/* ── CERTS ── */
-#certs{background:var(--off);}
-.certs-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:1.5rem;
-}
-.cert-card{
-  background:var(--white);border:1px solid var(--border);
-  padding:2rem;transition:all 0.25s;
-}
-.cert-card:hover{box-shadow:var(--shadow);border-color:var(--blue-mid);}
-.cc-head{
-  display:flex;align-items:flex-start;gap:1rem;
-  margin-bottom:1.2rem;
-}
-.cc-icon{
-  width:36px;height:36px;flex-shrink:0;
-  background:var(--blue2);color:white;
-  display:flex;align-items:center;justify-content:center;
-  font-size:0.9rem;
-}
-.cc-title{
-  font-weight:700;font-size:0.82rem;
-  color:var(--ink);line-height:1.4;
-}
-.cc-org{font-size:0.7rem;color:var(--blue2);margin-top:0.2rem;}
-.cc-list{list-style:none;display:flex;flex-direction:column;gap:0.45rem;}
-.cc-list li{
-  font-size:0.75rem;color:var(--mid);
-  padding-left:1rem;position:relative;line-height:1.5;
-}
-.cc-list li::before{content:'·';position:absolute;left:0;color:var(--blue2);font-size:1rem;top:-0.1rem;}
-
-/* ── CONTACT ── */
-#contact{
-  background:var(--ink);
-  text-align:center;padding:7rem 5rem;
-  position:relative;overflow:hidden;
-}
-#contact::before{
-  content:'';position:absolute;
-  top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  width:600px;height:400px;
-  background:radial-gradient(ellipse,rgba(37,99,235,0.25) 0%,transparent 70%);
-  pointer-events:none;
-}
-.c-kicker{
-  font-family:'Fira Code',monospace;
-  font-size:0.65rem;color:var(--blue-mid);
-  letter-spacing:0.2em;text-transform:uppercase;
-  margin-bottom:1.2rem;
-}
-.c-heading{
-  font-family:'Playfair Display',serif;
-  font-size:clamp(2rem,4vw,3.2rem);
-  font-weight:700;color:white;
-  line-height:1.15;margin-bottom:1.2rem;
-  letter-spacing:-0.02em;max-width:640px;
-  margin-inline:auto;
-}
-.c-heading em{font-style:italic;color:var(--blue-mid);}
-.c-sub{
-  color:rgba(255,255,255,0.55);
-  font-size:0.9rem;max-width:460px;
-  margin-inline:auto;margin-bottom:2.8rem;line-height:1.8;
-}
-.c-btns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;}
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:9rem 5rem 5rem;gap:5rem;background:var(--white);border-bottom:1px solid var(--border);}
+.hero-tracks{display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap;}
+.track-pill{display:inline-flex;align-items:center;gap:0.45rem;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.28rem 0.8rem;border:1.5px solid;}
+.track-pill.tw{color:var(--navy);border-color:var(--navy-mid);background:var(--navy-light);}
+.track-pill.builder{color:var(--green-dark);border-color:var(--green-mid);background:var(--green-light);}
+.dot{width:5px;height:5px;border-radius:50%;animation:blink 2s ease-in-out infinite;}
+.tw .dot{background:var(--navy);}.builder .dot{background:var(--green);}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero h1{font-family:var(--serif);font-size:clamp(2.6rem,5vw,5rem);font-weight:400;line-height:1.0;letter-spacing:-0.02em;margin-bottom:1.5rem;}
+.hero h1 .it{font-style:italic;}.hero h1 .bl{color:var(--navy);}.hero h1 .gr{color:var(--green-dark);}
+.hero-desc{font-size:1rem;color:var(--muted);max-width:450px;margin-bottom:2.5rem;line-height:1.9;}
+.hero-btns{display:flex;gap:0.75rem;flex-wrap:wrap;}
+.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.78rem 1.7rem;font-family:var(--mono);font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-decoration:none;transition:all 0.22s;}
+.btn-primary{background:var(--ink);color:var(--white);}
+.btn-primary:hover{background:var(--navy);transform:translateY(-2px);box-shadow:var(--shadow);}
+.btn-outline{border:1.5px solid var(--border2);color:var(--muted);}
+.btn-outline:hover{border-color:var(--navy);color:var(--navy);transform:translateY(-2px);}
 .btn-white{background:white;color:var(--ink);font-weight:600;}
-.btn-white:hover{background:var(--blue2);color:white;}
-.btn-ghost{
-  border:1.5px solid rgba(255,255,255,0.3);
-  color:white;font-weight:500;
-}
-.btn-ghost:hover{border-color:white;background:rgba(255,255,255,0.08);}
-.c-target-roles{
-  display:flex;justify-content:center;
-  flex-wrap:wrap;gap:0.6rem;
-  margin-top:2.5rem;padding-top:2.5rem;
-  border-top:1px solid rgba(255,255,255,0.1);
-}
-.cr-pill{
-  font-size:0.7rem;font-weight:500;
-  padding:0.3rem 0.9rem;
-  border:1px solid rgba(255,255,255,0.2);
-  color:rgba(255,255,255,0.6);
-  border-radius:2rem;
-}
+.btn-white:hover{background:var(--navy);color:white;transform:translateY(-2px);}
+.btn-ghost{border:1.5px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.65);}
+.btn-ghost:hover{border-color:white;color:white;}
 
-/* ── FOOTER ── */
-footer{
-  background:var(--ink);
-  border-top:1px solid rgba(255,255,255,0.08);
-  padding:1.8rem 5rem;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.f-copy{font-size:0.72rem;color:rgba(255,255,255,0.35);}
-.f-links{display:flex;gap:1.5rem;}
-.f-links a{font-size:0.72rem;color:rgba(255,255,255,0.45);text-decoration:none;transition:color 0.2s;}
+/* HERO RIGHT */
+.hero-right{display:flex;flex-direction:column;gap:1rem;}
+.h-card{background:var(--bg);border:1px solid var(--border);padding:1.4rem 1.7rem;transition:box-shadow 0.25s;}
+.h-card:hover{box-shadow:var(--shadow-sm);}
+.hc-label{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted2);margin-bottom:0.4rem;}
+.hc-val{font-family:var(--serif);font-size:2rem;color:var(--ink);line-height:1;margin-bottom:0.2rem;}
+.hc-val.navy{color:var(--navy);}.hc-val.green{color:var(--green-dark);}
+.hc-sub{font-size:0.7rem;color:var(--muted);}
+.h-cards-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.h-card-role{background:var(--white);border:1px solid var(--border);}
+.role-title{font-weight:600;font-size:0.9rem;color:var(--ink);margin-bottom:0.2rem;}
+.role-org{font-family:var(--mono);font-size:0.66rem;color:var(--navy);}
+.role-meta{font-size:0.7rem;color:var(--muted);margin-top:0.2rem;}
+.open-card{background:var(--navy)!important;}
+.open-card .hc-label{color:rgba(255,255,255,0.45);}
+.open-roles{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.5rem;}
+.open-role{font-size:0.7rem;padding:0.2rem 0.6rem;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);}
+
+/* SECTIONS */
+section{padding:5.5rem 5rem;position:relative;}
+section.alt{background:var(--bg);}section.white{background:var(--white);}
+.sec-rule{border-top:1px solid var(--border);}
+.sec-kicker{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;display:block;}
+.sec-kicker.green{color:var(--green-dark);}.sec-kicker.grey{color:var(--muted2);}
+.sec-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.9rem);font-weight:400;color:var(--ink);letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.8rem;}
+.sec-title em{font-style:italic;color:var(--navy);}
+.sec-title em.gr{color:var(--green-dark);}
+.sec-desc{font-size:0.9rem;color:var(--muted);max-width:540px;line-height:1.9;}
+.sec-header{margin-bottom:2.8rem;}
+.view-link{display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.66rem;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--navy-mid);padding-bottom:0.05rem;transition:all 0.2s;letter-spacing:0.03em;}
+.view-link:hover{border-color:var(--navy);color:var(--navy-dark);}
+.view-link.green{color:var(--green-dark);border-bottom-color:var(--green-mid);}
+.view-link.green:hover{border-color:var(--green-dark);}
+
+/* TRACKS */
+.tracks-split{display:grid;grid-template-columns:1fr 1fr;gap:2px;border:1px solid var(--border);background:var(--border);overflow:hidden;}
+.track-panel{background:var(--white);padding:3rem;}
+.tp-badge{display:inline-flex;align-items:center;gap:0.45rem;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.28rem 0.75rem;border:1.5px solid;margin-bottom:1.5rem;}
+.tp-badge.tw{color:var(--navy);border-color:var(--navy-mid);background:var(--navy-light);}
+.tp-badge.builder{color:var(--green-dark);border-color:var(--green-mid);background:var(--green-light);}
+.tp-title{font-family:var(--serif);font-size:1.6rem;color:var(--ink);margin-bottom:0.9rem;line-height:1.2;}
+.tp-desc{font-size:0.87rem;color:var(--muted);line-height:1.85;margin-bottom:1.8rem;}
+.tp-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.tp-tag{font-family:var(--mono);font-size:0.6rem;padding:0.2rem 0.6rem;border:1px solid var(--border2);color:var(--ink2);transition:all 0.2s;}
+.tp-tag:hover{border-color:var(--navy);color:var(--navy);background:var(--navy-light);}
+.tp-tag.gr:hover{border-color:var(--green);color:var(--green-dark);background:var(--green-light);}
+
+/* DOC TYPES */
+.doc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+.doc-card{background:var(--white);border:1px solid var(--border);padding:2rem;transition:all 0.25s;position:relative;overflow:hidden;}
+.doc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:transform 0.35s;}
+.doc-card:hover::after{transform:scaleX(1);}
+.doc-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
+.dc-num{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.15em;color:var(--muted2);margin-bottom:0.7rem;}
+.dc-icon{font-size:1.4rem;margin-bottom:0.7rem;}
+.dc-name{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin-bottom:0.5rem;}
+.dc-desc{font-size:0.77rem;color:var(--muted);line-height:1.75;margin-bottom:0.9rem;}
+.dc-tags{display:flex;flex-wrap:wrap;gap:0.3rem;}
+.dc-tag{font-family:var(--mono);font-size:0.55rem;padding:0.14rem 0.42rem;background:var(--navy-light);color:var(--navy);border:1px solid var(--navy-mid);}
+
+/* HOW I WORK */
+.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border);background:var(--border);overflow:hidden;}
+.process-step{background:var(--white);padding:2rem 1.8rem;position:relative;transition:background 0.25s;}
+.process-step:hover{background:#fafaf8;}
+.ps-num{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted2);margin-bottom:1rem;}
+.ps-icon{font-size:1.6rem;margin-bottom:1rem;}
+.ps-title{font-family:var(--serif);font-size:1.05rem;color:var(--ink);margin-bottom:0.6rem;line-height:1.2;}
+.ps-desc{font-size:0.76rem;color:var(--muted);line-height:1.75;}
+.ps-connector{display:none;}
+
+/* PROJECTS */
+.proj-tabs{display:flex;border-bottom:2px solid var(--border);margin-bottom:2.8rem;}
+.proj-tab{font-family:var(--mono);font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.7rem 1.5rem;cursor:pointer;background:none;border:none;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.2s;}
+.proj-tab:hover{color:var(--ink);}
+.proj-tab.atw{color:var(--navy);border-bottom-color:var(--navy);}
+.proj-tab.ab{color:var(--green-dark);border-bottom-color:var(--green-dark);}
+.proj-section{display:none;}.proj-section.active{display:block;}
+
+/* Builder featured */
+.bfeat{display:grid;grid-template-columns:220px 1fr;background:var(--white);border:1px solid var(--border);overflow:hidden;margin-bottom:1.5rem;box-shadow:var(--shadow-sm);transition:box-shadow 0.25s;}
+.bfeat:hover{box-shadow:var(--shadow);}
+.bf-left{padding:2.2rem 1.8rem;display:flex;flex-direction:column;justify-content:space-between;min-height:200px;}
+.bf-left.nv{background:var(--navy);}.bf-left.gd{background:var(--green-dark);}.bf-left.dk{background:var(--ink);}
+.bf-idx{font-family:var(--mono);font-size:0.55rem;letter-spacing:0.18em;color:rgba(255,255,255,0.35);}
+.bf-cat{font-family:var(--mono);font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:auto;margin-bottom:0.5rem;}
+.bf-title{font-family:var(--serif);font-size:1.35rem;color:white;line-height:1.2;margin-bottom:0.8rem;}
+.bf-year{font-family:var(--mono);font-size:0.55rem;color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.15);padding:0.18rem 0.5rem;align-self:flex-start;}
+.bf-right{padding:2.2rem 2.8rem;}
+.bp-stack{font-family:var(--mono);font-size:0.63rem;color:var(--muted2);font-style:italic;margin-bottom:0.9rem;line-height:1.6;}
+.bp-desc{font-size:0.86rem;color:var(--muted);line-height:1.85;margin-bottom:1.1rem;}
+.bp-hi{list-style:none;display:flex;flex-direction:column;gap:0.45rem;margin-bottom:1.1rem;}
+.bp-hi li{font-size:0.78rem;color:var(--ink2);padding-left:1.2rem;position:relative;line-height:1.6;}
+.bp-hi li::before{content:'→';position:absolute;left:0;font-size:0.7rem;}
+.bp-hi.nv li::before{color:var(--navy);}.bp-hi.gr li::before{color:var(--green-dark);}
+.bp-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:1rem;}
+.bp-tag{font-family:var(--mono);font-size:0.57rem;padding:0.16rem 0.5rem;}
+.bp-tag.nv{background:var(--navy-light);color:var(--navy);border:1px solid var(--navy-mid);}
+.bp-tag.gr{background:var(--green-light);color:var(--green-dark);border:1px solid var(--green-mid);}
+
+/* Builder grid */
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:1.5rem;}
+.bgrid.two{grid-template-columns:2fr 1fr;}
+.bcard{background:var(--white);border:1px solid var(--border);padding:1.8rem;transition:all 0.25s;position:relative;overflow:hidden;}
+.bcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+.bcard.nv::before{background:var(--navy);}.bcard.gr::before{background:var(--green-dark);}
+.bcard:hover::before{transform:scaleX(1);}
+.bcard:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
+.bc-kick{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;}
+.bc-kick.nv{color:var(--navy);}.bc-kick.gr{color:var(--green-dark);}
+.bc-title{font-family:var(--serif);font-size:1.05rem;color:var(--ink);margin-bottom:0.55rem;line-height:1.25;}
+.bc-desc{font-size:0.77rem;color:var(--muted);line-height:1.75;margin-bottom:0.9rem;}
+.bc-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;}
+.bc-tag{font-family:var(--mono);font-size:0.55rem;padding:0.14rem 0.42rem;}
+.bc-tag.nv{background:var(--navy-light);color:var(--navy);border:1px solid var(--navy-mid);}
+.bc-tag.gr{background:var(--green-light);color:var(--green-dark);border:1px solid var(--green-mid);}
+
+/* TW Projects */
+.twproj{background:var(--white);border:1px solid var(--border);display:grid;grid-template-columns:260px 1fr;overflow:hidden;margin-bottom:1.5rem;box-shadow:var(--shadow-sm);transition:box-shadow 0.25s;}
+.twproj:hover{box-shadow:var(--shadow);}
+.twp-left{background:var(--bg);padding:2.2rem 1.8rem;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--border);}
+.twp-num{font-family:var(--serif);font-size:3.2rem;color:var(--border2);line-height:1;margin-bottom:auto;}
+.twp-type{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.45rem;margin-top:2rem;}
+.twp-title{font-family:var(--serif);font-size:1rem;color:var(--ink);line-height:1.25;margin-bottom:0.6rem;}
+.twp-year{font-family:var(--mono);font-size:0.56rem;color:var(--muted2);}
+.twp-right{padding:2.2rem 2.8rem;}
+.twp-desc{font-size:0.86rem;color:var(--muted);line-height:1.85;margin-bottom:1.1rem;}
+.twp-bul{list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.1rem;}
+.twp-bul li{font-size:0.78rem;color:var(--ink2);padding-left:1.2rem;position:relative;line-height:1.6;}
+.twp-bul li::before{content:'→';position:absolute;left:0;color:var(--navy);font-size:0.7rem;}
+.tw-tags{display:flex;flex-wrap:wrap;gap:0.32rem;margin-bottom:0.9rem;}
+.tw-tag{font-family:var(--mono);font-size:0.57rem;padding:0.16rem 0.5rem;background:var(--navy-light);color:var(--navy);border:1px solid var(--navy-mid);}
+.tw-sm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
+.tw-sm{background:var(--white);border:1px solid var(--border);padding:1.8rem;transition:all 0.25s;position:relative;overflow:hidden;}
+.tw-sm::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+.tw-sm:hover::before{transform:scaleX(1);}
+.tw-sm:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
+.tws-kick{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;}
+.tws-title{font-family:var(--serif);font-size:1rem;color:var(--ink);margin-bottom:0.55rem;line-height:1.25;}
+.tws-desc{font-size:0.77rem;color:var(--muted);line-height:1.75;margin-bottom:0.9rem;}
+
+/* EXPERIENCE */
+.exp-layout{display:grid;grid-template-columns:200px 1fr;gap:4rem;}
+.exp-nav{position:sticky;top:8rem;align-self:start;}
+.exp-nav-item{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);display:block;padding:0.45rem 0 0.45rem 1rem;border-left:2px solid var(--border);text-decoration:none;transition:all 0.2s;margin-bottom:0.2rem;}
+.exp-nav-item:hover,.exp-nav-item.active{color:var(--navy);border-left-color:var(--navy);}
+.exp-entries{display:flex;flex-direction:column;gap:3rem;}
+.exp-entry{padding-bottom:3rem;border-bottom:1px solid var(--border);}
+.exp-entry:last-child{border-bottom:none;padding-bottom:0;}
+.ee-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.1rem;gap:1rem;flex-wrap:wrap;}
+.ee-role{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin-bottom:0.25rem;}
+.ee-org{font-family:var(--mono);font-size:0.68rem;color:var(--navy);letter-spacing:0.04em;}
+.ee-meta{font-size:0.76rem;color:var(--muted);margin-top:0.25rem;}
+.ee-badge{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.28rem 0.75rem;border:1.5px solid var(--navy-mid);color:var(--navy);background:var(--navy-light);flex-shrink:0;white-space:nowrap;}
+.ee-desc{font-size:0.87rem;color:var(--muted);line-height:1.9;margin-bottom:1.1rem;}
+.ee-bul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.1rem;}
+.ee-bul li{font-size:0.81rem;color:var(--ink2);padding-left:1.3rem;position:relative;line-height:1.65;}
+.ee-bul li::before{content:'→';position:absolute;left:0;color:var(--navy);font-size:0.7rem;}
+.ee-tags{display:flex;flex-wrap:wrap;gap:0.38rem;}
+.ee-tag{font-family:var(--mono);font-size:0.58rem;padding:0.18rem 0.55rem;border:1px solid var(--border2);color:var(--ink2);}
+
+/* DESIGN */
+.design-layout{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+.dblock{background:var(--white);border:1px solid var(--border);padding:2.5rem;}
+.db-kick{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);margin-bottom:0.7rem;}
+.db-title{font-family:var(--serif);font-size:1.3rem;color:var(--ink);margin-bottom:0.7rem;}
+.db-desc{font-size:0.84rem;color:var(--muted);line-height:1.85;margin-bottom:1.2rem;}
+.insta-item{border:1px solid var(--border2);padding:1.1rem;margin-bottom:0.9rem;transition:border-color 0.2s;}
+.insta-item:hover{border-color:var(--navy-mid);}
+.insta-item:last-child{margin-bottom:0;}
+.ii-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.45rem;gap:0.5rem;}
+.ii-name{font-weight:600;font-size:0.83rem;color:var(--ink);}
+.ii-sub{font-size:0.68rem;color:var(--muted);margin-top:0.15rem;}
+.ii-badge{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.15rem 0.45rem;border:1px solid var(--border2);color:var(--muted);flex-shrink:0;}
+.ii-desc{font-size:0.75rem;color:var(--muted);line-height:1.7;margin-bottom:0.6rem;}
+.content-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.1rem;}
+.col-label{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted2);margin-bottom:0.35rem;}
+.col-list{font-size:0.77rem;color:var(--muted);line-height:1.8;}
+
+/* PROMPT */
+.prompt-layout{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+.pfeat{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--navy);padding:2.5rem;box-shadow:var(--shadow-sm);}
+.pf-kick{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);margin-bottom:0.7rem;}
+.pf-title{font-family:var(--serif);font-size:1.35rem;color:var(--ink);margin-bottom:0.55rem;}
+.pf-stack{font-family:var(--mono);font-size:0.63rem;color:var(--muted2);font-style:italic;margin-bottom:0.9rem;line-height:1.6;}
+.pf-desc{font-size:0.86rem;color:var(--muted);line-height:1.85;margin-bottom:1.1rem;}
+.pf-bul{list-style:none;display:flex;flex-direction:column;gap:0.45rem;margin-bottom:1.1rem;}
+.pf-bul li{font-size:0.78rem;color:var(--ink2);padding-left:1.2rem;position:relative;line-height:1.6;}
+.pf-bul li::before{content:'→';position:absolute;left:0;color:var(--navy);}
+.pa-head{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted2);margin-bottom:0.9rem;padding-bottom:0.45rem;border-bottom:1px solid var(--border);}
+.pa-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.pa-item{background:var(--white);border:1px solid var(--border);padding:1.4rem;transition:all 0.2s;}
+.pa-item:hover{box-shadow:var(--shadow-sm);border-color:var(--navy-mid);}
+.pa-kick{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--green-dark);margin-bottom:0.45rem;}
+.pa-title{font-family:var(--serif);font-size:0.95rem;color:var(--ink);margin-bottom:0.4rem;}
+.pa-desc{font-size:0.73rem;color:var(--muted);line-height:1.7;margin-bottom:0.65rem;}
+
+/* TOOLS */
+.tools-inner{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start;}
+.tools-left p{font-size:0.87rem;color:var(--muted);line-height:1.9;margin-bottom:0.9rem;}
+.tool-chips{display:flex;flex-wrap:wrap;gap:0.55rem;}
+.tool-chip{display:flex;align-items:center;gap:0.6rem;border:1px solid var(--border);padding:0.5rem 0.9rem;background:var(--white);transition:all 0.2s;}
+.tool-chip:hover{border-color:var(--navy-mid);box-shadow:var(--shadow-sm);}
+.tc-icon{width:22px;height:22px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:0.47rem;font-weight:500;color:white;}
+.tc-name{font-size:0.76rem;font-weight:500;color:var(--ink);}
+
+/* SKILLS */
+.skills-outer{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;}
+.skill-block{background:var(--white);border:1px solid var(--border);padding:1.7rem;transition:box-shadow 0.2s;}
+.skill-block:hover{box-shadow:var(--shadow-sm);}
+.sb-title{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);margin-bottom:0.9rem;padding-bottom:0.55rem;border-bottom:2px solid var(--navy);}
+.sb-title.gr{border-bottom-color:var(--green-dark);}
+.sb-tags{display:flex;flex-wrap:wrap;gap:0.38rem;}
+.sb-tag{font-size:0.68rem;padding:0.2rem 0.55rem;border:1px solid var(--border2);color:var(--ink2);transition:all 0.2s;}
+.sb-tag:hover{border-color:var(--navy);color:var(--navy);background:var(--navy-light);}
+.sb-tag.gr:hover{border-color:var(--green);color:var(--green-dark);background:var(--green-light);}
+
+/* CERTS */
+.certs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;}
+.cert-card{background:var(--white);border:1px solid var(--border);padding:1.8rem;transition:all 0.25s;}
+.cert-card:hover{box-shadow:var(--shadow);border-color:var(--navy-mid);transform:translateY(-3px);}
+.cc-head{display:flex;align-items:flex-start;gap:0.9rem;margin-bottom:1.1rem;}
+.cc-icon{width:34px;height:34px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1rem;border-radius:4px;}
+.cc-icon.nv{background:var(--navy-light);}.cc-icon.gr{background:var(--green-light);}.cc-icon.dk{background:var(--bg);}
+.cc-title{font-weight:600;font-size:0.8rem;color:var(--ink);line-height:1.4;}
+.cc-org{font-family:var(--mono);font-size:0.62rem;color:var(--navy);margin-top:0.2rem;}
+.cc-list{list-style:none;display:flex;flex-direction:column;gap:0.38rem;}
+.cc-list li{font-size:0.73rem;color:var(--muted);padding-left:0.9rem;position:relative;line-height:1.5;}
+.cc-list li::before{content:'·';position:absolute;left:0;color:var(--navy);font-size:1rem;line-height:1.3;}
+
+/* CONTACT */
+#contact{background:var(--ink);text-align:center;padding:8rem 5rem;position:relative;overflow:hidden;}
+#contact::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(24,64,192,0.18) 0%,transparent 70%);pointer-events:none;}
+.c-kicker{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:1.1rem;display:block;}
+.c-title{font-family:var(--serif);font-size:clamp(2.2rem,4.5vw,4.2rem);color:white;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1.1rem;}
+.c-title em{font-style:italic;color:#b0c0ff;}
+.c-sub{color:rgba(255,255,255,0.45);font-size:0.93rem;max-width:480px;margin-inline:auto;margin-bottom:2.8rem;line-height:1.9;}
+.c-btns{display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:2.8rem;}
+.c-roles{display:flex;justify-content:center;flex-wrap:wrap;gap:0.45rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.07);}
+.c-role{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.06em;padding:0.25rem 0.8rem;border:1px solid rgba(255,255,255,0.13);color:rgba(255,255,255,0.45);}
+footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.07);padding:1.6rem 5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.f-copy{font-family:var(--mono);font-size:0.6rem;color:rgba(255,255,255,0.28);}
+.f-links{display:flex;gap:1.4rem;flex-wrap:wrap;}
+.f-links a{font-family:var(--mono);font-size:0.6rem;color:rgba(255,255,255,0.38);text-decoration:none;transition:color 0.2s;}
 .f-links a:hover{color:white;}
 
-::-webkit-scrollbar{width:3px;}
-::-webkit-scrollbar-track{background:var(--off);}
-::-webkit-scrollbar-thumb{background:var(--blue2);}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease,transform 0.55s ease;}
+.reveal.visible{opacity:1;transform:none;}
+.rd1{transition-delay:0.08s}.rd2{transition-delay:0.16s}.rd3{transition-delay:0.24s}
 
-@media(max-width:960px){
-  nav{padding:1.1rem 1.5rem;}
+/* ── RESPONSIVE ── */
+
+/* Tablet 768–1024 */
+@media(max-width:1024px){
+  nav{padding:1rem 2.5rem;}
   .nav-links{display:none;}
-  section{padding:4rem 1.5rem;}
-  .hero{grid-template-columns:1fr;padding:7rem 1.5rem 3rem;gap:3rem;}
-  .hero::after{display:none;}
-  .hero-cards-row{grid-template-columns:1fr 1fr;}
-  .doc-types-grid,.proj-small-grid,.skills-outer,.certs-grid{grid-template-columns:1fr;}
-  .proj-card{grid-template-columns:1fr;}
-  .tools-section-inner,.tools-grid{grid-template-columns:1fr;}
-  .tool-card.featured{grid-column:span 1;}
-  footer{flex-direction:column;gap:1rem;text-align:center;padding:1.5rem;}
+  .nav-toggle{display:flex;}
+  section{padding:4.5rem 2.5rem;}
+  .hero{grid-template-columns:1fr;padding:8rem 2.5rem 4rem;gap:3rem;min-height:auto;}
+  .hero-right{display:none;}
+  .tracks-split{grid-template-columns:1fr;}
+  .doc-grid{grid-template-columns:1fr 1fr;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .bfeat{grid-template-columns:180px 1fr;}
+  .bgrid{grid-template-columns:1fr 1fr;}
+  .bgrid.two{grid-template-columns:1fr 1fr;}
+  .tw-sm-grid{grid-template-columns:1fr 1fr;}
+  .exp-layout{grid-template-columns:1fr;gap:2rem;}
+  .exp-nav{display:flex;flex-wrap:wrap;gap:0.5rem;position:static;}
+  .exp-nav-item{border-left:none;border:1px solid var(--border);padding:0.3rem 0.7rem;font-size:0.55rem;}
+  .exp-nav-item.active{background:var(--navy-light);}
+  .design-layout,.prompt-layout,.tools-inner{grid-template-columns:1fr;}
+  .pa-grid{grid-template-columns:1fr 1fr;}
+  .skills-outer{grid-template-columns:1fr 1fr;}
+  .certs-grid{grid-template-columns:1fr 1fr;}
+  footer{padding:1.4rem 2.5rem;}
+  #contact{padding:6rem 2.5rem;}
+}
+
+/* Mobile <768 */
+@media(max-width:767px){
+  nav{padding:1rem 1.2rem;}
+  section{padding:4rem 1.2rem;}
+  .hero{padding:7rem 1.2rem 3.5rem;}
+  .hero h1{font-size:2.4rem;}
+  .sec-title{font-size:1.8rem;}
+  .tracks-split{grid-template-columns:1fr;}
+  .track-panel{padding:2rem;}
+  .doc-grid{grid-template-columns:1fr;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .bfeat{grid-template-columns:1fr;}
+  .bf-left{min-height:140px;flex-direction:row;align-items:center;gap:1rem;padding:1.5rem;}
+  .bf-cat{margin-top:0;}
+  .bf-right{padding:1.5rem;}
+  .bgrid{grid-template-columns:1fr;}
+  .bgrid.two{grid-template-columns:1fr;}
+  .twproj{grid-template-columns:1fr;}
+  .twp-left{border-right:none;border-bottom:1px solid var(--border);padding:1.5rem;flex-direction:row;align-items:center;justify-content:flex-start;gap:1.5rem;}
+  .twp-num{font-size:2rem;margin-bottom:0;}
+  .twp-right{padding:1.5rem;}
+  .twp-type{margin-top:0;}
+  .tw-sm-grid{grid-template-columns:1fr;}
+  .pa-grid{grid-template-columns:1fr;}
+  .skills-outer{grid-template-columns:1fr 1fr;}
+  .certs-grid{grid-template-columns:1fr;}
+  footer{padding:1.2rem;flex-direction:column;align-items:flex-start;}
+  #contact{padding:5rem 1.2rem;}
+  .c-btns{flex-direction:column;align-items:center;}
+  .process-grid{grid-template-columns:1fr 1fr;}
+  .h-cards-row{grid-template-columns:1fr 1fr;}
+  .content-row{grid-template-columns:1fr;}
+}
+
+/* Small mobile <480 */
+@media(max-width:480px){
+  .hero h1{font-size:2rem;}
+  .process-grid{grid-template-columns:1fr;}
+  .skills-outer{grid-template-columns:1fr;}
+  .h-cards-row{grid-template-columns:1fr 1fr;}
+  .certs-grid{grid-template-columns:1fr;}
+  .bgrid{grid-template-columns:1fr;}
+  .doc-grid{grid-template-columns:1fr;}
+  .tw-sm-grid{grid-template-columns:1fr;}
+  .bf-left{flex-direction:column;align-items:flex-start;}
 }
 </style>
 </head>
@@ -530,774 +394,616 @@ footer{
 
 <!-- NAV -->
 <nav>
-  <a class="logo" href="#">Abdul <span>Basith</span></a>
+  <a class="logo" href="#">Abdul <em>Basith</em></a>
   <ul class="nav-links">
-    <li><a href="#what">What I Document</a></li>
-    <li><a href="#tools">Tools</a></li>
+    <li><a href="#tracks">Expertise</a></li>
+    <li><a href="#process">Process</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#design">Design &amp; Content</a></li>
-    <li><a href="#prompting">Prompt Engineering</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#design">Design</a></li>
+    <li><a href="#prompting">Prompt Eng</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#certs">Certifications</a></li>
-    <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+    <li><a href="#certs">Certs</a></li>
+    <li><a href="#contact" class="nav-hire">Hire Me →</a></li>
   </ul>
+  <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#tracks" onclick="closeNav()">Expertise</a>
+  <a href="#process" onclick="closeNav()">Process</a>
+  <a href="#projects" onclick="closeNav()">Projects</a>
+  <a href="#experience" onclick="closeNav()">Experience</a>
+  <a href="#design" onclick="closeNav()">Design & Content</a>
+  <a href="#prompting" onclick="closeNav()">Prompt Engineering</a>
+  <a href="#skills" onclick="closeNav()">Skills</a>
+  <a href="#certs" onclick="closeNav()">Certifications</a>
+  <a href="#contact" onclick="closeNav()">Hire Me →</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-left">
-    <div class="hero-badge">Available for Senior &amp; Lead Technical Writing Roles</div>
-    <h1>Senior Technical<br><em>Writer &amp; Documentation</em><br>Specialist</h1>
-    <p class="hero-desc">
-      5+ years creating production-grade Product Documentation, SaaS Documentation, API Documentation, and Developer Documentation for global platforms. Based in India — open to remote and international roles.
-    </p>
-    <div class="hero-pills">
-      <span class="pill blue">Product Documentation</span>
-      <span class="pill blue">SaaS Documentation</span>
-      <span class="pill blue">API Documentation</span>
-      <span class="pill teal">Developer Documentation</span>
-      <span class="pill teal">Knowledge Base</span>
-      <span class="pill">Docs-as-Code</span>
-      <span class="pill">UX Writing</span>
-      <span class="pill">MadCap Flare</span>
-      <span class="pill">Adobe FrameMaker</span>
-      <span class="pill teal">AI Prompt Engineering</span>
-      <span class="pill">ElevenLabs · v0 · Bolt</span>
+  <div class="hero-left reveal">
+    <div class="hero-tracks">
+      <span class="track-pill tw"><span class="dot"></span>Senior Technical Writer</span>
+      <span class="track-pill builder"><span class="dot"></span>AI Builder</span>
     </div>
+    <h1>Writing that <span class="it bl">documents.</span><br>Code that <span class="it gr">builds.</span></h1>
+    <p class="hero-desc">5+ years of production-grade Technical Writing across SaaS, API, and CRM platforms. 6 self-built AI tools and browser extensions — built out of curiosity and hands-on learning. A writer who understands what they document — open to Senior/Lead Technical Writer and Developer Advocate roles globally.</p>
     <div class="hero-btns">
-      <a class="btn btn-primary" href="#projects">View Portfolio &rarr;</a>
-      <a class="btn btn-outline" href="mailto:abduays2@gmail.com">Contact Me</a>
+      <a class="btn btn-primary" href="#projects">View Portfolio →</a>
+      <a class="btn btn-outline" href="mailto:abduays2@gmail.com">Get in Touch</a>
     </div>
   </div>
-  <div class="hero-right">
-    <div class="hero-card">
-      <div class="hc-label">Current Role</div>
-      <div style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:0.25rem;">Technical Writer</div>
-      <div style="font-size:0.78rem;color:var(--blue2);font-weight:500;">UTDS Optimal Choice, Albania &mdash; Jun 2021 – Present</div>
-      <div style="font-size:0.75rem;color:var(--mid);margin-top:0.3rem;">SaaS · CRM · Booking Platforms · AI Applications</div>
+  <div class="hero-right reveal rd2">
+    <div class="h-card h-card-role">
+      <div class="role-title">Technical Writer</div>
+      <div class="role-org">UTDS Optimal Choice — Albania (Remote)</div>
+      <div class="role-meta">Jun 2021 – Present &nbsp;·&nbsp; SaaS · CRM · AI Applications</div>
     </div>
-    <div class="hero-cards-row">
-      <div class="hero-card">
-        <div class="hc-label">Experience</div>
-        <div class="hc-val">5+</div>
-        <div class="hc-sub">Years in Technical Writing</div>
-      </div>
-      <div class="hero-card">
-        <div class="hc-label">Projects</div>
-        <div class="hc-val">7+</div>
-        <div class="hc-sub">Documentation Systems</div>
-      </div>
-      <div class="hero-card">
-        <div class="hc-label">Workflows</div>
-        <div class="hc-val">19</div>
-        <div class="hc-sub">CRM Workflows Documented</div>
-      </div>
-      <div class="hero-card">
-        <div class="hc-label">Client Scale</div>
-        <div class="hc-val">£4.5M</div>
-        <div class="hc-sub">Revenue — UK Client</div>
+    <div class="h-cards-row">
+      <div class="h-card"><div class="hc-label">Experience</div><div class="hc-val navy">5+</div><div class="hc-sub">Years in Technical Writing</div></div>
+      <div class="h-card"><div class="hc-label">AI Products</div><div class="hc-val green">6</div><div class="hc-sub">Self-Built & Explored</div></div>
+      <div class="h-card"><div class="hc-label">CRM Workflows</div><div class="hc-val navy">19</div><div class="hc-sub">Documented · Bitrix24 UK · Salesforce</div></div>
+      <div class="h-card"><div class="hc-label">Client Scale</div><div class="hc-val green">£4.5M</div><div class="hc-sub">UK Client Revenue Supported</div></div>
+    </div>
+    <div class="h-card open-card">
+      <div class="hc-label">Open to Opportunities</div>
+      <div class="open-roles">
+        <span class="open-role">Senior Technical Writer</span>
+        <span class="open-role">Lead Technical Writer</span>
+        <span class="open-role">API Docs Specialist</span>
+        <span class="open-role">Developer Advocate</span>
+        <span class="open-role">Documentation Lead</span>
       </div>
     </div>
-    <div class="hero-card" style="background:var(--blue2);border-color:var(--blue2);">
-      <div style="font-family:'Fira Code',monospace;font-size:0.6rem;color:rgba(255,255,255,0.6);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem;">Open To</div>
-      <div style="font-size:0.82rem;color:white;font-weight:500;line-height:1.6;">Senior Technical Writer &nbsp;·&nbsp; Lead Technical Writer &nbsp;·&nbsp; API Documentation Specialist &nbsp;·&nbsp; Documentation Lead &nbsp;·&nbsp; Knowledge Base Manager</div>
+  </div>
+</section>
+
+<!-- TRACKS -->
+<section id="tracks" class="alt sec-rule">
+  <div class="sec-header reveal">
+    <span class="sec-kicker">Dual Expertise</span>
+    <h2 class="sec-title">Two tracks. <em>One professional.</em></h2>
+    <p class="sec-desc">Most technical writers write about products. I also build them. That intersection makes the documentation — and the developer empathy — better.</p>
+  </div>
+  <div class="tracks-split reveal">
+    <div class="track-panel">
+      <span class="tp-badge tw">Track 01 — Technical Writing</span>
+      <div class="tp-title">Production Documentation at Scale</div>
+      <p class="tp-desc">5+ years of end-to-end documentation ownership for live SaaS products — API references, knowledge bases, CRM operation manuals, developer guides, cybersecurity playbooks, and UX writing. Built documentation systems that reduce support load and drive product adoption for global clients.</p>
+      <div class="tp-tags">
+        <span class="tp-tag">API Documentation</span><span class="tp-tag">SaaS Documentation</span>
+        <span class="tp-tag">Developer Guides</span><span class="tp-tag">Knowledge Base Architecture</span>
+        <span class="tp-tag">UX Writing & UI Microcopy</span><span class="tp-tag">MadCap Flare</span>
+        <span class="tp-tag">Adobe FrameMaker</span><span class="tp-tag">Docs-as-Code</span>
+        <span class="tp-tag">Cybersecurity Documentation</span><span class="tp-tag">Release Notes</span>
+        <span class="tp-tag">Microsoft Style Guide</span><span class="tp-tag">Google Developer Style Guide</span>
+      </div>
+    </div>
+    <div class="track-panel">
+      <span class="tp-badge builder">Track 02 — AI Builder</span>
+      <div class="tp-title">Self-Built Tools. Real APIs. Real Learning.</div>
+      <p class="tp-desc">6 self-built AI tools and browser extensions — built independently out of curiosity, learning, and a desire to understand the developer experience from the inside. Built with Claude Vision, Google AI Studio, ERNIE LLM, Chrome/Firefox Manifest V3, React Native, and Canvas APIs. Not client work — personal builds that directly inform how I document APIs and developer tools.</p>
+      <div class="tp-tags">
+        <span class="tp-tag gr">Claude API · Vision</span><span class="tp-tag gr">Google AI Studio</span>
+        <span class="tp-tag gr">ElevenLabs AI</span><span class="tp-tag gr">Chrome / Firefox Extensions</span>
+        <span class="tp-tag gr">Manifest V3</span><span class="tp-tag gr">JavaScript</span>
+        <span class="tp-tag gr">React Native · Expo</span><span class="tp-tag gr">REST APIs · JSON · YAML</span>
+        <span class="tp-tag gr">Canvas Frame-Diffing</span><span class="tp-tag gr">System Prompt Engineering</span>
+        <span class="tp-tag gr">ERNIE LLM</span><span class="tp-tag gr">MeDo Cryptography API</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- WHAT I DOCUMENT -->
-<section id="what">
-  <div class="sec-header">
-    <span class="sec-kicker">Documentation Specialisation</span>
-    <h2 class="sec-title">What I <em>Document</em></h2>
-    <p class="sec-desc">End-to-end documentation ownership across product, developer, and operational domains — built for real users, real products, and real release cycles.</p>
+<section id="what" class="white sec-rule">
+  <div class="sec-header reveal">
+    <span class="sec-kicker">Documentation Domains</span>
+    <h2 class="sec-title">What I <em>document.</em></h2>
+    <p class="sec-desc">End-to-end ownership across product, developer, and operational documentation — built for real users and real release cycles.</p>
   </div>
-  <div class="doc-types-grid">
-
-    <div class="doc-type">
-      <div class="dt-icon">&#128196;</div>
-      <div class="dt-name">Product Documentation</div>
-      <p class="dt-desc">User manuals, product guides, feature documentation, onboarding documentation, and release notes that drive product adoption and reduce support load for SaaS platforms.</p>
-      <div class="dt-tags">
-        <span class="dt-tag">User Manuals</span>
-        <span class="dt-tag">Release Notes</span>
-        <span class="dt-tag">Onboarding Guides</span>
-        <span class="dt-tag">Feature Docs</span>
-      </div>
-    </div>
-
-    <div class="doc-type">
-      <div class="dt-icon">&#9729;&#65039;</div>
-      <div class="dt-name">SaaS Documentation</div>
-      <p class="dt-desc">Platform documentation for SaaS products — covering workflow documentation, configuration guides, integration documentation, and multi-tenant system documentation aligned to release cycles.</p>
-      <div class="dt-tags">
-        <span class="dt-tag">Platform Docs</span>
-        <span class="dt-tag">Configuration</span>
-        <span class="dt-tag">Integration Docs</span>
-        <span class="dt-tag">Workflow Systems</span>
-      </div>
-    </div>
-
-    <div class="doc-type">
-      <div class="dt-icon">&#128187;</div>
-      <div class="dt-name">Developer Documentation</div>
-      <p class="dt-desc">Developer-facing documentation including system integration guides, authentication flows, code-level configuration, CLI documentation, and technical onboarding documentation for engineering teams.</p>
-      <div class="dt-tags">
-        <span class="dt-tag">Integration Guides</span>
-        <span class="dt-tag">Auth Flows</span>
-        <span class="dt-tag">CLI Docs</span>
-        <span class="dt-tag">Tech Onboarding</span>
-      </div>
-    </div>
-
-    <div class="doc-type">
-      <div class="dt-icon">&#128279;</div>
-      <div class="dt-name">API Documentation</div>
-      <p class="dt-desc">Structured API reference documentation — endpoints, request/response structures, error handling, and usage patterns. Experienced with REST API documentation for Google Cloud and SaaS platforms.</p>
-      <div class="dt-tags">
-        <span class="dt-tag">REST API</span>
-        <span class="dt-tag">Endpoints</span>
-        <span class="dt-tag">Error Handling</span>
-        <span class="dt-tag">Google Cloud</span>
-      </div>
-    </div>
-
-    <div class="doc-type">
-      <div class="dt-icon">&#128218;</div>
-      <div class="dt-name">Knowledge Base &amp; Help Centre</div>
-      <p class="dt-desc">Structured knowledge base architecture, help centre documentation, troubleshooting documentation, and self-service content systems designed for discoverability and customer self-service adoption.</p>
-      <div class="dt-tags">
-        <span class="dt-tag">KB Architecture</span>
-        <span class="dt-tag">Help Centre</span>
-        <span class="dt-tag">Troubleshooting</span>
-        <span class="dt-tag">Self-Service</span>
-      </div>
-    </div>
-
-    <div class="doc-type">
-      <div class="dt-icon">&#9999;&#65039;</div>
-      <div class="dt-name">UX Writing &amp; UI Microcopy</div>
-      <p class="dt-desc">In-application instructional content, UI microcopy, tooltips, onboarding flows, and interface messaging — aligned with product terminology and design system guidelines.</p>
-      <div class="dt-tags">
-        <span class="dt-tag">UI Copy</span>
-        <span class="dt-tag">Tooltips</span>
-        <span class="dt-tag">Onboarding Flows</span>
-        <span class="dt-tag">Interface Messaging</span>
-      </div>
-    </div>
-
+  <div class="doc-grid reveal">
+    <div class="doc-card"><div class="dc-num">01</div><div class="dc-icon">🔗</div><div class="dc-name">API & Developer Documentation</div><p class="dc-desc">REST API references, authentication flows, endpoint docs, integration guides, SDK docs, error handling, and technical onboarding for engineering and developer teams.</p><div class="dc-tags"><span class="dc-tag">REST API</span><span class="dc-tag">Endpoints</span><span class="dc-tag">Auth Flows</span><span class="dc-tag">SDK Docs</span></div></div>
+    <div class="doc-card"><div class="dc-num">02</div><div class="dc-icon">☁️</div><div class="dc-name">Product & SaaS Documentation</div><p class="dc-desc">User manuals, feature guides, onboarding flows, release notes, and configuration docs for SaaS platforms across e-commerce, hospitality, CRM, and booking systems.</p><div class="dc-tags"><span class="dc-tag">User Manuals</span><span class="dc-tag">Feature Docs</span><span class="dc-tag">Config Guides</span><span class="dc-tag">Release Notes</span></div></div>
+    <div class="doc-card"><div class="dc-num">03</div><div class="dc-icon">📚</div><div class="dc-name">Knowledge Base & Help Centre</div><p class="dc-desc">Structured KB architecture, self-service content systems, troubleshooting guides, and help centre documentation designed for discoverability and measurable support load reduction.</p><div class="dc-tags"><span class="dc-tag">KB Architecture</span><span class="dc-tag">Self-Service</span><span class="dc-tag">Troubleshooting</span></div></div>
+    <div class="doc-card"><div class="dc-num">04</div><div class="dc-icon">🛡️</div><div class="dc-name">Cybersecurity Documentation</div><p class="dc-desc">Incident response playbooks (NIST SP 800-61), security process docs, compliance guides, and SOC-aligned operational documentation for security teams.</p><div class="dc-tags"><span class="dc-tag">IR Playbooks</span><span class="dc-tag">NIST SP 800-61</span><span class="dc-tag">SOC Docs</span><span class="dc-tag">Compliance</span></div></div>
+    <div class="doc-card"><div class="dc-num">05</div><div class="dc-icon">⚙️</div><div class="dc-name">CRM & Operations Manuals</div><p class="dc-desc">End-to-end workflow documentation for CRM platforms — lead intake, dispatch, invoicing, payment — built for non-technical users at enterprise scale. Bitrix24, Salesforce.</p><div class="dc-tags"><span class="dc-tag">Bitrix24</span><span class="dc-tag">Salesforce</span><span class="dc-tag">Workflow Docs</span><span class="dc-tag">Ops Manuals</span></div></div>
+    <div class="doc-card"><div class="dc-num">06</div><div class="dc-icon">✏️</div><div class="dc-name">UX Writing & UI Microcopy</div><p class="dc-desc">In-application instructional content, tooltips, onboarding flows, and interface messaging — aligned with product terminology, design systems, and established style standards.</p><div class="dc-tags"><span class="dc-tag">UI Copy</span><span class="dc-tag">Tooltips</span><span class="dc-tag">Onboarding</span><span class="dc-tag">Interface Messaging</span></div></div>
   </div>
 </section>
 
-<!-- TOOLS -->
-<section id="tools">
-  <div class="sec-header">
-    <span class="sec-kicker">Documentation Stack</span>
-    <h2 class="sec-title">Tools &amp; <em>Platforms</em></h2>
-    <p class="sec-desc">Production-level experience with industry-standard authoring tools, documentation platforms, and developer environments used by top MNCs.</p>
+<!-- HOW I WORK -->
+<section id="process" class="alt sec-rule">
+  <div class="sec-header reveal">
+    <span class="sec-kicker">Documentation Methodology</span>
+    <h2 class="sec-title">How I <em>work.</em></h2>
+    <p class="sec-desc">Documentation is a product. Every project follows the same disciplined process — from discovery to a maintained, living document that stays accurate as the product evolves.</p>
   </div>
-  <div class="tools-section-inner">
-    <div class="tools-left">
-      <p>My documentation stack spans professional authoring tools like <strong>MadCap Flare</strong> and <strong>Adobe FrameMaker</strong> for structured, single-source documentation systems — alongside modern Docs-as-Code workflows using <strong>Markdown and GitHub</strong>.</p>
-      <p>For e-learning and instructional design, I work with <strong>Adobe Captivate</strong> and <strong>Articulate 360</strong>. Platform documentation experience covers <strong>Salesforce, Bitrix24, Google Ads</strong>, and <strong>Google Cloud APIs</strong>, with exposure to JSON/YAML, REST API structures, and CLI environments.</p>
-      <p>I also actively use AI-assisted tools and prototype on <strong>Google AI Studio, Vercel, v0, and Bolt</strong> — keeping my documentation grounded in the developer environments I write about.</p>
+  <div class="process-grid reveal">
+    <div class="process-step">
+      <div class="ps-num">Step 01</div>
+      <div class="ps-icon">🔍</div>
+      <div class="ps-title">Discovery &amp; Scoping</div>
+      <p class="ps-desc">Working directly with the product — and often building it — to understand what needs documenting, who the audience is, and what they need to accomplish. When I can't build it, I interview product owners and engineers to gather accurate technical context before writing a single word.</p>
     </div>
-    <div class="tools-grid">
-      <div class="tool-card featured">
-        <div class="tool-icon" style="width:50px;height:50px;font-size:0.55rem;">MCF</div>
-        <div>
-          <div class="tool-name">MadCap Flare</div>
-          <div class="tool-use">Single-source authoring, DITA-style structured documentation, multi-output publishing, topic-based writing, conditional content</div>
-        </div>
-      </div>
-      <div class="tool-card featured" style="border-color:var(--border2);background:var(--off);">
-        <div class="tool-icon ink" style="width:50px;height:50px;font-size:0.55rem;">AFM</div>
-        <div>
-          <div class="tool-name">Adobe FrameMaker</div>
-          <div class="tool-use">Long-form technical documentation, structured authoring, DITA XML, PDF publishing, complex document management</div>
-        </div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon teal" style="font-size:0.55rem;">CAP</div>
-        <div class="tool-name">Adobe Captivate</div>
-        <div class="tool-use">Video walkthroughs, interactive tutorials, e-learning</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon ink" style="font-size:0.55rem;">A360</div>
-        <div class="tool-name">Articulate 360</div>
-        <div class="tool-use">Instructional design, interactive learning modules</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon" style="background:#24292e;font-size:0.55rem;">GH</div>
-        <div class="tool-name">GitHub + Markdown</div>
-        <div class="tool-use">Docs-as-Code, version control, documentation repositories</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon" style="background:#0052cc;font-size:0.55rem;">JIRA</div>
-        <div class="tool-name">Jira</div>
-        <div class="tool-use">Documentation tracking, release coordination, issue workflows</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon teal" style="font-size:0.55rem;">SF</div>
-        <div class="tool-name">Salesforce</div>
-        <div class="tool-use">CRM documentation, workflow &amp; automation docs</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon" style="background:#ea4335;font-size:0.55rem;">GAds</div>
-        <div class="tool-name">Google Ads + Cloud</div>
-        <div class="tool-use">Platform docs, API documentation, cloud service guides</div>
-      </div>
+    <div class="process-step">
+      <div class="ps-num">Step 02</div>
+      <div class="ps-icon">🗂️</div>
+      <div class="ps-title">Information Architecture</div>
+      <p class="ps-desc">Planning the content structure before drafting. Deciding content types (concept, task, reference), defining the topic hierarchy, identifying reuse opportunities, and structuring the KB or doc set so users can navigate by task, not by how the product was built.</p>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">Step 03</div>
+      <div class="ps-icon">✍️</div>
+      <div class="ps-title">Draft, Review &amp; Accuracy</div>
+      <p class="ps-desc">Writing iteratively against established style standards (Microsoft Style Guide, Google Developer Documentation Style Guide for developer-facing content). Sending drafts to SMEs and product stakeholders for technical accuracy review before any content is published or handed off.</p>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">Step 04</div>
+      <div class="ps-icon">🚀</div>
+      <div class="ps-title">Publish &amp; Maintain</div>
+      <p class="ps-desc">Publishing to the appropriate channel — help centre, GitHub Pages, PDF, or in-app — and maintaining documentation through product updates and feature releases. Documentation is not done at first publish. A doc that's wrong is worse than no doc.</p>
+    </div>
+    <div class="process-step">
+      <div class="ps-num">Step 05</div>
+      <div class="ps-icon">📊</div>
+      <div class="ps-title">Measure &amp; Improve</div>
+      <p class="ps-desc">Tracking real outcomes: support ticket reduction, self-service rates, stakeholder feedback, and user behaviour signals. The Bitrix24 KB reduced tier-1 support dependency by approximately 40%. Documentation that can't be measured can't be improved.</p>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects">
-  <div class="sec-header">
+<section id="projects" class="white sec-rule">
+  <div class="sec-header reveal">
     <span class="sec-kicker">Portfolio</span>
-    <h2 class="sec-title">Featured <em>Documentation Projects</em></h2>
-    <p class="sec-desc">Real documentation built for live products, real users, and real operational environments — not samples or academic exercises.</p>
+    <h2 class="sec-title">Built and <em>documented.</em></h2>
+    <p class="sec-desc">Personal builds and professional documentation work. The AI tools were built independently to understand developer workflows firsthand. The documentation projects are real client work.</p>
+  </div>
+  <div class="proj-tabs reveal">
+    <button class="proj-tab ab" onclick="showTab('builder',this,'ab')">⬡ Personal AI Builds</button>
+    <button class="proj-tab" onclick="showTab('tw',this,'atw')">◈ Documentation Work</button>
   </div>
 
-  <div class="projects-list">
+  <!-- BUILDER TAB -->
+  <div id="tab-builder" class="proj-section active">
 
-    <!-- PROJECT 1 -->
-    <div class="proj-card featured-proj">
-      <div class="proj-left blue">
-        <div class="proj-num">01 — FEATURED</div>
-        <div>
-          <div class="proj-type-label">SaaS · E-commerce · Fulfilment Systems</div>
-          <div class="proj-left-title">Order &amp; Inventory Management SaaS — End-to-End Documentation System</div>
-          <div class="proj-year-badge">2021 – Present</div>
-        </div>
+    <!-- DocuSnap featured -->
+    <div class="bfeat reveal">
+      <div class="bf-left nv">
+        <div class="bf-idx">01 — FEATURED</div>
+        <div><div class="bf-cat">AI Documentation Tool · 2024–Present</div><div class="bf-title">DocuSnap</div><div class="bf-year">Claude Vision · Canvas · JavaScript</div></div>
       </div>
-      <div class="proj-right">
-        <p class="proj-desc">Owned the complete documentation system for a SaaS order and inventory management platform — covering product documentation, UX writing, knowledge base architecture, and integration documentation. Documented the full order lifecycle from storefront capture to fulfilment across 6 major e-commerce platforms and 3 logistics systems.</p>
-        <ul class="proj-highlights">
+      <div class="bf-right">
+        <p class="bp-stack">Claude Vision API · Canvas Frame-Diffing · JavaScript · Single-File Architecture · Zero Dependencies · Personal Build</p>
+        <p class="bp-desc">A personal project exploring how AI and screen recording could automate documentation. Combines Claude Vision with canvas frame-diffing to capture UI state changes at 10fps and auto-generate step-by-step documentation. Built to understand the technical side of documentation tooling from the inside.</p>
+        <ul class="bp-hi nv">
+          <li>Zero-dependency single-file architecture — deploy without a build pipeline or package manager</li>
+          <li>Frame-diffing engine detects meaningful UI changes, filtering static frames automatically</li>
+          <li>Claude Vision interprets each captured UI state and generates structured, accurate documentation steps</li>
+          <li>Floating popup controller for real-time record, pause, and export without leaving the active workflow</li>
+        </ul>
+        <div class="bp-tags"><span class="bp-tag nv">Claude Vision</span><span class="bp-tag nv">Screen Recording</span><span class="bp-tag nv">Canvas API</span><span class="bp-tag nv">Zero Dependencies</span><span class="bp-tag nv">Auto Documentation</span></div>
+        <a class="view-link" href="https://github.com/abduays/docsnap" target="_blank">View Repo →</a>
+      </div>
+    </div>
+
+    <!-- Plain featured -->
+    <div class="bfeat reveal">
+      <div class="bf-left dk">
+        <div class="bf-idx">02 — HACKATHON</div>
+        <div><div class="bf-cat">Baidu AppMeDo Devpost · 2026</div><div class="bf-title">Plain — Encrypted AI Messaging</div><div class="bf-year">ERNIE LLM · MeDo Crypto API · Full-Stack</div></div>
+      </div>
+      <div class="bf-right">
+        <p class="bp-stack">ERNIE LLM · MeDo Cryptography API · Full-Stack · End-to-End Encrypted Architecture · Hackathon Build</p>
+        <p class="bp-desc">Full-stack end-to-end encrypted AI messaging platform built as a Baidu AppMeDo Devpost hackathon entry. Identified and integrated the MeDo Cryptography API as one of the first participants to do so — built from ideation to working submission in a single sprint.</p>
+        <ul class="bp-hi nv">
+          <li>First-to-integrate MeDo Cryptography API among hackathon participants — required real-time API exploration under competitive pressure</li>
+          <li>ERNIE LLM integrated for intelligent message composition and response within an encrypted context</li>
+          <li>End-to-end encrypted architecture — security-first design from the ground up, not bolted on</li>
+          <li>Complete documentation written during the sprint: architecture decisions, API integration notes, and deployment guide</li>
+        </ul>
+        <div class="bp-tags"><span class="bp-tag nv">ERNIE LLM</span><span class="bp-tag nv">MeDo Crypto API</span><span class="bp-tag nv">E2E Encryption</span><span class="bp-tag nv">Full-Stack</span><span class="bp-tag nv">First-to-Integrate</span></div>
+        <a class="view-link" href="https://app-bba0xzgzbnr5.appmedo.com/" target="_blank">View Live →</a>
+      </div>
+    </div>
+
+    <!-- 3-column grid -->
+    <div class="bgrid reveal">
+      <div class="bcard nv">
+        <div class="bc-kick nv">Firefox · Google Chrome · Extension · Personal Build · 2024</div>
+        <div class="bc-title">FeedHire</div>
+        <p class="bc-desc">A personal Firefox extension built to explore Manifest V3 and DOM parsing — surfaces LinkedIn hiring posts from outside your network via a persistent Side Panel. Zero backend. Built to understand how browser extensions handle real-time DOM manipulation.</p>
+        <div class="bc-tags"><span class="bc-tag nv">Firefox Extension</span><span class="bc-tag nv">Manifest V3</span><span class="bc-tag nv">Side Panel API</span><span class="bc-tag nv">Zero Backend</span></div>
+        <a class="view-link" href="https://github.com/abduays/LinkedIn-Newsfeed-Jobs" target="_blank">View Repo →</a>
+      </div>
+      <div class="bcard gr">
+        <div class="bc-kick gr">Claude API · SaaS Tool · 2025</div>
+        <div class="bc-title">ReplyGenius</div>
+        <p class="bc-desc">An AI-powered review response tool built for US & UK small businesses — generates professional, tone-matched replies to Google, Trustpilot, and TripAdvisor reviews in under 30 seconds. Includes BYOK mode (Anthropic API key, ~$0.001/response), 10 business types, 4 response tones, and a Pro tier with bulk response mode. Built to understand how AI tools close real operational gaps for non-technical users.</p>
+        <div class="bc-tags"><span class="bc-tag gr">Claude API</span><span class="bc-tag gr">Vanilla JS</span><span class="bc-tag gr">BYOK</span><span class="bc-tag gr">Small Business</span><span class="bc-tag gr">SaaS</span></div>
+        <a class="view-link" href="https://abduays.github.io/replygenius-ai-review-response/" target="_blank">View Live →</a>
+      </div>
+      <div class="bcard gr">
+        <div class="bc-kick gr">Computer Vision · Personal Build · 2024</div>
+        <div class="bc-title">AI Visual Analyser</div>
+        <p class="bc-desc">A personal exploration of Google AI Studio's video analysis capabilities — processes construction site footage and generates structured safety compliance reports. Built to understand multimodal AI documentation requirements from a hands-on perspective.</p>
+        <div class="bc-tags"><span class="bc-tag gr">Google AI Studio</span><span class="bc-tag gr">Video Analysis</span><span class="bc-tag gr">Safety Compliance</span><span class="bc-tag gr">Personal Build</span></div>
+        <a class="view-link" href="https://sitesight-865242794359.us-west1.run.app/" target="_blank">View Live →</a>
+      </div>
+    </div>
+
+    <!-- Wealth Guard + DevSections -->
+    <div class="bgrid two reveal">
+      <div class="bcard nv">
+        <div class="bc-kick nv">Personal Finance · v0 · Personal Build</div>
+        <div class="bc-title">Wealth Guard — Money-Making Dashboard</div>
+        <p class="bc-desc">A personal finance dashboard that visualises hidden financial losses — inefficient loans, credit card misuse, poor tax planning — and surfaces actionable optimisation strategies. Built through structured prompting on v0 to explore prompt-to-UI workflows for the Indian market.</p>
+        <div class="bc-tags" style="margin-bottom:0.8rem;"><span class="bc-tag nv">v0 / Vercel</span><span class="bc-tag nv">Personal Finance</span><span class="bc-tag nv">India Market</span><span class="bc-tag nv">Prompt-Built</span></div>
+        <a class="view-link" href="https://v0-money-making-dashboard.vercel.app/" target="_blank">View Live →</a>
+      </div>
+      <div class="bcard nv">
+        <div class="bc-nv">Vercel · v0 · EdTech · Personal Build</div>
+        <div class="bc-title">Tamil Writing — Interactive Script Learning App</div>
+        <p class="bc-desc">An interactive web app for learning Tamil script — covering 247 characters across structured lessons, tracing practice, pronunciation audio, quizzes, and paragraph writing. Built with v0 and deployed on Vercel. A personal project rooted in documenting for diverse learners — and in building tools that make structured knowledge accessible without friction.</p>
+        <div class="bc-tags" style="margin-bottom:0.8rem;"><span class="bc-tag nv">v0</span><span class="bc-tag nv">Vercel</span><span class="bc-tag nv">EdTech</span><span class="bc-tag nv">Tamil Script</span><span class="bc-tag nv">Audio Pronunciation</span></div>
+        <a class="view-link" href="https://v0-tamil-writing-app.vercel.app/" target="_blank">View DevSections →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TW TAB -->
+  <div id="tab-tw" class="proj-section">
+
+    <div class="twproj reveal">
+      <div class="twp-left"><div class="twp-num">01</div><div><div class="twp-type">SaaS · E-commerce · Fulfilment</div><div class="twp-title">Order & Inventory Management SaaS — End-to-End Documentation System</div><div class="twp-year">2021 – Present · UTDS Optimal Choice</div></div></div>
+      <div class="twp-right">
+        <p class="twp-desc">Owned the complete documentation system for a live SaaS order and inventory management platform — covering product documentation, UX writing, knowledge base architecture, and integration documentation across 6 major e-commerce platforms and 3 logistics systems. Sole technical writer, zero handoff.</p>
+        <ul class="twp-bul">
           <li>Created UI copy, tooltips, and in-app instructional content across the full product interface</li>
           <li>Built and structured the help centre and knowledge base from scratch for customer self-service</li>
           <li>Documented integrations: Shopify, Magento, WooCommerce, BigCommerce, Strikingly, Amazon</li>
           <li>Documented fulfilment workflows integrating Amazon, UPS, and third-party logistics systems</li>
-          <li>Standardised documentation across multi-platform integrations using single-source authoring principles</li>
+          <li>Applied single-source authoring principles to maintain consistency across multiple platform variants</li>
         </ul>
-        <div class="proj-doc-types">
-          <span class="pdt">Product Documentation</span>
-          <span class="pdt">UX Writing</span>
-          <span class="pdt">Knowledge Base</span>
-          <span class="pdt">Integration Documentation</span>
-          <span class="pdt">Workflow Systems</span>
-          <span class="pdt">SaaS Documentation</span>
-        </div>
-        <a class="proj-link" href="https://docs.google.com/spreadsheets/d/19KrPH9fEHiVI8UIxxrlqCZAboiYy7W5JEuDVGQRhZVY/edit?usp=sharing" target="_blank">View Documentation Samples &rarr;</a>
+        <div class="tw-tags"><span class="tw-tag">Product Documentation</span><span class="tw-tag">UX Writing</span><span class="tw-tag">Knowledge Base</span><span class="tw-tag">Integration Docs</span><span class="tw-tag">Single-Source Authoring</span></div>
       </div>
     </div>
 
-    <!-- PROJECT 2 -->
-    <div class="proj-card">
-      <div class="proj-left">
-        <div class="proj-num">02</div>
-        <div>
-          <div class="proj-type-label">Cloud · API Documentation</div>
-          <div class="proj-left-title">Google Cloud APIs — Developer &amp; API Documentation</div>
-          <div class="proj-year-badge">2021 – Present</div>
-        </div>
+    <div class="twproj reveal">
+      <div class="twp-left"><div class="twp-num">02</div><div><div class="twp-type">SaaS · Hospitality · Hotel Booking</div><div class="twp-title">Hotel Booking System — 65-Page Technical Manual</div><div class="twp-year">2021 – Present · UTDS Optimal Choice</div></div></div>
+      <div class="twp-right">
+        <p class="twp-desc">Authored a 65-page technical manual for a multi-module hotel booking SaaS platform. Documented six complete system modules — Rate Plans, Rooms, Pricing, Bookings, Management, and Notification Centre — covering OTA channel manager integration with Booking.com and Expedia.</p>
+        <ul class="twp-bul">
+          <li>Rate Plans: tax rates, coupon systems, packages, and promotional offers with full configuration walkthroughs</li>
+          <li>Rooms: categories, characteristics, occupancy settings, geographic map configuration, and room upgrades</li>
+          <li>Pricing: Rates Table, Special Prices (seasonal/promotional), Restrictions, and Calendar Pricing</li>
+          <li>Bookings: dashboard, calendar availability, guest registration, and PDF check-in document generation</li>
+          <li>Management: statistics, conversion reporting, customer records, invoices, and scheduled job documentation</li>
+          <li>Notification Centre: OTA, website, and guest event filters with quick-action workflow documentation</li>
+        </ul>
+        <div class="tw-tags"><span class="tw-tag">Technical Manual</span><span class="tw-tag">Configuration Guides</span><span class="tw-tag">System Workflows</span><span class="tw-tag">66 Pages</span><span class="tw-tag">OTA Integration</span></div>
+        <a class="view-link" target="_blank">Documentation Will Be Shared On Request →</a>
       </div>
-      <div class="proj-right">
-        <p class="proj-desc">Created structured API documentation for Google Cloud-based services. Documented endpoints, request/response structures, authentication flows, error handling, and usage patterns. Translated backend system behaviour into clear, developer-friendly documentation for integration teams.</p>
-        <ul class="proj-highlights">
-          <li>Documented REST API endpoints, HTTP methods, parameters, and response schemas</li>
+    </div>
+
+    <div class="twproj reveal">
+      <div class="twp-left"><div class="twp-num">03</div><div><div class="twp-type">Cloud · API Documentation</div><div class="twp-title">Google Cloud APIs — Developer & API Documentation</div><div class="twp-year">2021 – Present</div></div></div>
+      <div class="twp-right">
+        <p class="twp-desc">Created structured API documentation for Google Cloud-based services — endpoints, request/response schemas, authentication flows, error handling, and integration guides for developer onboarding. Written to Microsoft Style Guide standards for developer-facing content.</p>
+        <ul class="twp-bul">
+          <li>Documented REST API endpoints, HTTP methods, parameters, and response schemas in structured reference format</li>
           <li>Created authentication flow documentation for OAuth and API key implementations</li>
           <li>Built integration guides for developers onboarding to Google Cloud services</li>
           <li>Documented error codes, status responses, and troubleshooting guidance</li>
         </ul>
-        <div class="proj-doc-types">
-          <span class="pdt">API Documentation</span>
-          <span class="pdt">Developer Documentation</span>
-          <span class="pdt">Integration Guides</span>
-          <span class="pdt">Google Cloud</span>
-        </div>
+        <div class="tw-tags"><span class="tw-tag">API Documentation</span><span class="tw-tag">Developer Guides</span><span class="tw-tag">Google Cloud</span><span class="tw-tag">OAuth Docs</span><span class="tw-tag">REST Reference</span></div>
       </div>
     </div>
 
-    <!-- PROJECT 3 -->
-    <div class="proj-card featured-proj">
-      <div class="proj-left teal">
-        <div class="proj-num">03</div>
-        <div>
-          <div class="proj-type-label">SaaS &middot; Hospitality &middot; Booking Platform</div>
-          <div class="proj-left-title">Hotel Booking System — Technical Manual</div>
-          <div class="proj-year-badge">2021 – Present &middot; UTDS Optimal Choice</div>
-        </div>
+    <div class="tw-sm-grid reveal">
+      <div class="tw-sm">
+        <div class="tws-kick">CRM · Operations Manual · 2025</div>
+        <div class="tws-title">Cervo Digital — Field Service CRM Agent Manual</div>
+        <p class="tws-desc">24-page operations manual for Cervo Digital's £4.5M UK field services operation on Bitrix24. 19 end-to-end workflows — lead intake from inbound calls, deal creation, technician dispatch, invoicing, and payment — written for non-technical agents. Measured outcome: approximately 40% reduction in tier-1 support dependency.</p>
+        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">Cervo Digital</span><span class="tw-tag">Bitrix24</span><span class="tw-tag">19 Workflows</span><span class="tw-tag">UK Market</span><span class="tw-tag">24 Pages</span></div>
+        <a class="view-link" target="_blank">Documentation Will Be Shared On Request →</a>
       </div>
-      <div class="proj-right">
-        <p class="proj-desc">Authored technical manual for a multi-module hotel booking SaaS platform. Documented six complete system modules — Rate Plans, Rooms, Pricing, Bookings, Management, and Notification Centre — covering tax rate configuration, room availability, guest check-in workflows, invoice generation, and OTA channel manager integration with Booking.com and Expedia.</p>
-        <ul class="proj-highlights">
-          <li>Rate Plans module: tax rates, types of price, coupon systems, packages &amp; promotional offers with full configuration parameters</li>
-          <li>Rooms module: categories, characteristics, occupancy settings, geographic map configuration, and room upgrade workflows</li>
-          <li>Pricing system: Rates Table, Special Prices (seasonal/promotional), Restrictions, Rates Overview, and Calendar Pricing</li>
-          <li>Bookings module: dashboard, calendar, availability overview, booking details, guest registration, and PDF check-in document generation</li>
-          <li>Management module: statistics tracking, conversion rate reporting, customer records, invoices, and scheduled cron jobs</li>
-          <li>Notification Centre: OTA, website, and guest event filters with quick-action workflow documentation</li>
-        </ul>
-        <div class="proj-doc-types">
-          <span class="pdt">Technical Manual</span>
-          <span class="pdt">Product Documentation</span>
-          <span class="pdt">Configuration Guides</span>
-          <span class="pdt">System Workflows</span>
-          <span class="pdt">SaaS Documentation</span>
-          <span class="pdt">65 Pages</span>
-        </div>
-        <a class="proj-link" href="https://docs.google.com/spreadsheets/d/19KrPH9fEHiVI8UIxxrlqCZAboiYy7W5JEuDVGQRhZVY/edit?usp=sharing" target="_blank">View Documentation Samples &rarr;</a>
+      <div class="tw-sm">
+        <div class="tws-kick">Cybersecurity · NIST SP 800-61 · 2025</div>
+        <div class="tws-title">Incident Response Playbook — Phishing</div>
+        <p class="tws-desc">NIST SP 800-61 aligned IR Playbook for phishing under the World Bank, Chennai. Structured for real-world SOC team use — detection, containment, eradication, and post-incident review phases documented in full.</p>
+        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">NIST SP 800-61</span><span class="tw-tag">Cybersecurity</span><span class="tw-tag">SOC Docs</span><span class="tw-tag">IR Playbook</span></div>
+      </div>
+      <div class="tw-sm">
+        <div class="tws-kick">API Reference · Stripe · 2024</div>
+        <div class="tws-title">Stripe Payment Intents API Reference</div>
+        <p class="tws-desc">Custom-built API reference page for the Stripe Payment Intents API — accuracy-reviewed against live Stripe documentation. Demonstrates structured API reference writing: endpoints, parameters, authentication, error codes, and response schemas.</p>
+        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">API Reference</span><span class="tw-tag">Stripe API</span><span class="tw-tag">REST Docs</span><span class="tw-tag">Portfolio Sample</span></div>
       </div>
     </div>
 
+    <div class="tw-sm-grid reveal" style="margin-top:1.4rem;">
+      <div class="tw-sm">
+        <div class="tws-kick">Google · Local Service Ads · UK Beta · 2021–Present</div>
+        <div class="tws-title">Google Local Service Ads — Documentation Collaboration</div>
+        <p class="tws-desc">Worked alongside Google's Teleperformance teams in Brazil and Milan to document Local Service Ads during the UK beta launch — helping local service providers understand the platform and get more clients. Contributed to onboarding and platform guidance documentation for a product that was live only in the UK at the time.</p>
+        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">Google LSA</span><span class="tw-tag">UK Beta</span><span class="tw-tag">Teleperformance</span><span class="tw-tag">Platform Docs</span><span class="tw-tag">AdTech</span></div>
+      </div>
+      <div class="tw-sm">
+        <div class="tws-kick">Internal L&D · Employee Guides · AI Event Content</div>
+        <div class="tws-title">Internal Learning & Presentation Content</div>
+        <p class="tws-desc">Authored internal employee learning guides, created AI-in-the-workplace event presentations for UTDS Optimal Choice leadership, and provided proposal writing support — refining client-facing proposals with clear structure, brand-aligned language, and logical flow. Applied the same documentation discipline to internal audiences as to external ones.</p>
+        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">Learning Guides</span><span class="tw-tag">AI Presentations</span><span class="tw-tag">Proposal Writing</span><span class="tw-tag">Internal Comms</span></div>
+      </div>
+      <div class="tw-sm">
+        <div class="tws-kick">Internal & External Guides · Google Ads · SEO · Salesforce</div>
+        <div class="tws-title">Campaign, SEO & CRM Documentation Suite</div>
+        <p class="tws-desc">Authored internal team references and client-facing guides across three platforms — Google Ads (campaign setup, keyword strategy, PMax, conversion tracking, and optimisation reporting), SEO (local SEO, GBP, on-page/technical SEO, link building, and review management), and Salesforce CRM (setup, user management, lead and opportunity workflows, automation, dashboards, and integrations). Documentation spanned both operational how-to content for practitioners and structured onboarding guides for new users.</p>
+        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">Google Ads</span><span class="tw-tag">SEO</span><span class="tw-tag">Salesforce CRM</span><span class="tw-tag">Internal Docs</span><span class="tw-tag">Client Guides</span></div>
+        <a class="view-link" href="https://docs.google.com/spreadsheets/d/19KrPH9fEHiVI8UIxxrlqCZAboiYy7W5JEuDVGQRhZVY/edit?usp=sharing" target="_blank">View Live →</a>
+      </div>
+    </div>
   </div>
+</section>
 
-  <!-- SMALL PROJECTS -->
-  <div class="proj-small-grid">
-    <div class="proj-small">
-      <div class="ps-kicker">CRM · Operations Manual · 2025</div>
-      <div class="ps-title">Field Service CRM Agent Operations Manual (Bitrix24)</div>
-      <p class="ps-desc">24-page, deployment-ready operations manual for a £4.5M UK field services company. 19 workflows — lead intake, dispatch, invoicing, payment — built for non-technical users.</p>
-      <div class="ps-tags">
-        <span class="ps-tag">Bitrix24</span><span class="ps-tag">CRM Documentation</span>
-        <span class="ps-tag">19 Workflows</span><span class="ps-tag">UK Market</span>
-      </div>
-      <a class="proj-link" style="margin-top:1rem;display:inline-flex;" href="https://docs.google.com/spreadsheets/d/19KrPH9fEHiVI8UIxxrlqCZAboiYy7W5JEuDVGQRhZVY/edit?usp=sharing" target="_blank">View &rarr;</a>
+<!-- WORK EXPERIENCE -->
+<section id="experience" class="alt sec-rule">
+  <div class="sec-header reveal">
+    <span class="sec-kicker grey">Work Experience</span>
+    <h2 class="sec-title">Where I've <em>worked.</em></h2>
+  </div>
+  <div class="exp-layout reveal">
+    <div class="exp-nav">
+      <a class="exp-nav-item active" href="#experience">UTDS Optimal Choice</a>
+      <a class="exp-nav-item" href="#experience">Yaali SaaS</a>
+      <a class="exp-nav-item" href="#experience">Independent</a>
     </div>
-    <div class="proj-small">
-      <div class="ps-kicker">B2B SaaS · CRM · 2024–25</div>
-      <div class="ps-title">Salesforce CRM Technical Documentation</div>
-      <p class="ps-desc">CRM workflow documentation, automation logic, and user process documentation for cross-functional teams across B2B SaaS environments. Improved onboarding and system understanding.</p>
-      <div class="ps-tags">
-        <span class="ps-tag">Salesforce</span><span class="ps-tag">B2B SaaS</span>
-        <span class="ps-tag">Workflow Docs</span><span class="ps-tag">Product Documentation</span>
+    <div class="exp-entries">
+
+      <div class="exp-entry">
+        <div class="ee-head">
+          <div><div class="ee-role">Technical Writer</div><div class="ee-org">UTDS Optimal Choice — Remote, Albania</div><div class="ee-meta">Jun 2021 – Present · Full-time Remote · Sole Technical Writer</div></div>
+          <div class="ee-badge">Current Role</div>
+        </div>
+        <p class="ee-desc">End-to-end documentation ownership across multiple live SaaS products and client accounts as the organisation's sole technical writer. Covers the full documentation lifecycle — discovery, authoring, SME review, publication, and ongoing maintenance — with no team handoff.</p>
+        <ul class="ee-bul">
+          <li>Designed and trained a production ElevenLabs conversational AI agent for customer support — engineered the full system prompt architecture covering persona, tone constraints, fallback logic, and escalation triggers, then documented the full prompt system as an internal reference guide</li>
+          <li>Built a 19-workflow self-service knowledge base from scratch for Cervo Digital — a £4.5M UK field services company on Bitrix24 — covering lead intake from inbound calls, deal creation, technician dispatch, invoicing, and payment workflows. Measured outcome: approximately 40% reduction in tier-1 support dependency</li>
+          <li>Collaborated with Google's Teleperformance teams in Brazil and Milan on Local Service Ads documentation during the UK beta launch — helping local service providers understand and adopt the platform during its initial rollout</li>
+          <li>Authored technical API walkthroughs and integration guides for Google Cloud APIs — endpoints, authentication, error handling, and developer onboarding — adhering to Microsoft Style Guide standards for developer-facing content</li>
+          <li>Authored a 66-page technical manual for a hotel booking SaaS platform covering six complete system modules including rate plans, pricing, bookings, and OTA channel manager integration with Booking.com and Expedia</li>
+          <li>Documented e-commerce integrations across Shopify, Magento, WooCommerce, BigCommerce, Strikingly, and Amazon fulfilment workflows using single-source authoring principles</li>
+          <li>Created internal employee learning guides, AI-in-the-workplace event presentations, and provided proposal writing support — applying documentation structure and brand-aligned language to internal and client-facing content</li>
+          <li>Produced technical and marketing blog content covering digital marketing, SEO, web development, and platform guides — published at utds.al</li>
+          <li>Created UI copy, tooltips, and interface messaging for product platforms; designed social media visual content for two client Instagram accounts</li>
+        </ul>
+        <div class="ee-tags"><span class="ee-tag">SaaS Documentation</span><span class="ee-tag">API Documentation</span><span class="ee-tag">CRM Workflows</span><span class="ee-tag">ElevenLabs AI</span><span class="ee-tag">Technical Blog Writing</span><span class="ee-tag">UX Writing</span><span class="ee-tag">Knowledge Base</span><span class="ee-tag">Bitrix24</span><span class="ee-tag">Single-Source Authoring</span></div>
       </div>
-      <a class="proj-link" style="margin-top:1rem;display:inline-flex;" href="https://docs.google.com/spreadsheets/d/19KrPH9fEHiVI8UIxxrlqCZAboiYy7W5JEuDVGQRhZVY/edit?usp=sharing" target="_blank">View &rarr;</a>
-    </div>
-    <div class="proj-small">
-      <div class="ps-kicker">AdTech + SEO · 2024–25</div>
-      <div class="ps-title">Google Ads &amp; SEO Process Documentation</div>
-      <p class="ps-desc">Campaign workflow documentation, platform guides, and structured SEO process documentation — defining repeatable workflows for digital marketing and SEO teams at scale.</p>
-      <div class="ps-tags">
-        <span class="ps-tag">Google Ads</span><span class="ps-tag">SEO</span>
-        <span class="ps-tag">Process Docs</span><span class="ps-tag">Platform Documentation</span>
+
+      <div class="exp-entry">
+        <div class="ee-head">
+          <div><div class="ee-role">UX Writer & Technical Consultant</div><div class="ee-org">Yaali SaaS — Order & Inventory Management Platform</div><div class="ee-meta">2017 · Contract</div></div>
+        </div>
+        <p class="ee-desc">UX writing and technical documentation for Yaali SaaS, an order and inventory management platform. Produced in-application instructional content, UI copy, and product documentation covering the full order lifecycle from storefront capture to fulfilment.</p>
+        <ul class="ee-bul">
+          <li>Created UI copy, tooltips, and in-app messaging aligned to product terminology and user mental models</li>
+          <li>Documented core product workflows including order management, inventory tracking, and fulfilment processes</li>
+          <li>Contributed to information architecture decisions for the platform's help centre structure</li>
+        </ul>
+        <div class="ee-tags"><span class="ee-tag">UX Writing</span><span class="ee-tag">SaaS Documentation</span><span class="ee-tag">Order Management</span><span class="ee-tag">Inventory Systems</span></div>
       </div>
-      <a class="proj-link" style="margin-top:1rem;display:inline-flex;" href="https://docs.google.com/spreadsheets/d/19KrPH9fEHiVI8UIxxrlqCZAboiYy7W5JEuDVGQRhZVY/edit?usp=sharing" target="_blank">View &rarr;</a>
+
+      <div class="exp-entry">
+        <div class="ee-head">
+          <div><div class="ee-role">Independent Technical Writer & Learner</div><div class="ee-org">Self-directed</div><div class="ee-meta">2017 – 2021</div></div>
+        </div>
+        <p class="ee-desc">Period of structured self-development in technical writing methodology, API documentation, and instructional design. Completed the Qualifi Level 5 TEFL Diploma — an Ofqual-regulated qualification in structured learning content and instructional methodology that directly informs how I approach audience analysis, task decomposition, and documentation structure.</p>
+        <ul class="ee-bul">
+          <li>Completed Qualifi Level 5 TEFL Diploma (Ofqual-regulated, 168 hours) — formal training in instructional design, structured content delivery, and learning-objective-based writing</li>
+          <li>Structured self-study across API documentation standards, developer content writing, and information architecture frameworks</li>
+        </ul>
+        <div class="ee-tags"><span class="ee-tag">Instructional Design</span><span class="ee-tag">TEFL / Learning Content</span><span class="ee-tag">Self-directed Development</span></div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- DESIGN & CONTENT -->
-<section id="design" style="background:var(--off);">
-  <div class="sec-header">
+<section id="design" class="white sec-rule">
+  <div class="sec-header reveal">
     <span class="sec-kicker">Beyond Documentation</span>
-    <h2 class="sec-title">Design &amp; <em>Content Work</em></h2>
-    <p class="sec-desc">In addition to technical documentation, I create visual content and technical blog articles — bridging documentation thinking with content strategy and visual communication.</p>
+    <h2 class="sec-title">Design & <em>Content Work</em></h2>
+    <p class="sec-desc">Documentation thinking applied to visual content, technical blogging, and public-facing articles — the same discipline of clarity, audience awareness, and structure.</p>
   </div>
-
-  <div class="tools-section-inner">
-
-    <!-- LEFT: BLOG -->
-    <div>
-      <div style="border:1px solid var(--border);background:var(--white);padding:2.5rem;margin-bottom:1.5rem;">
-        <div style="font-family:'Fira Code',monospace;font-size:0.62rem;color:var(--blue2);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1rem;">Technical Blog Writing</div>
-        <div style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:0.8rem;line-height:1.3;">Technical Articles &amp; Blog Content</div>
-        <p style="font-size:0.85rem;color:var(--mid);line-height:1.85;margin-bottom:1.2rem;">Author of technical and marketing-focused blog content for UTDS Optimal Choice — covering topics across digital marketing, SEO, web development, and platform guides. Content is structured for both discoverability and readability, applying documentation principles to public-facing articles.</p>
-        <p style="font-size:0.85rem;color:var(--mid);line-height:1.85;margin-bottom:1.5rem;">Articles are written for a mixed audience of technical and non-technical readers — demonstrating audience analysis, content strategy, and the ability to translate complex platform knowledge into accessible, structured content.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem;">
-          <span class="pdt">Technical Writing</span>
-          <span class="pdt">SEO Content</span>
-          <span class="pdt">Platform Guides</span>
-          <span class="pdt">Content Strategy</span>
-          <span class="pdt">Audience Analysis</span>
-        </div>
-        <a class="proj-link" href="https://utds.al/author/abdul/" target="_blank">View Published Articles &rarr;</a>
+  <div class="design-layout reveal">
+    <div class="dblock">
+      <div class="db-kick">Technical Blog Writing</div>
+      <div class="db-title">Technical Articles & Published Content</div>
+      <p class="db-desc">Author of technical and marketing-focused blog content for UTDS Optimal Choice — covering digital marketing, SEO, web development, and platform guides. Written for mixed technical and non-technical audiences, applying documentation principles of task-based writing, clear structure, and audience-first thinking.</p>
+      <div class="content-row">
+        <div><div class="col-label">Content Types</div><div class="col-list">Platform how-to guides<br>SEO explainers<br>Digital marketing articles<br>Product feature write-ups<br>Technical concept breakdowns</div></div>
+        <div><div class="col-label">Skills Applied</div><div class="col-list">Task-based writing<br>Information architecture<br>SEO-aligned formatting<br>Audience analysis<br>Technical accuracy</div></div>
       </div>
-
-      <div style="border:1px solid var(--border);background:var(--white);padding:2rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-        <div>
-          <div style="font-family:'Fira Code',monospace;font-size:0.58rem;color:var(--teal);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem;">Content Types</div>
-          <div style="font-size:0.8rem;color:var(--mid);line-height:1.8;">Platform how-to guides<br>SEO explainers<br>Digital marketing articles<br>Product feature write-ups<br>Technical concept breakdowns</div>
-        </div>
-        <div>
-          <div style="font-family:'Fira Code',monospace;font-size:0.58rem;color:var(--teal);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.5rem;">Skills Applied</div>
-          <div style="font-size:0.8rem;color:var(--mid);line-height:1.8;">Task-based writing<br>Information architecture<br>Structured content<br>SEO-aligned formatting<br>Technical accuracy</div>
-        </div>
-      </div>
+      <a class="view-link" href="https://utds.al/author/abdul/" target="_blank">View Published Articles →</a>
     </div>
-
-    <!-- RIGHT: SOCIAL MEDIA DESIGN -->
-    <div style="display:flex;flex-direction:column;gap:1.5rem;">
-
-      <div style="border:1px solid var(--border);background:var(--white);padding:2.5rem;">
-        <div style="font-family:'Fira Code',monospace;font-size:0.62rem;color:var(--blue2);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1rem;">Social Media Design</div>
-        <div style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:0.8rem;line-height:1.3;">Instagram Post &amp; Visual Design</div>
-        <p style="font-size:0.85rem;color:var(--mid);line-height:1.85;margin-bottom:1.4rem;">Designed social media post graphics and visual content for two active Instagram accounts — combining content writing, visual design, and platform knowledge. Posts cover service communication, brand awareness, and technical topics — all structured for engagement and clarity.</p>
-
-        <div style="border:1px solid var(--border2);padding:1.2rem;margin-bottom:1rem;transition:border-color 0.25s;" onmouseover="this.style.borderColor='var(--blue-mid)'" onmouseout="this.style.borderColor='var(--border2)'">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;">
-            <div>
-              <div style="font-weight:600;font-size:0.85rem;color:var(--ink);margin-bottom:0.2rem;">UTDS Optimal Choice</div>
-              <div style="font-size:0.72rem;color:var(--mid);">Digital Agency &middot; Albania &middot; Global clients</div>
-            </div>
-            <div style="font-family:'Fira Code',monospace;font-size:0.58rem;color:var(--blue2);border:1px solid var(--blue-mid);padding:0.2rem 0.5rem;background:var(--blue-light);">Agency</div>
-          </div>
-          <p style="font-size:0.78rem;color:var(--mid);line-height:1.7;margin-bottom:0.8rem;">Designed posts covering digital solutions, web development, CRM systems, SEO services, and client success stories — written and designed to reflect a professional B2B brand voice.</p>
-          <a class="proj-link" href="https://www.instagram.com/utds_optimal_choice/" target="_blank" style="font-size:0.68rem;">View Instagram &rarr;</a>
+    <div class="dblock">
+      <div class="db-kick">Social Media Design & Copywriting</div>
+      <div class="db-title">Instagram Visual Content & Brand Writing</div>
+      <p class="db-desc">Designed social media post graphics and wrote copy for two active client Instagram accounts — applying the same audience-first, clarity-driven principles from technical writing to visual and marketing communication.</p>
+      <div class="insta-item">
+        <div class="ii-head">
+          <div><div class="ii-name">UTDS Optimal Choice</div><div class="ii-sub">Digital Agency · Albania · Global clients</div></div>
+          <div class="ii-badge">B2B Agency</div>
         </div>
-
-        <div style="border:1px solid var(--border2);padding:1.2rem;transition:border-color 0.25s;" onmouseover="this.style.borderColor='var(--blue-mid)'" onmouseout="this.style.borderColor='var(--border2)'">
-          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;">
-            <div>
-              <div style="font-weight:600;font-size:0.85rem;color:var(--ink);margin-bottom:0.2rem;">Onsite Contractors Plumbing</div>
-              <div style="font-size:0.72rem;color:var(--mid);">Field Services &middot; UK Market</div>
-            </div>
-            <div style="font-family:'Fira Code',monospace;font-size:0.58rem;color:var(--teal);border:1px solid #99f6e4;padding:0.2rem 0.5rem;background:var(--teal-light);">Trade Services</div>
-          </div>
-          <p style="font-size:0.78rem;color:var(--mid);line-height:1.7;margin-bottom:0.8rem;">Created visual content for a UK-based plumbing and drainage service — posts covering emergency services, service highlights, and customer-facing messaging targeted at London and Greater London audiences.</p>
-          <a class="proj-link" href="https://www.instagram.com/onsite_contractors_plumbing/" target="_blank" style="font-size:0.68rem;">View Instagram &rarr;</a>
-        </div>
+        <p class="ii-desc">Posts covering digital solutions, web development, CRM systems, SEO services, and client success — written for a professional B2B brand voice targeting global audiences.</p>
+        <a class="view-link" href="https://www.instagram.com/utds_optimal_choice/" target="_blank">View Instagram →</a>
       </div>
-
-      <div style="border:1px solid var(--border);background:var(--blue-light);padding:1.8rem;border-color:var(--blue-mid);">
-        <div style="font-family:'Fira Code',monospace;font-size:0.58rem;color:var(--blue2);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.6rem;">Design Skills Applied</div>
-        <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-          <span class="pdt" style="background:white;">Canva</span>
-          <span class="pdt" style="background:white;">Venngage</span>
-          <span class="pdt" style="background:white;">Visual Storytelling</span>
-          <span class="pdt" style="background:white;">Brand Voice Writing</span>
-          <span class="pdt" style="background:white;">Social Media Copywriting</span>
-          <span class="pdt" style="background:white;">B2B Content Design</span>
-          <span class="pdt" style="background:white;">UK Market</span>
+      <div class="insta-item">
+        <div class="ii-head">
+          <div><div class="ii-name">Onsite Contractors Plumbing</div><div class="ii-sub">Field Services · UK Market · London</div></div>
+          <div class="ii-badge">Trade / UK</div>
         </div>
+        <p class="ii-desc">Visual content for a UK-based plumbing and drainage service — service highlights, emergency response messaging, and customer-facing copy for London audiences.</p>
+        <a class="view-link" href="https://www.instagram.com/onsite_contractors_plumbing/" target="_blank">View Instagram →</a>
       </div>
-
+      <div style="background:var(--navy-light);border:1px solid var(--navy-mid);padding:1rem;margin-top:1rem;">
+        <div class="col-label" style="color:var(--navy);margin-bottom:0.45rem;">Design Tools</div>
+        <div class="tw-tags"><span class="tw-tag">Canva</span><span class="tw-tag">Venngage</span><span class="tw-tag">Visual Storytelling</span><span class="tw-tag">Brand Voice Writing</span><span class="tw-tag">B2B Content Design</span></div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- PROMPT ENGINEERING -->
-<section id="prompting">
-  <div class="sec-header">
+<section id="prompting" class="alt sec-rule">
+  <div class="sec-header reveal">
     <span class="sec-kicker">AI Prompt Engineering</span>
-    <h2 class="sec-title">Prompting as a <em>Practice</em></h2>
-    <p class="sec-desc">Structured prompt design for production AI systems and independently built applications — combining a technical writer's precision with a builder's curiosity to shape how AI thinks, responds, and performs.</p>
+    <h2 class="sec-title">Prompting as a <em>AI Trainer.</em></h2>
+    <p class="sec-desc">Structured prompt design for production AI systems and zero-code applications — combining a technical writer's precision with a builder's execution instinct.</p>
   </div>
-
-  <!-- Professional: ElevenLabs -->
-  <div style="margin-bottom:3rem;">
-    <div style="font-family:'Fira Code',monospace;font-size:0.62rem;color:var(--blue2);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1.5rem;">Professional Prompt Work</div>
-    <div class="proj-card featured-proj" style="margin-bottom:0;">
-      <div class="proj-left blue">
-        <div class="proj-num">01 — Professional</div>
-        <div class="proj-type-label">AI Voice Agent · Customer Support</div>
-        <div class="proj-left-title">ElevenLabs Conversational AI Agent</div>
-        <div class="proj-year-badge">UTDS Optimal Choice · 2024–Present</div>
-      </div>
-      <div class="proj-right">
-        <p class="proj-desc">Designed and iterated the system prompt for a production-grade ElevenLabs conversational AI vocal agent deployed as customer support for UTDS Optimal Choice. The agent handles inbound customer interactions — answering queries about services, qualifying leads, and routing conversations — entirely through structured prompt engineering with no traditional code involved.</p>
-        <ul class="proj-highlights">
-          <li>Engineered persona, tone, and constraint layers to align the agent with company brand voice and service boundaries</li>
-          <li>Structured Markdown-based prompt architecture covering greeting flows, fallback logic, escalation triggers, and objection handling</li>
-          <li>Iterated prompts based on live agent behaviour — refining ambiguous responses, reducing hallucinations, and tightening scope boundaries</li>
-          <li>Documented the full prompt system in a structured internal reference guide for team handoff and future maintenance</li>
-        </ul>
-        <div class="proj-doc-types">
-          <span class="pdt">ElevenLabs AI</span>
-          <span class="pdt">System Prompting</span>
-          <span class="pdt">Conversational AI</span>
-          <span class="pdt">Voice Agent Design</span>
-          <span class="pdt">Persona Engineering</span>
-          <span class="pdt">Customer Support Automation</span>
-        </div>
-      </div>
+  < class="prompt-layout reveal">
+    <div class="pfeat">
+      <div class="pf-kick">Professional — Production Deployment · UTDS Optimal Choice</div>
+      <div class="pf-title">ElevenLabs Conversational AI Agent</div>
+      <p class="pf-stack">ElevenLabs AI · System Prompt Architecture · Voice Agent Design · Customer Support Automation · 2024–Present</p>
+      <p class="pf-desc">Designed and iterated the system prompt for a production ElevenLabs conversational AI vocal agent deployed as customer support. The agent handles inbound interactions — answering service queries, qualifying leads, and routing conversations — entirely through structured prompt engineering. No traditional code involved.</p>
+      <ul class="pf-bul">
+        <li>Engineered persona, tone, and constraint layers to align the agent with company brand voice and service scope</li>
+        <li>Structured Markdown-based prompt architecture covering greeting flows, fallback logic, escalation triggers, and objection handling</li>
+        <li>Iterated across multiple versions based on live agent behaviour — reducing hallucinations and tightening topical scope</li>
+        <li>Documented the full prompt system in a structured internal reference guide for team handoff and future maintenance</li>
+      </ul>
+      <div class="tw-tags"><span class="tw-tag">ElevenLabs AI</span><span class="tw-tag">System Prompting</span><span class="tw-tag">Voice Agent Design</span><span class="tw-tag">Persona Engineering</span><span class="tw-tag">Escalation Logic</span><span class="tw-tag">Production Deployed</span></div>
     </div>
   </div>
+</section>
 
-  <!-- Personal Apps -->
-  <div>
-    <div style="font-family:'Fira Code',monospace;font-size:0.62rem;color:var(--blue2);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1.5rem;">Prompt-Built Applications</div>
-    <div style="background:var(--off);border:1px solid var(--border);padding:1.8rem;margin-bottom:1.5rem;">
-      <p style="font-size:0.85rem;color:var(--mid);line-height:1.85;max-width:720px;">Each of these applications was built without writing traditional code — designed entirely through structured prompting on platforms like <strong>v0, Bolt, and Google AI Studio</strong>. The work demonstrates the ability to translate a product idea into a working application through precise, iterative, and architectural prompt design.</p>
+<!-- TOOLS -->
+<section id="tools" class="white sec-rule">
+  <div class="sec-header reveal"><span class="sec-kicker grey">Documentation Stack</span><h2 class="sec-title">Tools & <em>Platforms</em></h2></div>
+  <div class="tools-inner reveal">
+    <div class="tools-left">
+      <p>My documentation stack spans professional authoring tools like <strong>MadCap Flare</strong> and <strong>Adobe FrameMaker</strong> for structured, single-source documentation — alongside Docs-as-Code workflows using <strong>Markdown and GitHub</strong>.</p>
+      <p>For e-learning and instructional design: <strong>Adobe Captivate</strong> and <strong>Articulate 360</strong>. Platform experience covers <strong>Salesforce, Bitrix24, Google Ads</strong>, and <strong>Google Cloud APIs</strong> with hands-on JSON/YAML, REST API structures, and CLI environments.</p>
+      <p>I actively build with AI tools — <strong>Claude API, Google AI Studio, ElevenLabs</strong>, and <strong>v0 / Bolt / Vercel</strong> — keeping documentation grounded in the developer environments I write about.</p>
     </div>
-    <div class="proj-small-grid" style="grid-template-columns:repeat(3,1fr);">
-
-      <div class="proj-small">
-        <div class="ps-kicker">Education · Maths · v0</div>
-        <div class="ps-title">Educational Maths App</div>
-        <p class="ps-desc">An interactive maths learning application for children — covering arithmetic, number patterns, and problem-solving. Prompted to include progressive difficulty, visual feedback, and a child-friendly interface.</p>
-        <div class="ps-tags">
-          <span class="ps-tag">v0</span><span class="ps-tag">EdTech</span><span class="ps-tag">UI Prompting</span><span class="ps-tag">Progressive Logic</span>
-        </div>
-        <a class="proj-link" style="margin-top:1rem;display:inline-flex;" href="https://v0-maths-game-7p1hayesf-abdulbasith-projects.vercel.app/" target="_blank">View App &rarr;</a>
-      </div>
-
-      <div class="proj-small">
-        <div class="ps-kicker">Language · Tamil · v0</div>
-        <div class="ps-title">Language Learning App</div>
-        <p class="ps-desc">A Tamil language learning application built to help users practise reading and writing Tamil script — with structured lessons, character recognition, and writing exercises. Fully prompted from concept to deployed app.</p>
-        <div class="ps-tags">
-          <span class="ps-tag">v0</span><span class="ps-tag">Language Learning</span><span class="ps-tag">Tamil Script</span><span class="ps-tag">EdTech</span>
-        </div>
-        <a class="proj-link" style="margin-top:1rem;display:inline-flex;" href="https://v0-tamil-writing-app.vercel.app/" target="_blank">View App &rarr;</a>
-      </div>
-
-      <div class="proj-small">
-        <div class="ps-kicker">Productivity · Finance · Bolt</div>
-        <div class="ps-title">Invoice Generator</div>
-        <p class="ps-desc">A minimal, clean invoice generation tool built with a strong emphasis on process and design. Prompted to generate, preview, and export professional invoices — designed for freelancers and small businesses.</p>
-        <div class="ps-tags">
-          <span class="ps-tag">Bolt</span><span class="ps-tag">Minimal Design</span><span class="ps-tag">Finance Tool</span><span class="ps-tag">Process Design</span>
-        </div>
-      </div>
-
-      <div class="proj-small">
-        <div class="ps-kicker">Productivity · Career · Bolt</div>
-        <div class="ps-title">Resume Generator</div>
-        <p class="ps-desc">A minimal, structured resume builder that guides users through clean, process-driven resume creation. Prompted with a focus on typography, information hierarchy, and export-ready output — no bloat, no clutter.</p>
-        <div class="ps-tags">
-          <span class="ps-tag">Bolt</span><span class="ps-tag">Minimal Design</span><span class="ps-tag">Career Tools</span><span class="ps-tag">Content Architecture</span>
-        </div>
-      </div>
-
-      <div class="proj-small">
-        <div class="ps-kicker">Food · Discovery · AI Studio</div>
-        <div class="ps-title">HiddenChef</div>
-        <p class="ps-desc">A recipe discovery app centred around hidden, lesser-known dishes from world cuisines. Prompted to deliver personalised recipe recommendations, ingredient-based search, and a clean reading experience for home cooks.</p>
-        <div class="ps-tags">
-          <span class="ps-tag">Google AI Studio</span><span class="ps-tag">Recipe AI</span><span class="ps-tag">Personalisation</span><span class="ps-tag">Content Design</span>
-        </div>
-      </div>
-
-      <div class="proj-small">
-        <div class="ps-kicker">Food · Finance · AI Studio</div>
-        <div class="ps-title">Budget Bites</div>
-        <p class="ps-desc">A budget-conscious meal planning app that generates affordable, nutritious meal ideas based on a user's weekly budget and ingredient availability. Prompted to balance cost logic, dietary variety, and practical shopping guidance.</p>
-        <div class="ps-tags">
-          <span class="ps-tag">Google AI Studio</span><span class="ps-tag">Meal Planning</span><span class="ps-tag">Budget Logic</span><span class="ps-tag">AI Prompting</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div style="border:1px solid var(--border);background:var(--blue-light);border-color:var(--blue-mid);padding:1.8rem;margin-top:1.5rem;">
-      <div style="font-family:'Fira Code',monospace;font-size:0.58rem;color:var(--blue2);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.6rem;">Prompt Engineering Skills Demonstrated</div>
-      <div style="display:flex;flex-wrap:wrap;gap:0.4rem;">
-        <span class="pdt" style="background:white;">System Prompt Design</span>
-        <span class="pdt" style="background:white;">Persona &amp; Tone Engineering</span>
-        <span class="pdt" style="background:white;">Constraint &amp; Boundary Setting</span>
-        <span class="pdt" style="background:white;">Iterative Prompt Refinement</span>
-        <span class="pdt" style="background:white;">Conversational Flow Architecture</span>
-        <span class="pdt" style="background:white;">AI Hallucination Reduction</span>
-        <span class="pdt" style="background:white;">Structured Markdown Prompting</span>
-        <span class="pdt" style="background:white;">v0 · Bolt · Google AI Studio · ElevenLabs</span>
-        <span class="pdt" style="background:white;">Zero-Code App Development</span>
-        <span class="pdt" style="background:white;">Product Thinking via Prompting</span>
-      </div>
+    <div class="tool-chips">
+      <div class="tool-chip"><div class="tc-icon" style="background:#1a73e8;">MCF</div><span class="tc-name">MadCap Flare</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#cc0000;">AFM</div><span class="tc-name">Adobe FrameMaker</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#00bfff;">CAP</div><span class="tc-name">Adobe Captivate</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#e8620a;">A36</div><span class="tc-name">Articulate 360</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#24292e;">GH</div><span class="tc-name">GitHub + Markdown</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#0052cc;">JIRA</div><span class="tc-name">Jira</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#00a1e0;">SF</div><span class="tc-name">Salesforce</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#6929c4;">BRX</div><span class="tc-name">Bitrix24</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#ea4335;">GAds</div><span class="tc-name">Google Ads + Cloud</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:var(--navy);">CLD</div><span class="tc-name">Claude API</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#4285f4;">GAS</div><span class="tc-name">Google AI Studio</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#ff6600;">11L</div><span class="tc-name">ElevenLabs</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:#000;">V0</div><span class="tc-name">v0 / Vercel / Bolt</span></div>
+      <div class="tool-chip"><div class="tc-icon" style="background:var(--ink);">JS</div><span class="tc-name">JavaScript / JSON / YAML</span></div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-  <div class="sec-header">
-    <span class="sec-kicker">Core Competencies</span>
-    <h2 class="sec-title">Skills &amp; <em>Expertise</em></h2>
-  </div>
-  <div class="skills-outer">
-    <div class="skill-block">
-      <div class="sb-title">Prompt Engineering</div>
-      <div class="sb-tags">
-        <span class="sb-tag">System Prompt Design</span>
-        <span class="sb-tag">Persona Engineering</span>
-        <span class="sb-tag">Conversational AI</span>
-        <span class="sb-tag">Voice Agent Prompting</span>
-        <span class="sb-tag">Constraint Design</span>
-        <span class="sb-tag">Iterative Refinement</span>
-        <span class="sb-tag">ElevenLabs</span>
-        <span class="sb-tag">v0 · Bolt · AI Studio</span>
-        <span class="sb-tag">Zero-Code App Building</span>
-        <span class="sb-tag">Hallucination Reduction</span>
-        <span class="sb-tag">Markdown Prompt Architecture</span>
-      </div>
-    </div>
-    <div class="skill-block">
-      <div class="sb-title">Documentation Types</div>
-      <div class="sb-tags">
-        <span class="sb-tag">Product Documentation</span>
-        <span class="sb-tag">SaaS Documentation</span>
-        <span class="sb-tag">API Documentation</span>
-        <span class="sb-tag">Developer Documentation</span>
-        <span class="sb-tag">User Manuals</span>
-        <span class="sb-tag">Knowledge Base</span>
-        <span class="sb-tag">Help Centre Documentation</span>
-        <span class="sb-tag">Release Documentation</span>
-        <span class="sb-tag">Configuration Guides</span>
-        <span class="sb-tag">Troubleshooting Guides</span>
-        <span class="sb-tag">Onboarding Documentation</span>
-        <span class="sb-tag">UX Writing &amp; UI Microcopy</span>
-      </div>
-    </div>
-    <div class="skill-block">
-      <div class="sb-title">Documentation Systems</div>
-      <div class="sb-tags">
-        <span class="sb-tag">Information Architecture</span>
-        <span class="sb-tag">Docs-as-Code</span>
-        <span class="sb-tag">Structured Authoring</span>
-        <span class="sb-tag">Single Sourcing</span>
-        <span class="sb-tag">Content Reuse</span>
-        <span class="sb-tag">DITA Concepts</span>
-        <span class="sb-tag">Topic-Based Writing</span>
-        <span class="sb-tag">Document Lifecycle Management</span>
-        <span class="sb-tag">Style Guide Development</span>
-        <span class="sb-tag">Modular Documentation</span>
-        <span class="sb-tag">KB Management</span>
-        <span class="sb-tag">Release Cycle Coordination</span>
-      </div>
-    </div>
-    <div class="skill-block">
-      <div class="sb-title">Authoring Tools</div>
-      <div class="sb-tags">
-        <span class="sb-tag">MadCap Flare</span>
-        <span class="sb-tag">Adobe FrameMaker</span>
-        <span class="sb-tag">Adobe Captivate</span>
-        <span class="sb-tag">Articulate 360</span>
-        <span class="sb-tag">GitHub + Markdown</span>
-        <span class="sb-tag">Google Workspace</span>
-        <span class="sb-tag">Microsoft Office Suite</span>
-        <span class="sb-tag">Canva &amp; Venngage</span>
-        <span class="sb-tag">Jira</span>
-        <span class="sb-tag">Brevo / Mailchimp</span>
-      </div>
-    </div>
-    <div class="skill-block">
-      <div class="sb-title">Technical Exposure</div>
-      <div class="sb-tags">
-        <span class="sb-tag">REST API Documentation</span>
-        <span class="sb-tag">JSON &amp; YAML</span>
-        <span class="sb-tag">CLI Environments</span>
-        <span class="sb-tag">Google Cloud APIs</span>
-        <span class="sb-tag">AI-Enabled Applications</span>
-        <span class="sb-tag">OAuth &amp; Authentication</span>
-        <span class="sb-tag">Shopify / Magento / WooCommerce</span>
-        <span class="sb-tag">Semrush / Ahrefs / SEranking</span>
-      </div>
-    </div>
-    <div class="skill-block">
-      <div class="sb-title">Domain Expertise</div>
-      <div class="sb-tags">
-        <span class="sb-tag">SaaS Platforms</span>
-        <span class="sb-tag">CRM Systems</span>
-        <span class="sb-tag">E-commerce &amp; Fulfilment</span>
-        <span class="sb-tag">Hotel Booking Systems</span>
-        <span class="sb-tag">AdTech &amp; Google Ads</span>
-        <span class="sb-tag">SEO Systems</span>
-        <span class="sb-tag">Cloud Platforms</span>
-        <span class="sb-tag">AI &amp; Voice Systems</span>
-      </div>
-    </div>
-    <div class="skill-block">
-      <div class="sb-title">Professional Skills</div>
-      <div class="sb-tags">
-        <span class="sb-tag">Stakeholder Management</span>
-        <span class="sb-tag">SME Collaboration</span>
-        <span class="sb-tag">Cross-functional Collaboration</span>
-        <span class="sb-tag">Audience Analysis</span>
-        <span class="sb-tag">Content Strategy</span>
-        <span class="sb-tag">Instructional Design</span>
-        <span class="sb-tag">Task-Based Writing</span>
-        <span class="sb-tag">Feature Documentation Planning</span>
-      </div>
-    </div>
+<section id="skills" class="alt sec-rule">
+  <div class="sec-header reveal"><span class="sec-kicker">Core Competencies</span><h2 class="sec-title">Skills & <em>Expertise</em></h2></div>
+  <div class="skills-outer reveal">
+    <div class="skill-block"><div class="sb-title gr">Prompt Engineering</div><div class="sb-tags"><span class="sb-tag gr">System Prompt Design</span><span class="sb-tag gr">Persona Engineering</span><span class="sb-tag gr">Conversational AI</span><span class="sb-tag gr">Voice Agent Prompting</span><span class="sb-tag gr">Constraint Design</span><span class="sb-tag gr">Iterative Refinement</span><span class="sb-tag gr">ElevenLabs</span><span class="sb-tag gr">v0 · Bolt · AI Studio</span><span class="sb-tag gr">Zero-Code App Building</span></div></div>
+    <div class="skill-block"><div class="sb-title">Documentation Types</div><div class="sb-tags"><span class="sb-tag">Product Documentation</span><span class="sb-tag">SaaS Documentation</span><span class="sb-tag">API Documentation</span><span class="sb-tag">Developer Documentation</span><span class="sb-tag">User Manuals</span><span class="sb-tag">Knowledge Base</span><span class="sb-tag">Help Centre</span><span class="sb-tag">Release Notes</span><span class="sb-tag">Config Guides</span><span class="sb-tag">UX Writing</span><span class="sb-tag">IR Playbooks</span></div></div>
+    <div class="skill-block"><div class="sb-title">Documentation Systems</div><div class="sb-tags"><span class="sb-tag">Information Architecture</span><span class="sb-tag">Docs-as-Code</span><span class="sb-tag">Structured Authoring</span><span class="sb-tag">Single Sourcing</span><span class="sb-tag">Content Reuse</span><span class="sb-tag">Topic-Based Writing</span><span class="sb-tag">Microsoft Style Guide</span><span class="sb-tag">Google Dev Style Guide</span><span class="sb-tag">KB Management</span></div></div>
+    <div class="skill-block"><div class="sb-title gr">Technical Exposure</div><div class="sb-tags"><span class="sb-tag gr">REST API Docs</span><span class="sb-tag gr">JSON & YAML</span><span class="sb-tag gr">CLI Environments</span><span class="sb-tag gr">Google Cloud APIs</span><span class="sb-tag gr">JavaScript</span><span class="sb-tag gr">React Native</span><span class="sb-tag gr">Chrome / Firefox Extensions</span><span class="sb-tag gr">Manifest V3</span><span class="sb-tag gr">Canvas API</span><span class="sb-tag gr">OAuth & Auth Flows</span></div></div>
+    <div class="skill-block"><div class="sb-title">Authoring Tools</div><div class="sb-tags"><span class="sb-tag">MadCap Flare</span><span class="sb-tag">Adobe FrameMaker</span><span class="sb-tag">Adobe Captivate</span><span class="sb-tag">Articulate 360</span><span class="sb-tag">GitHub + Markdown</span><span class="sb-tag">Google Workspace</span><span class="sb-tag">Microsoft Office</span><span class="sb-tag">Canva & Venngage</span><span class="sb-tag">Jira</span></div></div>
+    <div class="skill-block"><div class="sb-title">Domain Expertise</div><div class="sb-tags"><span class="sb-tag">SaaS Platforms</span><span class="sb-tag">CRM Systems</span><span class="sb-tag">E-commerce & Fulfilment</span><span class="sb-tag">Hotel Booking Systems</span><span class="sb-tag">Cybersecurity</span><span class="sb-tag">AdTech & Google Ads</span><span class="sb-tag">Cloud Platforms</span><span class="sb-tag">AI & Voice Systems</span><span class="sb-tag">Stakeholder Management</span></div></div>
+    <div class="skill-block"><div class="sb-title">Professional Skills</div><div class="sb-tags"><span class="sb-tag">Audience Analysis</span><span class="sb-tag">Content Strategy</span><span class="sb-tag">Instructional Design</span><span class="sb-tag">Task-Based Writing</span><span class="sb-tag">SME Collaboration</span><span class="sb-tag">Technical Blog Writing</span><span class="sb-tag">Internal Learning Guides</span><span class="sb-tag">Event Presentation Writing</span><span class="sb-tag">Proposal Writing Support</span><span class="sb-tag">Social Media Copywriting</span><span class="sb-tag">Release Cycle Coordination</span></div></div>
   </div>
 </section>
 
 <!-- CERTIFICATIONS -->
-<section id="certs">
-  <div class="sec-header">
-    <span class="sec-kicker">Credentials</span>
-    <h2 class="sec-title">Certifications &amp; <em>Learning</em></h2>
-  </div>
-  <div class="certs-grid">
+<section id="certs" class="white sec-rule">
+  <div class="sec-header reveal"><span class="sec-kicker grey">Credentials</span><h2 class="sec-title">Certifications & <em>Learning</em></h2></div>
+  <div class="certs-grid reveal">
     <div class="cert-card">
-      <div class="cc-head">
-        <div class="cc-icon">&#128737;&#65039;</div>
-        <div>
-          <div class="cc-title">Cybersecurity &amp; Technical Awareness</div>
-          <div class="cc-org">2025 — TryHackMe · IBM · Fortinet · Forage</div>
-        </div>
-      </div>
-      <ul class="cc-list">
-        <li>Jr. Penetration Tester — TryHackMe</li>
-        <li>Cybersecurity Fundamentals — IBM</li>
-        <li>Fortinet Certified Fundamentals in Cybersecurity</li>
-        <li>Cybersecurity — Mastercard (Forage)</li>
-        <li>Cybersecurity Analyst — Tata Group (Forage)</li>
-        <li>Introduction to Cybersecurity — Commonwealth Bank (Forage)</li>
-      </ul>
+      <div class="cc-head"><div class="cc-icon nv">🛡️</div><div><div class="cc-title">Cybersecurity & Penetration Testing</div><div class="cc-org">2025 — TryHackMe · IBM · Fortinet · Forage</div></div></div>
+      <ul class="cc-list"><li>Jr. Penetration Tester — TryHackMe</li><li>Cybersecurity Fundamentals — IBM</li><li>Fortinet Certified Fundamentals in Cybersecurity</li><li>Cybersecurity — Mastercard (Forage)</li><li>Cybersecurity Analyst — Tata Group (Forage)</li><li>Intro to Cybersecurity — Commonwealth Bank (Forage)</li></ul>
     </div>
     <div class="cert-card">
-      <div class="cc-head">
-        <div class="cc-icon" style="background:var(--teal);">&#128200;</div>
-        <div>
-          <div class="cc-title">Marketing &amp; Platform Certifications</div>
-          <div class="cc-org">2023–2024 — Google · Semrush · HubSpot</div>
-        </div>
-      </div>
-      <ul class="cc-list">
-        <li>Google Ads Certified — Display, Mobile, Search, Video</li>
-        <li>Semrush Certification — Workflow &amp; SEO</li>
-        <li>HubSpot SEO Certification</li>
-        <li>LinkedIn &amp; Instagram Marketing Fundamentals</li>
-      </ul>
+      <div class="cc-head"><div class="cc-icon gr">📈</div><div><div class="cc-title">Marketing & Platform Certifications</div><div class="cc-org">2023–2024 — Google · Semrush · HubSpot</div></div></div>
+      <ul class="cc-list"><li>Google Ads Certified — Display, Mobile, Search, Video</li><li>Semrush Certification — Workflow & SEO</li><li>HubSpot SEO Certification</li><li>LinkedIn & Instagram Marketing Fundamentals</li></ul>
     </div>
     <div class="cert-card">
-      <div class="cc-head">
-        <div class="cc-icon" style="background:var(--ink);">&#129302;</div>
-        <div>
-          <div class="cc-title">Technology Exploration &amp; AI Projects</div>
-          <div class="cc-org">Ongoing — Self-directed</div>
-        </div>
-      </div>
-      <ul class="cc-list">
-        <li>Built prototype apps on Google AI Studio, Vercel, v0, and Bolt</li>
-        <li>Trained ElevenLabs vocal support AI using structured Markdown prompts</li>
-        <li>Docs-as-Code workflows using GitHub and Markdown documentation repositories</li>
-        <li>REST API and CLI exploration for documentation accuracy</li>
-      </ul>
+      <div class="cc-head"><div class="cc-icon dk">🎓</div><div><div class="cc-title">Qualifi Level 5 TEFL Diploma</div><div class="cc-org">2026 — Ofqual-Regulated · 168 Hours</div></div></div>
+      <ul class="cc-list"><li>Ofqual-regulated formal qualification in structured learning content and instructional methodology</li><li>Directly informs how I approach audience analysis, task decomposition, and documentation structure for technical audiences</li><li>English (Professional) · Tamil (Native) · Malayalam · Hindi</li></ul>
+    </div>
+    <div class="cert-card">
+      <div class="cc-head"><div class="cc-icon" style="background:#fff3e0;">🤖</div><div><div class="cc-title">AI & Developer Exploration</div><div class="cc-org">Ongoing — Self-directed</div></div></div>
+      <ul class="cc-list"><li>Self-built 6 AI tools using Claude API, Google AI Studio, ElevenLabs, and ERNIE LLM — built independently to understand developer workflows and API documentation firsthand</li><li>Production ElevenLabs vocal agent for UTDS — designed, deployed, and documented full system prompt architecture</li><li>Docs-as-Code via GitHub and Markdown — version-controlled documentation workflows</li><li>REST API and CLI hands-on exploration for documentation accuracy and developer empathy</li></ul>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="c-kicker">Open to Opportunities</div>
-  <h2 class="c-heading">Let's build <em>documentation</em><br>that actually works</h2>
-  <p class="c-sub">
-    Available for Senior Technical Writer, Lead Technical Writer, API Documentation Specialist, and Documentation Lead roles — remote, hybrid, or on-site with international MNCs worldwide.
-  </p>
-  <div class="c-btns">
-    <a class="btn btn-white" href="mailto:abduays2@gmail.com">Email Me &rarr;</a>
-    <a class="btn btn-ghost" href="https://www.linkedin.com/in/abdul-basith/" target="_blank">LinkedIn &rarr;</a>
-    <a class="btn btn-ghost" href="https://abduays.github.io/technical-writer-portfolio" target="_blank">Share Portfolio &rarr;</a>
-  </div>
-  <div class="c-target-roles">
-    <span class="cr-pill">Senior Technical Writer</span>
-    <span class="cr-pill">Lead Technical Writer</span>
-    <span class="cr-pill">API Documentation Specialist</span>
-    <span class="cr-pill">Documentation Lead</span>
-    <span class="cr-pill">SaaS Documentation Specialist</span>
-    <span class="cr-pill">Knowledge Base Manager</span>
-    <span class="cr-pill">Prompt Engineer</span>
-    <span class="cr-pill">Product Documentation Specialist</span>
+  <div style="position:relative;z-index:1;">
+    <span class="c-kicker">Open to Opportunities — Remote &amp; Global</span>
+    <h2 class="c-title">Let's build documentation<br>that <em>actually works.</em></h2>
+    <p class="c-sub">Available for Senior Technical Writer, Lead Technical Writer, API Documentation Specialist, Documentation Lead, and Developer Advocate roles — remote, hybrid, or on-site with international teams worldwide. Based in Salem, Tamil Nadu, India.</p>
+    <div class="c-btns">
+      <a class="btn btn-white" href="mailto:abduays2@gmail.com">Email Me →</a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/abdul-basith/" target="_blank">LinkedIn →</a>
+      <a class="btn btn-ghost" href="https://abduays.github.io/technical-writer-portfolio" target="_blank">Share Portfolio →</a>
+    </div>
+    <div class="c-roles">
+      <span class="c-role">Senior Technical Writer</span><span class="c-role">Lead Technical Writer</span>
+      <span class="c-role">API Documentation Specialist</span><span class="c-role">Documentation Lead</span>
+      <span class="c-role">Developer Advocate</span><span class="c-role">Knowledge Base Manager</span>
+      <span class="c-role">Prompt Engineer</span><span class="c-role">Technical Content Engineer</span>
+    </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <span class="f-copy">Abdul Basith &mdash; Senior Technical Writer Portfolio &mdash; 2025</span>
+  <span class="f-copy">Abdul Basith — Senior Technical Writer & AI Builder — Salem, Tamil Nadu, India — 2026</span>
   <div class="f-links">
     <a href="mailto:abduays2@gmail.com">Email</a>
     <a href="https://www.linkedin.com/in/abdul-basith/" target="_blank">LinkedIn</a>
-    <a hre
+    <a href="https://abduays.github.io/technical-writer-portfolio" target="_blank">Portfolio</a>
+    <a href="https://github.com/abduays" target="_blank">GitHub</a>
+  </div>
+</footer>
+
+<script>
+function showTab(id, btn, cls) {
+  document.querySelectorAll('.proj-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.proj-tab').forEach(t => { t.classList.remove('atw','ab'); });
+  document.getElementById('tab-' + id).classList.add('active');
+  btn.classList.add(cls);
+}
+function toggleNav() {
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+function closeNav() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  });
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+const sections = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+  links.forEach(a => { a.style.color = a.getAttribute('href') === '#'+cur ? 'var(--ink)' : ''; });
+}, {passive:true});
+</script>
+</body>
+</html>
