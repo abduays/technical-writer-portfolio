@@ -1,0 +1,88 @@
+/* ============================================================
+   tokens.css — dark editorial system
+   Contrast verified: #EDE9E0 on #0B0B0C 16.24 · #9B978E 6.76
+   #FF4D18 5.93 · #C6F24E 15.19 · ink on bone 16.55
+   ============================================================ */
+
+:root {
+  /* surfaces */
+  --ink: #0b0b0c;
+  --ink-2: #101012;
+  --ink-3: #17171a;
+  --bone: #efebe3;
+  --bone-2: #e6e1d7;
+
+  /* type colour, dark surface */
+  --t1: #ede9e0;
+  --t2: #9b978e;
+  --t3: #8c8880;
+
+  /* type colour, bone surface */
+  --b1: #0b0b0c;
+  --b2: #4a463f;
+  --b3: #6b665e;
+
+  /* accents */
+  --signal: #ff4d18;
+  --signal-deep: #b63310;
+  --signal-wash: rgba(255, 77, 24, 0.1);
+  --lime: #c6f24e;
+
+  /* rules */
+  --line: rgba(237, 233, 224, 0.16);
+  --line-2: rgba(237, 233, 224, 0.32);
+  --line-b: rgba(11, 11, 12, 0.16);
+  --line-b2: rgba(11, 11, 12, 0.34);
+
+  /* type */
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --d1: clamp(2.7rem, 5.6vw, 6rem);
+  --d2: clamp(2.05rem, 4.5vw, 4.15rem);
+  --d3: clamp(1.12rem, 1.45vw, 1.42rem);
+  --body: clamp(0.95rem, 0.3vw + 0.9rem, 1.04rem);
+  --mono-size: 0.7rem;
+
+  /* space */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 48px;
+  --s8: 64px;
+  --s9: 96px;
+  --s10: 128px;
+
+  --pad: clamp(76px, 8vw, 132px);
+  --gutter: clamp(20px, 4vw, 48px);
+  --max: 1400px;
+
+  /* geometry — this system has edges */
+  --r: 0px;
+  --r-2: 2px;
+  --r-pill: 999px;
+
+  /* motion */
+  --fast: 200ms;
+  --base: 420ms;
+  --slow: 720ms;
+  --cut: cubic-bezier(0.76, 0, 0.24, 1);
+  --out: cubic-bezier(0.16, 1, 0.3, 1);
+  --spring: cubic-bezier(0.34, 1.32, 0.44, 1);
+  --stagger: 60ms;
+
+  /* layers */
+  --z-nav: 100;
+  --z-menu: 95;
+  --z-top: 200;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --mono-size: 0.65rem;
+  }
+}

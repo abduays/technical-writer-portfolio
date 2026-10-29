@@ -1,1009 +1,1154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="google-site-verification" content="HzxRCkZQNnztszCPqjHv6kPiaXxziDrTJY_wfGBvGIg" />
-<title>Abdul Basith — Senior Technical Writer · AI Builder · Developer Content</title>
-<meta name="description" content="Senior Technical Writer and AI Builder with 5+ years of production documentation experience. API docs, SaaS documentation, developer guides, and self-built AI products. Open to Senior/Lead TW and Developer Advocate roles globally."/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abdul Basith — Technical Writer, Knowledge Bases, Editorial &amp; Operations</title>
+<meta name="description" content="Technical writer working on product, API and knowledge-base documentation, AI support knowledge bases, editorial, social content and operations support. Ten documented engagements, 250+ knowledge base articles, seven personal builds.">
+<meta name="author" content="Abdul Basith">
+<meta name="theme-color" content="#0B0B0C">
+<link rel="canonical" href="https://abduays.github.io/technical-writer-portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Abdul Basith — Technical Writer &amp; Knowledge Base Builder">
+<meta property="og:description" content="Documentation, AI knowledge bases, editorial and operations. Ten engagements, 250+ articles, seven personal builds.">
+<meta property="og:url" content="https://abduays.github.io/technical-writer-portfolio/">
+<meta property="og:site_name" content="Abdul Basith">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://abduays.github.io/technical-writer-portfolio/assets/og-card.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Complex products, made readable — Abdul Basith, technical writer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Abdul Basith — Technical Writer &amp; Knowledge Base Builder">
+<meta name="twitter:description" content="Documentation, AI knowledge bases, editorial and operations. Ten engagements, 250+ articles, seven personal builds.">
+<meta name="twitter:image" content="https://abduays.github.io/technical-writer-portfolio/assets/og-card.png">
+<meta name="twitter:image:alt" content="Complex products, made readable — Abdul Basith, technical writer">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-:root{
-  --bg:#f7f7f5;--white:#fff;--ink:#0d0c14;--ink2:#2e2c42;
-  --muted:#6e6b85;--muted2:#9a98b2;--border:#e6e4f0;--border2:#d0cee5;
-  --navy:#1840c0;--navy-light:#eef1fd;--navy-mid:#c5d0f8;--navy-dark:#0f2880;
-  --green:#059669;--green-light:#ecfdf5;--green-mid:#a7f3d0;--green-dark:#047857;
-  --shadow-sm:0 1px 6px rgba(14,12,40,0.06);--shadow:0 4px 24px rgba(14,12,40,0.09);--shadow-lg:0 12px 48px rgba(14,12,40,0.12);
-  --serif:'Instrument Serif',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
-}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.7;overflow-x:hidden;}
-::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--navy)}
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/sections.css">
+<link rel="stylesheet" href="assets/css/motion.css">
+<script>
+  // Decided before the first paint: a class added by a deferred module
+  // would let the hero paint, then snap back to its hidden state and
+  // replay the entrance.
+  (function (root) {
+    root.classList.add("js");
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:900;display:flex;justify-content:space-between;align-items:center;padding:1rem 5rem;background:rgba(247,247,245,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
-.logo{font-family:var(--serif);font-size:1.1rem;color:var(--ink);text-decoration:none;white-space:nowrap;}
-.logo em{font-style:italic;color:var(--navy);}
-.nav-links{display:flex;gap:1.6rem;list-style:none;align-items:center;}
-.nav-links a{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;white-space:nowrap;}
-.nav-links a:hover{color:var(--ink);}
-.nav-hire{background:var(--ink)!important;color:var(--white)!important;padding:0.4rem 1rem!important;}
-.nav-hire:hover{background:var(--navy)!important;}
-.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.25rem;flex-direction:column;gap:4px;}
-.nav-toggle span{display:block;width:22px;height:2px;background:var(--ink);transition:all 0.3s;}
-.mobile-nav{display:none;position:fixed;top:57px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--border);z-index:899;padding:1.5rem 1.5rem;flex-direction:column;gap:0;}
-.mobile-nav.open{display:flex;}
-.mobile-nav a{font-family:var(--mono);font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:0.85rem 0;border-bottom:1px solid var(--border);transition:color 0.2s;}
-.mobile-nav a:last-child{border-bottom:none;}
-.mobile-nav a:hover{color:var(--navy);}
+    var params = new URLSearchParams(window.location.search);
+    var still =
+      params.get("motion") === "off" ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-/* HERO */
-.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:9rem 5rem 5rem;gap:5rem;background:var(--white);border-bottom:1px solid var(--border);}
-.hero-tracks{display:flex;gap:0.5rem;margin-bottom:2rem;flex-wrap:wrap;}
-.track-pill{display:inline-flex;align-items:center;gap:0.45rem;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.28rem 0.8rem;border:1.5px solid;}
-.track-pill.tw{color:var(--navy);border-color:var(--navy-mid);background:var(--navy-light);}
-.track-pill.builder{color:var(--green-dark);border-color:var(--green-mid);background:var(--green-light);}
-.dot{width:5px;height:5px;border-radius:50%;animation:blink 2s ease-in-out infinite;}
-.tw .dot{background:var(--navy);}.builder .dot{background:var(--green);}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-.hero h1{font-family:var(--serif);font-size:clamp(2.6rem,5vw,5rem);font-weight:400;line-height:1.0;letter-spacing:-0.02em;margin-bottom:1.5rem;}
-.hero h1 .it{font-style:italic;}.hero h1 .bl{color:var(--navy);}.hero h1 .gr{color:var(--green-dark);}
-.hero-desc{font-size:1rem;color:var(--muted);max-width:450px;margin-bottom:2.5rem;line-height:1.9;}
-.hero-btns{display:flex;gap:0.75rem;flex-wrap:wrap;}
-.btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.78rem 1.7rem;font-family:var(--mono);font-size:0.68rem;font-weight:500;letter-spacing:0.06em;text-decoration:none;transition:all 0.22s;}
-.btn-primary{background:var(--ink);color:var(--white);}
-.btn-primary:hover{background:var(--navy);transform:translateY(-2px);box-shadow:var(--shadow);}
-.btn-outline{border:1.5px solid var(--border2);color:var(--muted);}
-.btn-outline:hover{border-color:var(--navy);color:var(--navy);transform:translateY(-2px);}
-.btn-white{background:white;color:var(--ink);font-weight:600;}
-.btn-white:hover{background:var(--navy);color:white;transform:translateY(-2px);}
-.btn-ghost{border:1.5px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.65);}
-.btn-ghost:hover{border-color:white;color:white;}
+    if (still) {
+      root.classList.add("reduce");
+      return;
+    }
 
-/* HERO RIGHT */
-.hero-right{display:flex;flex-direction:column;gap:1rem;}
-.h-card{background:var(--bg);border:1px solid var(--border);padding:1.4rem 1.7rem;transition:box-shadow 0.25s;}
-.h-card:hover{box-shadow:var(--shadow-sm);}
-.hc-label{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted2);margin-bottom:0.4rem;}
-.hc-val{font-family:var(--serif);font-size:2rem;color:var(--ink);line-height:1;margin-bottom:0.2rem;}
-.hc-val.navy{color:var(--navy);}.hc-val.green{color:var(--green-dark);}
-.hc-sub{font-size:0.7rem;color:var(--muted);}
-.h-cards-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.h-card-role{background:var(--white);border:1px solid var(--border);}
-.role-title{font-weight:600;font-size:0.9rem;color:var(--ink);margin-bottom:0.2rem;}
-.role-org{font-family:var(--mono);font-size:0.66rem;color:var(--navy);}
-.role-meta{font-size:0.7rem;color:var(--muted);margin-top:0.2rem;}
-.open-card{background:var(--navy)!important;}
-.open-card .hc-label{color:rgba(255,255,255,0.45);}
-.open-roles{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.5rem;}
-.open-role{font-size:0.7rem;padding:0.2rem 0.6rem;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.8);}
+    root.classList.add("motion");
 
-/* SECTIONS */
-section{padding:5.5rem 5rem;position:relative;}
-section.alt{background:var(--bg);}section.white{background:var(--white);}
-.sec-rule{border-top:1px solid var(--border);}
-.sec-kicker{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;display:block;}
-.sec-kicker.green{color:var(--green-dark);}.sec-kicker.grey{color:var(--muted2);}
-.sec-title{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.9rem);font-weight:400;color:var(--ink);letter-spacing:-0.02em;line-height:1.1;margin-bottom:0.8rem;}
-.sec-title em{font-style:italic;color:var(--navy);}
-.sec-title em.gr{color:var(--green-dark);}
-.sec-desc{font-size:0.9rem;color:var(--muted);max-width:540px;line-height:1.9;}
-.sec-header{margin-bottom:2.8rem;}
-.view-link{display:inline-flex;align-items:center;gap:0.4rem;font-family:var(--mono);font-size:0.66rem;color:var(--navy);text-decoration:none;border-bottom:1px solid var(--navy-mid);padding-bottom:0.05rem;transition:all 0.2s;letter-spacing:0.03em;}
-.view-link:hover{border-color:var(--navy);color:var(--navy-dark);}
-.view-link.green{color:var(--green-dark);border-bottom-color:var(--green-mid);}
-.view-link.green:hover{border-color:var(--green-dark);}
-
-/* TRACKS */
-.tracks-split{display:grid;grid-template-columns:1fr 1fr;gap:2px;border:1px solid var(--border);background:var(--border);overflow:hidden;}
-.track-panel{background:var(--white);padding:3rem;}
-.tp-badge{display:inline-flex;align-items:center;gap:0.45rem;font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.28rem 0.75rem;border:1.5px solid;margin-bottom:1.5rem;}
-.tp-badge.tw{color:var(--navy);border-color:var(--navy-mid);background:var(--navy-light);}
-.tp-badge.builder{color:var(--green-dark);border-color:var(--green-mid);background:var(--green-light);}
-.tp-title{font-family:var(--serif);font-size:1.6rem;color:var(--ink);margin-bottom:0.9rem;line-height:1.2;}
-.tp-desc{font-size:0.87rem;color:var(--muted);line-height:1.85;margin-bottom:1.8rem;}
-.tp-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
-.tp-tag{font-family:var(--mono);font-size:0.6rem;padding:0.2rem 0.6rem;border:1px solid var(--border2);color:var(--ink2);transition:all 0.2s;}
-.tp-tag:hover{border-color:var(--navy);color:var(--navy);background:var(--navy-light);}
-.tp-tag.gr:hover{border-color:var(--green);color:var(--green-dark);background:var(--green-light);}
-
-/* DOC TYPES */
-.doc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;}
-.doc-card{background:var(--white);border:1px solid var(--border);padding:2rem;transition:all 0.25s;position:relative;overflow:hidden;}
-.doc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:transform 0.35s;}
-.doc-card:hover::after{transform:scaleX(1);}
-.doc-card:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
-.dc-num{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.15em;color:var(--muted2);margin-bottom:0.7rem;}
-.dc-icon{font-size:1.4rem;margin-bottom:0.7rem;}
-.dc-name{font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin-bottom:0.5rem;}
-.dc-desc{font-size:0.77rem;color:var(--muted);line-height:1.75;margin-bottom:0.9rem;}
-.dc-tags{display:flex;flex-wrap:wrap;gap:0.3rem;}
-.dc-tag{font-family:var(--mono);font-size:0.55rem;padding:0.14rem 0.42rem;background:var(--navy-light);color:var(--navy);border:1px solid var(--navy-mid);}
-
-/* HOW I WORK */
-.process-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1px solid var(--border);background:var(--border);overflow:hidden;}
-.process-step{background:var(--white);padding:2rem 1.8rem;position:relative;transition:background 0.25s;}
-.process-step:hover{background:#fafaf8;}
-.ps-num{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted2);margin-bottom:1rem;}
-.ps-icon{font-size:1.6rem;margin-bottom:1rem;}
-.ps-title{font-family:var(--serif);font-size:1.05rem;color:var(--ink);margin-bottom:0.6rem;line-height:1.2;}
-.ps-desc{font-size:0.76rem;color:var(--muted);line-height:1.75;}
-.ps-connector{display:none;}
-
-/* PROJECTS */
-.proj-tabs{display:flex;border-bottom:2px solid var(--border);margin-bottom:2.8rem;}
-.proj-tab{font-family:var(--mono);font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;padding:0.7rem 1.5rem;cursor:pointer;background:none;border:none;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.2s;}
-.proj-tab:hover{color:var(--ink);}
-.proj-tab.atw{color:var(--navy);border-bottom-color:var(--navy);}
-.proj-tab.ab{color:var(--green-dark);border-bottom-color:var(--green-dark);}
-.proj-section{display:none;}.proj-section.active{display:block;}
-
-/* Builder featured */
-.bfeat{display:grid;grid-template-columns:220px 1fr;background:var(--white);border:1px solid var(--border);overflow:hidden;margin-bottom:1.5rem;box-shadow:var(--shadow-sm);transition:box-shadow 0.25s;}
-.bfeat:hover{box-shadow:var(--shadow);}
-.bf-left{padding:2.2rem 1.8rem;display:flex;flex-direction:column;justify-content:space-between;min-height:200px;}
-.bf-left.nv{background:var(--navy);}.bf-left.gd{background:var(--green-dark);}.bf-left.dk{background:var(--ink);}
-.bf-idx{font-family:var(--mono);font-size:0.55rem;letter-spacing:0.18em;color:rgba(255,255,255,0.35);}
-.bf-cat{font-family:var(--mono);font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:auto;margin-bottom:0.5rem;}
-.bf-title{font-family:var(--serif);font-size:1.35rem;color:white;line-height:1.2;margin-bottom:0.8rem;}
-.bf-year{font-family:var(--mono);font-size:0.55rem;color:rgba(255,255,255,0.45);border:1px solid rgba(255,255,255,0.15);padding:0.18rem 0.5rem;align-self:flex-start;}
-.bf-right{padding:2.2rem 2.8rem;}
-.bp-stack{font-family:var(--mono);font-size:0.63rem;color:var(--muted2);font-style:italic;margin-bottom:0.9rem;line-height:1.6;}
-.bp-desc{font-size:0.86rem;color:var(--muted);line-height:1.85;margin-bottom:1.1rem;}
-.bp-hi{list-style:none;display:flex;flex-direction:column;gap:0.45rem;margin-bottom:1.1rem;}
-.bp-hi li{font-size:0.78rem;color:var(--ink2);padding-left:1.2rem;position:relative;line-height:1.6;}
-.bp-hi li::before{content:'→';position:absolute;left:0;font-size:0.7rem;}
-.bp-hi.nv li::before{color:var(--navy);}.bp-hi.gr li::before{color:var(--green-dark);}
-.bp-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:1rem;}
-.bp-tag{font-family:var(--mono);font-size:0.57rem;padding:0.16rem 0.5rem;}
-.bp-tag.nv{background:var(--navy-light);color:var(--navy);border:1px solid var(--navy-mid);}
-.bp-tag.gr{background:var(--green-light);color:var(--green-dark);border:1px solid var(--green-mid);}
-
-/* Builder grid */
-.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:1.5rem;}
-.bgrid.two{grid-template-columns:2fr 1fr;}
-.bcard{background:var(--white);border:1px solid var(--border);padding:1.8rem;transition:all 0.25s;position:relative;overflow:hidden;}
-.bcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
-.bcard.nv::before{background:var(--navy);}.bcard.gr::before{background:var(--green-dark);}
-.bcard:hover::before{transform:scaleX(1);}
-.bcard:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
-.bc-kick{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.6rem;}
-.bc-kick.nv{color:var(--navy);}.bc-kick.gr{color:var(--green-dark);}
-.bc-title{font-family:var(--serif);font-size:1.05rem;color:var(--ink);margin-bottom:0.55rem;line-height:1.25;}
-.bc-desc{font-size:0.77rem;color:var(--muted);line-height:1.75;margin-bottom:0.9rem;}
-.bc-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem;}
-.bc-tag{font-family:var(--mono);font-size:0.55rem;padding:0.14rem 0.42rem;}
-.bc-tag.nv{background:var(--navy-light);color:var(--navy);border:1px solid var(--navy-mid);}
-.bc-tag.gr{background:var(--green-light);color:var(--green-dark);border:1px solid var(--green-mid);}
-
-/* TW Projects */
-.twproj{background:var(--white);border:1px solid var(--border);display:grid;grid-template-columns:260px 1fr;overflow:hidden;margin-bottom:1.5rem;box-shadow:var(--shadow-sm);transition:box-shadow 0.25s;}
-.twproj:hover{box-shadow:var(--shadow);}
-.twp-left{background:var(--bg);padding:2.2rem 1.8rem;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--border);}
-.twp-num{font-family:var(--serif);font-size:3.2rem;color:var(--border2);line-height:1;margin-bottom:auto;}
-.twp-type{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.45rem;margin-top:2rem;}
-.twp-title{font-family:var(--serif);font-size:1rem;color:var(--ink);line-height:1.25;margin-bottom:0.6rem;}
-.twp-year{font-family:var(--mono);font-size:0.56rem;color:var(--muted2);}
-.twp-right{padding:2.2rem 2.8rem;}
-.twp-desc{font-size:0.86rem;color:var(--muted);line-height:1.85;margin-bottom:1.1rem;}
-.twp-bul{list-style:none;display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1.1rem;}
-.twp-bul li{font-size:0.78rem;color:var(--ink2);padding-left:1.2rem;position:relative;line-height:1.6;}
-.twp-bul li::before{content:'→';position:absolute;left:0;color:var(--navy);font-size:0.7rem;}
-.tw-tags{display:flex;flex-wrap:wrap;gap:0.32rem;margin-bottom:0.9rem;}
-.tw-tag{font-family:var(--mono);font-size:0.57rem;padding:0.16rem 0.5rem;background:var(--navy-light);color:var(--navy);border:1px solid var(--navy-mid);}
-.tw-sm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
-.tw-sm{background:var(--white);border:1px solid var(--border);padding:1.8rem;transition:all 0.25s;position:relative;overflow:hidden;}
-.tw-sm::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--navy);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
-.tw-sm:hover::before{transform:scaleX(1);}
-.tw-sm:hover{box-shadow:var(--shadow);transform:translateY(-3px);}
-.tws-kick{font-family:var(--mono);font-size:0.56rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);margin-bottom:0.6rem;}
-.tws-title{font-family:var(--serif);font-size:1rem;color:var(--ink);margin-bottom:0.55rem;line-height:1.25;}
-.tws-desc{font-size:0.77rem;color:var(--muted);line-height:1.75;margin-bottom:0.9rem;}
-
-/* EXPERIENCE */
-.exp-layout{display:grid;grid-template-columns:200px 1fr;gap:4rem;}
-.exp-nav{position:sticky;top:8rem;align-self:start;}
-.exp-nav-item{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);display:block;padding:0.45rem 0 0.45rem 1rem;border-left:2px solid var(--border);text-decoration:none;transition:all 0.2s;margin-bottom:0.2rem;}
-.exp-nav-item:hover,.exp-nav-item.active{color:var(--navy);border-left-color:var(--navy);}
-.exp-entries{display:flex;flex-direction:column;gap:3rem;}
-.exp-entry{padding-bottom:3rem;border-bottom:1px solid var(--border);}
-.exp-entry:last-child{border-bottom:none;padding-bottom:0;}
-.ee-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.1rem;gap:1rem;flex-wrap:wrap;}
-.ee-role{font-family:var(--serif);font-size:1.4rem;color:var(--ink);margin-bottom:0.25rem;}
-.ee-org{font-family:var(--mono);font-size:0.68rem;color:var(--navy);letter-spacing:0.04em;}
-.ee-meta{font-size:0.76rem;color:var(--muted);margin-top:0.25rem;}
-.ee-badge{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.28rem 0.75rem;border:1.5px solid var(--navy-mid);color:var(--navy);background:var(--navy-light);flex-shrink:0;white-space:nowrap;}
-.ee-desc{font-size:0.87rem;color:var(--muted);line-height:1.9;margin-bottom:1.1rem;}
-.ee-bul{list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.1rem;}
-.ee-bul li{font-size:0.81rem;color:var(--ink2);padding-left:1.3rem;position:relative;line-height:1.65;}
-.ee-bul li::before{content:'→';position:absolute;left:0;color:var(--navy);font-size:0.7rem;}
-.ee-tags{display:flex;flex-wrap:wrap;gap:0.38rem;}
-.ee-tag{font-family:var(--mono);font-size:0.58rem;padding:0.18rem 0.55rem;border:1px solid var(--border2);color:var(--ink2);}
-
-/* DESIGN */
-.design-layout{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
-.dblock{background:var(--white);border:1px solid var(--border);padding:2.5rem;}
-.db-kick{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);margin-bottom:0.7rem;}
-.db-title{font-family:var(--serif);font-size:1.3rem;color:var(--ink);margin-bottom:0.7rem;}
-.db-desc{font-size:0.84rem;color:var(--muted);line-height:1.85;margin-bottom:1.2rem;}
-.insta-item{border:1px solid var(--border2);padding:1.1rem;margin-bottom:0.9rem;transition:border-color 0.2s;}
-.insta-item:hover{border-color:var(--navy-mid);}
-.insta-item:last-child{margin-bottom:0;}
-.ii-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.45rem;gap:0.5rem;}
-.ii-name{font-weight:600;font-size:0.83rem;color:var(--ink);}
-.ii-sub{font-size:0.68rem;color:var(--muted);margin-top:0.15rem;}
-.ii-badge{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.15rem 0.45rem;border:1px solid var(--border2);color:var(--muted);flex-shrink:0;}
-.ii-desc{font-size:0.75rem;color:var(--muted);line-height:1.7;margin-bottom:0.6rem;}
-.content-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.1rem;}
-.col-label{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted2);margin-bottom:0.35rem;}
-.col-list{font-size:0.77rem;color:var(--muted);line-height:1.8;}
-
-/* PROMPT */
-.prompt-layout{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
-.pfeat{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--navy);padding:2.5rem;box-shadow:var(--shadow-sm);}
-.pf-kick{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);margin-bottom:0.7rem;}
-.pf-title{font-family:var(--serif);font-size:1.35rem;color:var(--ink);margin-bottom:0.55rem;}
-.pf-stack{font-family:var(--mono);font-size:0.63rem;color:var(--muted2);font-style:italic;margin-bottom:0.9rem;line-height:1.6;}
-.pf-desc{font-size:0.86rem;color:var(--muted);line-height:1.85;margin-bottom:1.1rem;}
-.pf-bul{list-style:none;display:flex;flex-direction:column;gap:0.45rem;margin-bottom:1.1rem;}
-.pf-bul li{font-size:0.78rem;color:var(--ink2);padding-left:1.2rem;position:relative;line-height:1.6;}
-.pf-bul li::before{content:'→';position:absolute;left:0;color:var(--navy);}
-.pa-head{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted2);margin-bottom:0.9rem;padding-bottom:0.45rem;border-bottom:1px solid var(--border);}
-.pa-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
-.pa-item{background:var(--white);border:1px solid var(--border);padding:1.4rem;transition:all 0.2s;}
-.pa-item:hover{box-shadow:var(--shadow-sm);border-color:var(--navy-mid);}
-.pa-kick{font-family:var(--mono);font-size:0.54rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--green-dark);margin-bottom:0.45rem;}
-.pa-title{font-family:var(--serif);font-size:0.95rem;color:var(--ink);margin-bottom:0.4rem;}
-.pa-desc{font-size:0.73rem;color:var(--muted);line-height:1.7;margin-bottom:0.65rem;}
-
-/* TOOLS */
-.tools-inner{display:grid;grid-template-columns:1fr 2fr;gap:4rem;align-items:start;}
-.tools-left p{font-size:0.87rem;color:var(--muted);line-height:1.9;margin-bottom:0.9rem;}
-.tool-chips{display:flex;flex-wrap:wrap;gap:0.55rem;}
-.tool-chip{display:flex;align-items:center;gap:0.6rem;border:1px solid var(--border);padding:0.5rem 0.9rem;background:var(--white);transition:all 0.2s;}
-.tool-chip:hover{border-color:var(--navy-mid);box-shadow:var(--shadow-sm);}
-.tc-icon{width:22px;height:22px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:0.47rem;font-weight:500;color:white;}
-.tc-name{font-size:0.76rem;font-weight:500;color:var(--ink);}
-
-/* SKILLS */
-.skills-outer{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;}
-.skill-block{background:var(--white);border:1px solid var(--border);padding:1.7rem;transition:box-shadow 0.2s;}
-.skill-block:hover{box-shadow:var(--shadow-sm);}
-.sb-title{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);margin-bottom:0.9rem;padding-bottom:0.55rem;border-bottom:2px solid var(--navy);}
-.sb-title.gr{border-bottom-color:var(--green-dark);}
-.sb-tags{display:flex;flex-wrap:wrap;gap:0.38rem;}
-.sb-tag{font-size:0.68rem;padding:0.2rem 0.55rem;border:1px solid var(--border2);color:var(--ink2);transition:all 0.2s;}
-.sb-tag:hover{border-color:var(--navy);color:var(--navy);background:var(--navy-light);}
-.sb-tag.gr:hover{border-color:var(--green);color:var(--green-dark);background:var(--green-light);}
-
-/* CERTS */
-.certs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;}
-.cert-card{background:var(--white);border:1px solid var(--border);padding:1.8rem;transition:all 0.25s;}
-.cert-card:hover{box-shadow:var(--shadow);border-color:var(--navy-mid);transform:translateY(-3px);}
-.cc-head{display:flex;align-items:flex-start;gap:0.9rem;margin-bottom:1.1rem;}
-.cc-icon{width:34px;height:34px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:1rem;border-radius:4px;}
-.cc-icon.nv{background:var(--navy-light);}.cc-icon.gr{background:var(--green-light);}.cc-icon.dk{background:var(--bg);}
-.cc-title{font-weight:600;font-size:0.8rem;color:var(--ink);line-height:1.4;}
-.cc-org{font-family:var(--mono);font-size:0.62rem;color:var(--navy);margin-top:0.2rem;}
-.cc-list{list-style:none;display:flex;flex-direction:column;gap:0.38rem;}
-.cc-list li{font-size:0.73rem;color:var(--muted);padding-left:0.9rem;position:relative;line-height:1.5;}
-.cc-list li::before{content:'·';position:absolute;left:0;color:var(--navy);font-size:1rem;line-height:1.3;}
-
-/* CONTACT */
-#contact{background:var(--ink);text-align:center;padding:8rem 5rem;position:relative;overflow:hidden;}
-#contact::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse,rgba(24,64,192,0.18) 0%,transparent 70%);pointer-events:none;}
-.c-kicker{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:1.1rem;display:block;}
-.c-title{font-family:var(--serif);font-size:clamp(2.2rem,4.5vw,4.2rem);color:white;line-height:1.05;letter-spacing:-0.02em;margin-bottom:1.1rem;}
-.c-title em{font-style:italic;color:#b0c0ff;}
-.c-sub{color:rgba(255,255,255,0.45);font-size:0.93rem;max-width:480px;margin-inline:auto;margin-bottom:2.8rem;line-height:1.9;}
-.c-btns{display:flex;justify-content:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:2.8rem;}
-.c-roles{display:flex;justify-content:center;flex-wrap:wrap;gap:0.45rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.07);}
-.c-role{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.06em;padding:0.25rem 0.8rem;border:1px solid rgba(255,255,255,0.13);color:rgba(255,255,255,0.45);}
-footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.07);padding:1.6rem 5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
-.f-copy{font-family:var(--mono);font-size:0.6rem;color:rgba(255,255,255,0.28);}
-.f-links{display:flex;gap:1.4rem;flex-wrap:wrap;}
-.f-links a{font-family:var(--mono);font-size:0.6rem;color:rgba(255,255,255,0.38);text-decoration:none;transition:color 0.2s;}
-.f-links a:hover{color:white;}
-
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity 0.55s ease,transform 0.55s ease;}
-.reveal.visible{opacity:1;transform:none;}
-.rd1{transition-delay:0.08s}.rd2{transition-delay:0.16s}.rd3{transition-delay:0.24s}
-
-/* ── RESPONSIVE ── */
-
-/* Tablet 768–1024 */
-@media(max-width:1024px){
-  nav{padding:1rem 2.5rem;}
-  .nav-links{display:none;}
-  .nav-toggle{display:flex;}
-  section{padding:4.5rem 2.5rem;}
-  .hero{grid-template-columns:1fr;padding:8rem 2.5rem 4rem;gap:3rem;min-height:auto;}
-  .hero-right{display:none;}
-  .tracks-split{grid-template-columns:1fr;}
-  .doc-grid{grid-template-columns:1fr 1fr;}
-  .process-grid{grid-template-columns:1fr 1fr;}
-  .bfeat{grid-template-columns:180px 1fr;}
-  .bgrid{grid-template-columns:1fr 1fr;}
-  .bgrid.two{grid-template-columns:1fr 1fr;}
-  .tw-sm-grid{grid-template-columns:1fr 1fr;}
-  .exp-layout{grid-template-columns:1fr;gap:2rem;}
-  .exp-nav{display:flex;flex-wrap:wrap;gap:0.5rem;position:static;}
-  .exp-nav-item{border-left:none;border:1px solid var(--border);padding:0.3rem 0.7rem;font-size:0.55rem;}
-  .exp-nav-item.active{background:var(--navy-light);}
-  .design-layout,.prompt-layout,.tools-inner{grid-template-columns:1fr;}
-  .pa-grid{grid-template-columns:1fr 1fr;}
-  .skills-outer{grid-template-columns:1fr 1fr;}
-  .certs-grid{grid-template-columns:1fr 1fr;}
-  footer{padding:1.4rem 2.5rem;}
-  #contact{padding:6rem 2.5rem;}
-}
-
-/* Mobile <768 */
-@media(max-width:767px){
-  nav{padding:1rem 1.2rem;}
-  section{padding:4rem 1.2rem;}
-  .hero{padding:7rem 1.2rem 3.5rem;}
-  .hero h1{font-size:2.4rem;}
-  .sec-title{font-size:1.8rem;}
-  .tracks-split{grid-template-columns:1fr;}
-  .track-panel{padding:2rem;}
-  .doc-grid{grid-template-columns:1fr;}
-  .process-grid{grid-template-columns:1fr 1fr;}
-  .bfeat{grid-template-columns:1fr;}
-  .bf-left{min-height:140px;flex-direction:row;align-items:center;gap:1rem;padding:1.5rem;}
-  .bf-cat{margin-top:0;}
-  .bf-right{padding:1.5rem;}
-  .bgrid{grid-template-columns:1fr;}
-  .bgrid.two{grid-template-columns:1fr;}
-  .twproj{grid-template-columns:1fr;}
-  .twp-left{border-right:none;border-bottom:1px solid var(--border);padding:1.5rem;flex-direction:row;align-items:center;justify-content:flex-start;gap:1.5rem;}
-  .twp-num{font-size:2rem;margin-bottom:0;}
-  .twp-right{padding:1.5rem;}
-  .twp-type{margin-top:0;}
-  .tw-sm-grid{grid-template-columns:1fr;}
-  .pa-grid{grid-template-columns:1fr;}
-  .skills-outer{grid-template-columns:1fr 1fr;}
-  .certs-grid{grid-template-columns:1fr;}
-  footer{padding:1.2rem;flex-direction:column;align-items:flex-start;}
-  #contact{padding:5rem 1.2rem;}
-  .c-btns{flex-direction:column;align-items:center;}
-  .process-grid{grid-template-columns:1fr 1fr;}
-  .h-cards-row{grid-template-columns:1fr 1fr;}
-  .content-row{grid-template-columns:1fr;}
-}
-
-/* Small mobile <480 */
-@media(max-width:480px){
-  .hero h1{font-size:2rem;}
-  .process-grid{grid-template-columns:1fr;}
-  .skills-outer{grid-template-columns:1fr;}
-  .h-cards-row{grid-template-columns:1fr 1fr;}
-  .certs-grid{grid-template-columns:1fr;}
-  .bgrid{grid-template-columns:1fr;}
-  .doc-grid{grid-template-columns:1fr;}
-  .tw-sm-grid{grid-template-columns:1fr;}
-  .bf-left{flex-direction:column;align-items:flex-start;}
-}
-</style>
+    // If the modules never boot (a blocked request, an old browser), put
+    // the page back exactly as it would be without them.
+    window.setTimeout(function () {
+      if (root.classList.contains("is-ready")) return;
+      root.classList.remove("motion");
+      root.classList.add("reduce");
+    }, 3000);
+  })(document.documentElement);
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- NAV -->
-<nav>
-  <a class="logo" href="#">Abdul <em>Basith</em></a>
-  <ul class="nav-links">
-    <li><a href="#tracks">Expertise</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#design">Design</a></li>
-    <li><a href="#prompting">Prompt Eng</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#certs">Certs</a></li>
-    <li><a href="#contact" class="nav-hire">Hire Me →</a></li>
-  </ul>
-  <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-<div class="mobile-nav" id="mobileNav">
-  <a href="#tracks" onclick="closeNav()">Expertise</a>
-  <a href="#process" onclick="closeNav()">Process</a>
-  <a href="#projects" onclick="closeNav()">Projects</a>
-  <a href="#experience" onclick="closeNav()">Experience</a>
-  <a href="#design" onclick="closeNav()">Design & Content</a>
-  <a href="#prompting" onclick="closeNav()">Prompt Engineering</a>
-  <a href="#skills" onclick="closeNav()">Skills</a>
-  <a href="#certs" onclick="closeNav()">Certifications</a>
-  <a href="#contact" onclick="closeNav()">Hire Me →</a>
+<header class="nav" data-nav>
+  <div class="nav-in">
+    <a class="nav-brand" href="#top">
+      <span class="nav-mark" aria-hidden="true">AB</span>
+      <span class="nav-name">Abdul Basith</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Sections">
+      <span class="nav-line" data-nav-line aria-hidden="true"></span>
+      <a href="#capabilities" data-spy><i>02</i>Capabilities</a>
+      <a href="#casebook" data-spy><i>03</i>Casebook</a>
+      <a href="#ai" data-spy><i>04</i>AI</a>
+      <a href="#experience" data-spy><i>05</i>Experience</a>
+      <a href="#projects" data-spy><i>06</i>Projects</a>
+      <a href="#credentials" data-spy><i>08</i>Credentials</a>
+    </nav>
+
+    <a class="nav-cta" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+
+    <button class="nav-burger" data-burger aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <span class="nav-bar" data-progress aria-hidden="true"></span>
+</header>
+
+<div class="menu" id="menu" data-menu hidden>
+  <nav aria-label="Sections, mobile">
+    <a href="#capabilities"><i>02</i>Capabilities</a>
+    <a href="#casebook"><i>03</i>Casebook</a>
+    <a href="#ai"><i>04</i>AI practice</a>
+    <a href="#experience"><i>05</i>Experience</a>
+    <a href="#projects"><i>06</i>Projects</a>
+    <a href="#social"><i>07</i>Social</a>
+    <a href="#credentials"><i>08</i>Credentials</a>
+    <a href="#toolkit"><i>09</i>Toolkit</a>
+    <a href="#contact"><i>10</i>Contact</a>
+  </nav>
+  <a class="btn btn--signal" href="mailto:abduays2@gmail.com">abduays2@gmail.com</a>
 </div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-left reveal">
-    <div class="hero-tracks">
-      <span class="track-pill tw"><span class="dot"></span>Senior Technical Writer</span>
-      <span class="track-pill builder"><span class="dot"></span>AI Builder</span>
-    </div>
-    <h1>Writing that <span class="it bl">documents.</span><br>Code that <span class="it gr">builds.</span></h1>
-    <p class="hero-desc">5+ years of production-grade Technical Writing across SaaS, API, and CRM platforms. 6 self-built AI tools and browser extensions — built out of curiosity and hands-on learning. A writer who understands what they document — open to Senior/Lead Technical Writer and Developer Advocate roles globally.</p>
-    <div class="hero-btns">
-      <a class="btn btn-primary" href="#projects">View Portfolio →</a>
-      <a class="btn btn-outline" href="mailto:abduays2@gmail.com">Get in Touch</a>
-    </div>
-  </div>
-  <div class="hero-right reveal rd2">
-    <div class="h-card h-card-role">
-      <div class="role-title">Technical Writer</div>
-      <div class="role-org">UTDS Optimal Choice — Albania (Remote)</div>
-      <div class="role-meta">Jun 2021 – Present &nbsp;·&nbsp; SaaS · CRM · AI Applications</div>
-    </div>
-    <div class="h-cards-row">
-      <div class="h-card"><div class="hc-label">Experience</div><div class="hc-val navy">5+</div><div class="hc-sub">Years in Technical Writing</div></div>
-      <div class="h-card"><div class="hc-label">AI Products</div><div class="hc-val green">6</div><div class="hc-sub">Self-Built & Explored</div></div>
-      <div class="h-card"><div class="hc-label">CRM Workflows</div><div class="hc-val navy">19</div><div class="hc-sub">Documented · Bitrix24 UK · Salesforce</div></div>
-      <div class="h-card"><div class="hc-label">Client Scale</div><div class="hc-val green">£4.5M</div><div class="hc-sub">UK Client Revenue Supported</div></div>
-    </div>
-    <div class="h-card open-card">
-      <div class="hc-label">Open to Opportunities</div>
-      <div class="open-roles">
-        <span class="open-role">Senior Technical Writer</span>
-        <span class="open-role">Lead Technical Writer</span>
-        <span class="open-role">API Docs Specialist</span>
-        <span class="open-role">Developer Advocate</span>
-        <span class="open-role">Documentation Lead</span>
-      </div>
-    </div>
-  </div>
-</section>
+<main id="main">
+<span id="top"></span>
 
-<!-- TRACKS -->
-<section id="tracks" class="alt sec-rule">
-  <div class="sec-header reveal">
-    <span class="sec-kicker">Dual Expertise</span>
-    <h2 class="sec-title">Two tracks. <em>One professional.</em></h2>
-    <p class="sec-desc">Most technical writers write about products. I also build them. That intersection makes the documentation — and the developer empathy — better.</p>
-  </div>
-  <div class="tracks-split reveal">
-    <div class="track-panel">
-      <span class="tp-badge tw">Track 01 — Technical Writing</span>
-      <div class="tp-title">Production Documentation at Scale</div>
-      <p class="tp-desc">5+ years of end-to-end documentation ownership for live SaaS products — API references, knowledge bases, CRM operation manuals, developer guides, cybersecurity playbooks, and UX writing. Built documentation systems that reduce support load and drive product adoption for global clients.</p>
-      <div class="tp-tags">
-        <span class="tp-tag">API Documentation</span><span class="tp-tag">SaaS Documentation</span>
-        <span class="tp-tag">Developer Guides</span><span class="tp-tag">Knowledge Base Architecture</span>
-        <span class="tp-tag">UX Writing & UI Microcopy</span><span class="tp-tag">MadCap Flare</span>
-        <span class="tp-tag">Adobe FrameMaker</span><span class="tp-tag">Docs-as-Code</span>
-        <span class="tp-tag">Cybersecurity Documentation</span><span class="tp-tag">Release Notes</span>
-        <span class="tp-tag">Microsoft Style Guide</span><span class="tp-tag">Google Developer Style Guide</span>
-      </div>
-    </div>
-    <div class="track-panel">
-      <span class="tp-badge builder">Track 02 — AI Builder</span>
-      <div class="tp-title">Self-Built Tools. Real APIs. Real Learning.</div>
-      <p class="tp-desc">6 self-built AI tools and browser extensions — built independently out of curiosity, learning, and a desire to understand the developer experience from the inside. Built with Claude Vision, Google AI Studio, ERNIE LLM, Chrome/Firefox Manifest V3, React Native, and Canvas APIs. Not client work — personal builds that directly inform how I document APIs and developer tools.</p>
-      <div class="tp-tags">
-        <span class="tp-tag gr">Claude API · Vision</span><span class="tp-tag gr">Google AI Studio</span>
-        <span class="tp-tag gr">ElevenLabs AI</span><span class="tp-tag gr">Chrome / Firefox Extensions</span>
-        <span class="tp-tag gr">Manifest V3</span><span class="tp-tag gr">JavaScript</span>
-        <span class="tp-tag gr">React Native · Expo</span><span class="tp-tag gr">REST APIs · JSON · YAML</span>
-        <span class="tp-tag gr">Canvas Frame-Diffing</span><span class="tp-tag gr">System Prompt Engineering</span>
-        <span class="tp-tag gr">ERNIE LLM</span><span class="tp-tag gr">MeDo Cryptography API</span>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ══════════ 01 · HERO ══════════ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="wrap">
 
-<!-- WHAT I DOCUMENT -->
-<section id="what" class="white sec-rule">
-  <div class="sec-header reveal">
-    <span class="sec-kicker">Documentation Domains</span>
-    <h2 class="sec-title">What I <em>document.</em></h2>
-    <p class="sec-desc">End-to-end ownership across product, developer, and operational documentation — built for real users and real release cycles.</p>
-  </div>
-  <div class="doc-grid reveal">
-    <div class="doc-card"><div class="dc-num">01</div><div class="dc-icon">🔗</div><div class="dc-name">API & Developer Documentation</div><p class="dc-desc">REST API references, authentication flows, endpoint docs, integration guides, SDK docs, error handling, and technical onboarding for engineering and developer teams.</p><div class="dc-tags"><span class="dc-tag">REST API</span><span class="dc-tag">Endpoints</span><span class="dc-tag">Auth Flows</span><span class="dc-tag">SDK Docs</span></div></div>
-    <div class="doc-card"><div class="dc-num">02</div><div class="dc-icon">☁️</div><div class="dc-name">Product & SaaS Documentation</div><p class="dc-desc">User manuals, feature guides, onboarding flows, release notes, and configuration docs for SaaS platforms across e-commerce, hospitality, CRM, and booking systems.</p><div class="dc-tags"><span class="dc-tag">User Manuals</span><span class="dc-tag">Feature Docs</span><span class="dc-tag">Config Guides</span><span class="dc-tag">Release Notes</span></div></div>
-    <div class="doc-card"><div class="dc-num">03</div><div class="dc-icon">📚</div><div class="dc-name">Knowledge Base & Help Centre</div><p class="dc-desc">Structured KB architecture, self-service content systems, troubleshooting guides, and help centre documentation designed for discoverability and measurable support load reduction.</p><div class="dc-tags"><span class="dc-tag">KB Architecture</span><span class="dc-tag">Self-Service</span><span class="dc-tag">Troubleshooting</span></div></div>
-    <div class="doc-card"><div class="dc-num">04</div><div class="dc-icon">🛡️</div><div class="dc-name">Cybersecurity Documentation</div><p class="dc-desc">Incident response playbooks (NIST SP 800-61), security process docs, compliance guides, and SOC-aligned operational documentation for security teams.</p><div class="dc-tags"><span class="dc-tag">IR Playbooks</span><span class="dc-tag">NIST SP 800-61</span><span class="dc-tag">SOC Docs</span><span class="dc-tag">Compliance</span></div></div>
-    <div class="doc-card"><div class="dc-num">05</div><div class="dc-icon">⚙️</div><div class="dc-name">CRM & Operations Manuals</div><p class="dc-desc">End-to-end workflow documentation for CRM platforms — lead intake, dispatch, invoicing, payment — built for non-technical users at enterprise scale. Bitrix24, Salesforce.</p><div class="dc-tags"><span class="dc-tag">Bitrix24</span><span class="dc-tag">Salesforce</span><span class="dc-tag">Workflow Docs</span><span class="dc-tag">Ops Manuals</span></div></div>
-    <div class="doc-card"><div class="dc-num">06</div><div class="dc-icon">✏️</div><div class="dc-name">UX Writing & UI Microcopy</div><p class="dc-desc">In-application instructional content, tooltips, onboarding flows, and interface messaging — aligned with product terminology, design systems, and established style standards.</p><div class="dc-tags"><span class="dc-tag">UI Copy</span><span class="dc-tag">Tooltips</span><span class="dc-tag">Onboarding</span><span class="dc-tag">Interface Messaging</span></div></div>
-  </div>
-</section>
-
-<!-- HOW I WORK -->
-<section id="process" class="alt sec-rule">
-  <div class="sec-header reveal">
-    <span class="sec-kicker">Documentation Methodology</span>
-    <h2 class="sec-title">How I <em>work.</em></h2>
-    <p class="sec-desc">Documentation is a product. Every project follows the same disciplined process — from discovery to a maintained, living document that stays accurate as the product evolves.</p>
-  </div>
-  <div class="process-grid reveal">
-    <div class="process-step">
-      <div class="ps-num">Step 01</div>
-      <div class="ps-icon">🔍</div>
-      <div class="ps-title">Discovery &amp; Scoping</div>
-      <p class="ps-desc">Working directly with the product — and often building it — to understand what needs documenting, who the audience is, and what they need to accomplish. When I can't build it, I interview product owners and engineers to gather accurate technical context before writing a single word.</p>
-    </div>
-    <div class="process-step">
-      <div class="ps-num">Step 02</div>
-      <div class="ps-icon">🗂️</div>
-      <div class="ps-title">Information Architecture</div>
-      <p class="ps-desc">Planning the content structure before drafting. Deciding content types (concept, task, reference), defining the topic hierarchy, identifying reuse opportunities, and structuring the KB or doc set so users can navigate by task, not by how the product was built.</p>
-    </div>
-    <div class="process-step">
-      <div class="ps-num">Step 03</div>
-      <div class="ps-icon">✍️</div>
-      <div class="ps-title">Draft, Review &amp; Accuracy</div>
-      <p class="ps-desc">Writing iteratively against established style standards (Microsoft Style Guide, Google Developer Documentation Style Guide for developer-facing content). Sending drafts to SMEs and product stakeholders for technical accuracy review before any content is published or handed off.</p>
-    </div>
-    <div class="process-step">
-      <div class="ps-num">Step 04</div>
-      <div class="ps-icon">🚀</div>
-      <div class="ps-title">Publish &amp; Maintain</div>
-      <p class="ps-desc">Publishing to the appropriate channel — help centre, GitHub Pages, PDF, or in-app — and maintaining documentation through product updates and feature releases. Documentation is not done at first publish. A doc that's wrong is worse than no doc.</p>
-    </div>
-    <div class="process-step">
-      <div class="ps-num">Step 05</div>
-      <div class="ps-icon">📊</div>
-      <div class="ps-title">Measure &amp; Improve</div>
-      <p class="ps-desc">Tracking real outcomes: support ticket reduction, self-service rates, stakeholder feedback, and user behaviour signals. The Bitrix24 KB reduced tier-1 support dependency by approximately 40%. Documentation that can't be measured can't be improved.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="white sec-rule">
-  <div class="sec-header reveal">
-    <span class="sec-kicker">Portfolio</span>
-    <h2 class="sec-title">Built and <em>documented.</em></h2>
-    <p class="sec-desc">Personal builds and professional documentation work. The AI tools were built independently to understand developer workflows firsthand. The documentation projects are real client work.</p>
-  </div>
-  <div class="proj-tabs reveal">
-    <button class="proj-tab ab" onclick="showTab('builder',this,'ab')">⬡ Personal AI Builds</button>
-    <button class="proj-tab" onclick="showTab('tw',this,'atw')">◈ Documentation Work</button>
-  </div>
-
-  <!-- BUILDER TAB -->
-  <div id="tab-builder" class="proj-section active">
-
-    <!-- DocuSnap featured -->
-    <div class="bfeat reveal">
-      <div class="bf-left nv">
-        <div class="bf-idx">01 — FEATURED</div>
-        <div><div class="bf-cat">AI Documentation Tool · 2024–Present</div><div class="bf-title">DocuSnap</div><div class="bf-year">Claude Vision · Canvas · JavaScript</div></div>
-      </div>
-      <div class="bf-right">
-        <p class="bp-stack">Claude Vision API · Canvas Frame-Diffing · JavaScript · Single-File Architecture · Zero Dependencies · Personal Build</p>
-        <p class="bp-desc">A personal project exploring how AI and screen recording could automate documentation. Combines Claude Vision with canvas frame-diffing to capture UI state changes at 10fps and auto-generate step-by-step documentation. Built to understand the technical side of documentation tooling from the inside.</p>
-        <ul class="bp-hi nv">
-          <li>Zero-dependency single-file architecture — deploy without a build pipeline or package manager</li>
-          <li>Frame-diffing engine detects meaningful UI changes, filtering static frames automatically</li>
-          <li>Claude Vision interprets each captured UI state and generates structured, accurate documentation steps</li>
-          <li>Floating popup controller for real-time record, pause, and export without leaving the active workflow</li>
-        </ul>
-        <div class="bp-tags"><span class="bp-tag nv">Claude Vision</span><span class="bp-tag nv">Screen Recording</span><span class="bp-tag nv">Canvas API</span><span class="bp-tag nv">Zero Dependencies</span><span class="bp-tag nv">Auto Documentation</span></div>
-        <a class="view-link" href="https://github.com/abduays/docsnap" target="_blank">View Repo →</a>
-      </div>
+    <div class="hero-meta">
+      <span class="mono">Portfolio — 01 / 10</span>
+      <span class="mono">Salem, India · remote worldwide</span>
+      <span class="avail"><i></i>Available for work</span>
     </div>
 
-    <!-- Plain featured -->
-    <div class="bfeat reveal">
-      <div class="bf-left dk">
-        <div class="bf-idx">02 — HACKATHON</div>
-        <div><div class="bf-cat">Baidu AppMeDo Devpost · 2026</div><div class="bf-title">Plain — Encrypted AI Messaging</div><div class="bf-year">ERNIE LLM · MeDo Crypto API · Full-Stack</div></div>
-      </div>
-      <div class="bf-right">
-        <p class="bp-stack">ERNIE LLM · MeDo Cryptography API · Full-Stack · End-to-End Encrypted Architecture · Hackathon Build</p>
-        <p class="bp-desc">Full-stack end-to-end encrypted AI messaging platform built as a Baidu AppMeDo Devpost hackathon entry. Identified and integrated the MeDo Cryptography API as one of the first participants to do so — built from ideation to working submission in a single sprint.</p>
-        <ul class="bp-hi nv">
-          <li>First-to-integrate MeDo Cryptography API among hackathon participants — required real-time API exploration under competitive pressure</li>
-          <li>ERNIE LLM integrated for intelligent message composition and response within an encrypted context</li>
-          <li>End-to-end encrypted architecture — security-first design from the ground up, not bolted on</li>
-          <li>Complete documentation written during the sprint: architecture decisions, API integration notes, and deployment guide</li>
-        </ul>
-        <div class="bp-tags"><span class="bp-tag nv">ERNIE LLM</span><span class="bp-tag nv">MeDo Crypto API</span><span class="bp-tag nv">E2E Encryption</span><span class="bp-tag nv">Full-Stack</span><span class="bp-tag nv">First-to-Integrate</span></div>
-        <a class="view-link" href="https://app-bba0xzgzbnr5.appmedo.com/" target="_blank">View Live →</a>
-      </div>
-    </div>
-
-    <!-- 3-column grid -->
-    <div class="bgrid reveal">
-      <div class="bcard nv">
-        <div class="bc-kick nv">Firefox · Google Chrome · Extension · Personal Build · 2024</div>
-        <div class="bc-title">FeedHire</div>
-        <p class="bc-desc">A personal Firefox extension built to explore Manifest V3 and DOM parsing — surfaces LinkedIn hiring posts from outside your network via a persistent Side Panel. Zero backend. Built to understand how browser extensions handle real-time DOM manipulation.</p>
-        <div class="bc-tags"><span class="bc-tag nv">Firefox Extension</span><span class="bc-tag nv">Manifest V3</span><span class="bc-tag nv">Side Panel API</span><span class="bc-tag nv">Zero Backend</span></div>
-        <a class="view-link" href="https://github.com/abduays/LinkedIn-Newsfeed-Jobs" target="_blank">View Repo →</a>
-      </div>
-      <div class="bcard gr">
-        <div class="bc-kick gr">Claude API · SaaS Tool · 2025</div>
-        <div class="bc-title">ReplyGenius</div>
-        <p class="bc-desc">An AI-powered review response tool built for US & UK small businesses — generates professional, tone-matched replies to Google, Trustpilot, and TripAdvisor reviews in under 30 seconds. Includes BYOK mode (Anthropic API key, ~$0.001/response), 10 business types, 4 response tones, and a Pro tier with bulk response mode. Built to understand how AI tools close real operational gaps for non-technical users.</p>
-        <div class="bc-tags"><span class="bc-tag gr">Claude API</span><span class="bc-tag gr">Vanilla JS</span><span class="bc-tag gr">BYOK</span><span class="bc-tag gr">Small Business</span><span class="bc-tag gr">SaaS</span></div>
-        <a class="view-link" href="https://abduays.github.io/replygenius-ai-review-response/" target="_blank">View Live →</a>
-      </div>
-      <div class="bcard gr">
-        <div class="bc-kick gr">Computer Vision · Personal Build · 2024</div>
-        <div class="bc-title">AI Visual Analyser</div>
-        <p class="bc-desc">A personal exploration of Google AI Studio's video analysis capabilities — processes construction site footage and generates structured safety compliance reports. Built to understand multimodal AI documentation requirements from a hands-on perspective.</p>
-        <div class="bc-tags"><span class="bc-tag gr">Google AI Studio</span><span class="bc-tag gr">Video Analysis</span><span class="bc-tag gr">Safety Compliance</span><span class="bc-tag gr">Personal Build</span></div>
-        <a class="view-link" href="https://sitesight-865242794359.us-west1.run.app/" target="_blank">View Live →</a>
-      </div>
-    </div>
-
-    <!-- Wealth Guard + DevSections -->
-    <div class="bgrid two reveal">
-      <div class="bcard nv">
-        <div class="bc-kick nv">Personal Finance · v0 · Personal Build</div>
-        <div class="bc-title">Wealth Guard — Money-Making Dashboard</div>
-        <p class="bc-desc">A personal finance dashboard that visualises hidden financial losses — inefficient loans, credit card misuse, poor tax planning — and surfaces actionable optimisation strategies. Built through structured prompting on v0 to explore prompt-to-UI workflows for the Indian market.</p>
-        <div class="bc-tags" style="margin-bottom:0.8rem;"><span class="bc-tag nv">v0 / Vercel</span><span class="bc-tag nv">Personal Finance</span><span class="bc-tag nv">India Market</span><span class="bc-tag nv">Prompt-Built</span></div>
-        <a class="view-link" href="https://v0-money-making-dashboard.vercel.app/" target="_blank">View Live →</a>
-      </div>
-      <div class="bcard nv">
-        <div class="bc-nv">Vercel · v0 · EdTech · Personal Build</div>
-        <div class="bc-title">Tamil Writing — Interactive Script Learning App</div>
-        <p class="bc-desc">An interactive web app for learning Tamil script — covering 247 characters across structured lessons, tracing practice, pronunciation audio, quizzes, and paragraph writing. Built with v0 and deployed on Vercel. A personal project rooted in documenting for diverse learners — and in building tools that make structured knowledge accessible without friction.</p>
-        <div class="bc-tags" style="margin-bottom:0.8rem;"><span class="bc-tag nv">v0</span><span class="bc-tag nv">Vercel</span><span class="bc-tag nv">EdTech</span><span class="bc-tag nv">Tamil Script</span><span class="bc-tag nv">Audio Pronunciation</span></div>
-        <a class="view-link" href="https://v0-tamil-writing-app.vercel.app/" target="_blank">View DevSections →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- TW TAB -->
-  <div id="tab-tw" class="proj-section">
-
-    <div class="twproj reveal">
-      <div class="twp-left"><div class="twp-num">01</div><div><div class="twp-type">SaaS · E-commerce · Fulfilment</div><div class="twp-title">Order & Inventory Management SaaS — End-to-End Documentation System</div><div class="twp-year">2021 – Present · UTDS Optimal Choice</div></div></div>
-      <div class="twp-right">
-        <p class="twp-desc">Owned the complete documentation system for a live SaaS order and inventory management platform — covering product documentation, UX writing, knowledge base architecture, and integration documentation across 6 major e-commerce platforms and 3 logistics systems. Sole technical writer, zero handoff.</p>
-        <ul class="twp-bul">
-          <li>Created UI copy, tooltips, and in-app instructional content across the full product interface</li>
-          <li>Built and structured the help centre and knowledge base from scratch for customer self-service</li>
-          <li>Documented integrations: Shopify, Magento, WooCommerce, BigCommerce, Strikingly, Amazon</li>
-          <li>Documented fulfilment workflows integrating Amazon, UPS, and third-party logistics systems</li>
-          <li>Applied single-source authoring principles to maintain consistency across multiple platform variants</li>
-        </ul>
-        <div class="tw-tags"><span class="tw-tag">Product Documentation</span><span class="tw-tag">UX Writing</span><span class="tw-tag">Knowledge Base</span><span class="tw-tag">Integration Docs</span><span class="tw-tag">Single-Source Authoring</span></div>
-      </div>
-    </div>
-
-    <div class="twproj reveal">
-      <div class="twp-left"><div class="twp-num">02</div><div><div class="twp-type">SaaS · Hospitality · Hotel Booking</div><div class="twp-title">Hotel Booking System — 65-Page Technical Manual</div><div class="twp-year">2021 – Present · UTDS Optimal Choice</div></div></div>
-      <div class="twp-right">
-        <p class="twp-desc">Authored a 65-page technical manual for a multi-module hotel booking SaaS platform. Documented six complete system modules — Rate Plans, Rooms, Pricing, Bookings, Management, and Notification Centre — covering OTA channel manager integration with Booking.com and Expedia.</p>
-        <ul class="twp-bul">
-          <li>Rate Plans: tax rates, coupon systems, packages, and promotional offers with full configuration walkthroughs</li>
-          <li>Rooms: categories, characteristics, occupancy settings, geographic map configuration, and room upgrades</li>
-          <li>Pricing: Rates Table, Special Prices (seasonal/promotional), Restrictions, and Calendar Pricing</li>
-          <li>Bookings: dashboard, calendar availability, guest registration, and PDF check-in document generation</li>
-          <li>Management: statistics, conversion reporting, customer records, invoices, and scheduled job documentation</li>
-          <li>Notification Centre: OTA, website, and guest event filters with quick-action workflow documentation</li>
-        </ul>
-        <div class="tw-tags"><span class="tw-tag">Technical Manual</span><span class="tw-tag">Configuration Guides</span><span class="tw-tag">System Workflows</span><span class="tw-tag">66 Pages</span><span class="tw-tag">OTA Integration</span></div>
-        <a class="view-link" target="_blank">Documentation Will Be Shared On Request →</a>
-      </div>
-    </div>
-
-    <div class="twproj reveal">
-      <div class="twp-left"><div class="twp-num">03</div><div><div class="twp-type">Cloud · API Documentation</div><div class="twp-title">Google Cloud APIs — Developer & API Documentation</div><div class="twp-year">2021 – Present</div></div></div>
-      <div class="twp-right">
-        <p class="twp-desc">Created structured API documentation for Google Cloud-based services — endpoints, request/response schemas, authentication flows, error handling, and integration guides for developer onboarding. Written to Microsoft Style Guide standards for developer-facing content.</p>
-        <ul class="twp-bul">
-          <li>Documented REST API endpoints, HTTP methods, parameters, and response schemas in structured reference format</li>
-          <li>Created authentication flow documentation for OAuth and API key implementations</li>
-          <li>Built integration guides for developers onboarding to Google Cloud services</li>
-          <li>Documented error codes, status responses, and troubleshooting guidance</li>
-        </ul>
-        <div class="tw-tags"><span class="tw-tag">API Documentation</span><span class="tw-tag">Developer Guides</span><span class="tw-tag">Google Cloud</span><span class="tw-tag">OAuth Docs</span><span class="tw-tag">REST Reference</span></div>
-      </div>
-    </div>
-
-    <div class="tw-sm-grid reveal">
-      <div class="tw-sm">
-        <div class="tws-kick">CRM · Operations Manual · 2025</div>
-        <div class="tws-title">Cervo Digital — Field Service CRM Agent Manual</div>
-        <p class="tws-desc">24-page operations manual for Cervo Digital's £4.5M UK field services operation on Bitrix24. 19 end-to-end workflows — lead intake from inbound calls, deal creation, technician dispatch, invoicing, and payment — written for non-technical agents. Measured outcome: approximately 40% reduction in tier-1 support dependency.</p>
-        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">Cervo Digital</span><span class="tw-tag">Bitrix24</span><span class="tw-tag">19 Workflows</span><span class="tw-tag">UK Market</span><span class="tw-tag">24 Pages</span></div>
-        <a class="view-link" target="_blank">Documentation Will Be Shared On Request →</a>
-      </div>
-      <div class="tw-sm">
-        <div class="tws-kick">Cybersecurity · NIST SP 800-61 · 2025</div>
-        <div class="tws-title">Incident Response Playbook — Phishing</div>
-        <p class="tws-desc">NIST SP 800-61 aligned IR Playbook for phishing under the World Bank, Chennai. Structured for real-world SOC team use — detection, containment, eradication, and post-incident review phases documented in full.</p>
-        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">NIST SP 800-61</span><span class="tw-tag">Cybersecurity</span><span class="tw-tag">SOC Docs</span><span class="tw-tag">IR Playbook</span></div>
-      </div>
-      <div class="tw-sm">
-        <div class="tws-kick">API Reference · Stripe · 2024</div>
-        <div class="tws-title">Stripe Payment Intents API Reference</div>
-        <p class="tws-desc">Custom-built API reference page for the Stripe Payment Intents API — accuracy-reviewed against live Stripe documentation. Demonstrates structured API reference writing: endpoints, parameters, authentication, error codes, and response schemas.</p>
-        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">API Reference</span><span class="tw-tag">Stripe API</span><span class="tw-tag">REST Docs</span><span class="tw-tag">Portfolio Sample</span></div>
-      </div>
-    </div>
-
-    <div class="tw-sm-grid reveal" style="margin-top:1.4rem;">
-      <div class="tw-sm">
-        <div class="tws-kick">Google · Local Service Ads · UK Beta · 2021–Present</div>
-        <div class="tws-title">Google Local Service Ads — Documentation Collaboration</div>
-        <p class="tws-desc">Worked alongside Google's Teleperformance teams in Brazil and Milan to document Local Service Ads during the UK beta launch — helping local service providers understand the platform and get more clients. Contributed to onboarding and platform guidance documentation for a product that was live only in the UK at the time.</p>
-        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">Google LSA</span><span class="tw-tag">UK Beta</span><span class="tw-tag">Teleperformance</span><span class="tw-tag">Platform Docs</span><span class="tw-tag">AdTech</span></div>
-      </div>
-      <div class="tw-sm">
-        <div class="tws-kick">Internal L&D · Employee Guides · AI Event Content</div>
-        <div class="tws-title">Internal Learning & Presentation Content</div>
-        <p class="tws-desc">Authored internal employee learning guides, created AI-in-the-workplace event presentations for UTDS Optimal Choice leadership, and provided proposal writing support — refining client-facing proposals with clear structure, brand-aligned language, and logical flow. Applied the same documentation discipline to internal audiences as to external ones.</p>
-        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">Learning Guides</span><span class="tw-tag">AI Presentations</span><span class="tw-tag">Proposal Writing</span><span class="tw-tag">Internal Comms</span></div>
-      </div>
-      <div class="tw-sm">
-        <div class="tws-kick">Internal & External Guides · Google Ads · SEO · Salesforce</div>
-        <div class="tws-title">Campaign, SEO & CRM Documentation Suite</div>
-        <p class="tws-desc">Authored internal team references and client-facing guides across three platforms — Google Ads (campaign setup, keyword strategy, PMax, conversion tracking, and optimisation reporting), SEO (local SEO, GBP, on-page/technical SEO, link building, and review management), and Salesforce CRM (setup, user management, lead and opportunity workflows, automation, dashboards, and integrations). Documentation spanned both operational how-to content for practitioners and structured onboarding guides for new users.</p>
-        <div class="tw-tags" style="margin-bottom:0.8rem;"><span class="tw-tag">Google Ads</span><span class="tw-tag">SEO</span><span class="tw-tag">Salesforce CRM</span><span class="tw-tag">Internal Docs</span><span class="tw-tag">Client Guides</span></div>
-        <a class="view-link" href="https://docs.google.com/spreadsheets/d/19KrPH9fEHiVI8UIxxrlqCZAboiYy7W5JEuDVGQRhZVY/edit?usp=sharing" target="_blank">View Live →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WORK EXPERIENCE -->
-<section id="experience" class="alt sec-rule">
-  <div class="sec-header reveal">
-    <span class="sec-kicker grey">Work Experience</span>
-    <h2 class="sec-title">Where I've <em>worked.</em></h2>
-  </div>
-  <div class="exp-layout reveal">
-    <div class="exp-nav">
-      <a class="exp-nav-item active" href="#experience">UTDS Optimal Choice</a>
-      <a class="exp-nav-item" href="#experience">Yaali SaaS</a>
-      <a class="exp-nav-item" href="#experience">Independent</a>
-    </div>
-    <div class="exp-entries">
-
-      <div class="exp-entry">
-        <div class="ee-head">
-          <div><div class="ee-role">Technical Writer</div><div class="ee-org">UTDS Optimal Choice — Remote, Albania</div><div class="ee-meta">Jun 2021 – Present · Full-time Remote · Sole Technical Writer</div></div>
-          <div class="ee-badge">Current Role</div>
+    <div class="hero-body">
+      <div class="role-rail">
+        <span class="role-label mono">Choose a lens</span>
+        <div class="roles" role="tablist" aria-label="Area of work" aria-orientation="vertical">
+          <button class="role is-on" role="tab" id="tab-docs" aria-selected="true" aria-controls="hero-panel" tabindex="0" data-role="docs">
+            <i>01</i><span>Documentation</span>
+          </button>
+          <button class="role" role="tab" id="tab-ai" aria-selected="false" aria-controls="hero-panel" tabindex="-1" data-role="ai">
+            <i>02</i><span>AI knowledge</span>
+          </button>
+          <button class="role" role="tab" id="tab-editorial" aria-selected="false" aria-controls="hero-panel" tabindex="-1" data-role="editorial">
+            <i>03</i><span>Editorial</span>
+          </button>
+          <button class="role" role="tab" id="tab-social" aria-selected="false" aria-controls="hero-panel" tabindex="-1" data-role="social">
+            <i>04</i><span>Social &amp; brand</span>
+          </button>
+          <button class="role" role="tab" id="tab-ops" aria-selected="false" aria-controls="hero-panel" tabindex="-1" data-role="ops">
+            <i>05</i><span>Ops &amp; EA</span>
+          </button>
         </div>
-        <p class="ee-desc">End-to-end documentation ownership across multiple live SaaS products and client accounts as the organisation's sole technical writer. Covers the full documentation lifecycle — discovery, authoring, SME review, publication, and ongoing maintenance — with no team handoff.</p>
-        <ul class="ee-bul">
-          <li>Designed and trained a production ElevenLabs conversational AI agent for customer support — engineered the full system prompt architecture covering persona, tone constraints, fallback logic, and escalation triggers, then documented the full prompt system as an internal reference guide</li>
-          <li>Built a 19-workflow self-service knowledge base from scratch for Cervo Digital — a £4.5M UK field services company on Bitrix24 — covering lead intake from inbound calls, deal creation, technician dispatch, invoicing, and payment workflows. Measured outcome: approximately 40% reduction in tier-1 support dependency</li>
-          <li>Collaborated with Google's Teleperformance teams in Brazil and Milan on Local Service Ads documentation during the UK beta launch — helping local service providers understand and adopt the platform during its initial rollout</li>
-          <li>Authored technical API walkthroughs and integration guides for Google Cloud APIs — endpoints, authentication, error handling, and developer onboarding — adhering to Microsoft Style Guide standards for developer-facing content</li>
-          <li>Authored a 66-page technical manual for a hotel booking SaaS platform covering six complete system modules including rate plans, pricing, bookings, and OTA channel manager integration with Booking.com and Expedia</li>
-          <li>Documented e-commerce integrations across Shopify, Magento, WooCommerce, BigCommerce, Strikingly, and Amazon fulfilment workflows using single-source authoring principles</li>
-          <li>Created internal employee learning guides, AI-in-the-workplace event presentations, and provided proposal writing support — applying documentation structure and brand-aligned language to internal and client-facing content</li>
-          <li>Produced technical and marketing blog content covering digital marketing, SEO, web development, and platform guides — published at utds.al</li>
-          <li>Created UI copy, tooltips, and interface messaging for product platforms; designed social media visual content for two client Instagram accounts</li>
-        </ul>
-        <div class="ee-tags"><span class="ee-tag">SaaS Documentation</span><span class="ee-tag">API Documentation</span><span class="ee-tag">CRM Workflows</span><span class="ee-tag">ElevenLabs AI</span><span class="ee-tag">Technical Blog Writing</span><span class="ee-tag">UX Writing</span><span class="ee-tag">Knowledge Base</span><span class="ee-tag">Bitrix24</span><span class="ee-tag">Single-Source Authoring</span></div>
       </div>
 
-      <div class="exp-entry">
-        <div class="ee-head">
-          <div><div class="ee-role">UX Writer & Technical Consultant</div><div class="ee-org">Yaali SaaS — Order & Inventory Management Platform</div><div class="ee-meta">2017 · Contract</div></div>
+      <div class="hero-copy" id="hero-panel" role="tabpanel" aria-labelledby="tab-docs" tabindex="0">
+        <h1 class="display" id="hero-title" data-hero-title>Complex products, made readable.</h1>
+        <p class="hero-sub" data-hero-sub>Writing for software teams since 2017: API references, a 66-page product manual, 250+ knowledge base articles — and the knowledge an AI support agent answers from.</p>
+        <div class="hero-actions">
+          <a class="btn btn--signal" href="#casebook">See the casebook <span aria-hidden="true">↓</span></a>
+          <a class="btn btn--line" href="#contact">Start a conversation</a>
         </div>
-        <p class="ee-desc">UX writing and technical documentation for Yaali SaaS, an order and inventory management platform. Produced in-application instructional content, UI copy, and product documentation covering the full order lifecycle from storefront capture to fulfilment.</p>
-        <ul class="ee-bul">
-          <li>Created UI copy, tooltips, and in-app messaging aligned to product terminology and user mental models</li>
-          <li>Documented core product workflows including order management, inventory tracking, and fulfilment processes</li>
-          <li>Contributed to information architecture decisions for the platform's help centre structure</li>
-        </ul>
-        <div class="ee-tags"><span class="ee-tag">UX Writing</span><span class="ee-tag">SaaS Documentation</span><span class="ee-tag">Order Management</span><span class="ee-tag">Inventory Systems</span></div>
       </div>
 
-      <div class="exp-entry">
-        <div class="ee-head">
-          <div><div class="ee-role">Independent Technical Writer & Learner</div><div class="ee-org">Self-directed</div><div class="ee-meta">2017 – 2021</div></div>
-        </div>
-        <p class="ee-desc">Period of structured self-development in technical writing methodology, API documentation, and instructional design. Completed the Qualifi Level 5 TEFL Diploma — an Ofqual-regulated qualification in structured learning content and instructional methodology that directly informs how I approach audience analysis, task decomposition, and documentation structure.</p>
-        <ul class="ee-bul">
-          <li>Completed Qualifi Level 5 TEFL Diploma (Ofqual-regulated, 168 hours) — formal training in instructional design, structured content delivery, and learning-objective-based writing</li>
-          <li>Structured self-study across API documentation standards, developer content writing, and information architecture frameworks</li>
+      <aside class="hero-evidence" aria-label="Evidence for the selected area">
+        <span class="evidence-label mono">Evidence</span>
+        <ul class="evidence" data-hero-evidence>
+          <li><b>250+</b><span>knowledge base articles created</span></li>
+          <li><b>66</b><span>pages of hotel booking system manual</span></li>
+          <li><b>−40%</b><span>new-starter onboarding time</span></li>
         </ul>
-        <div class="ee-tags"><span class="ee-tag">Instructional Design</span><span class="ee-tag">TEFL / Learning Content</span><span class="ee-tag">Self-directed Development</span></div>
-      </div>
+      </aside>
+    </div>
 
+    <div class="hero-strip">
+      <div class="strip-item"><b data-count="10" data-delay="620">10</b><span>documented engagements</span></div>
+      <div class="strip-item"><b data-count="7" data-delay="680">7</b><span>personal builds</span></div>
+      <div class="strip-item"><b data-count="5" data-delay="740">5</b><span>brands on social</span></div>
+      <div class="strip-item"><b data-count="4.5" data-decimals="1" data-prefix="£" data-suffix="M" data-delay="800">£4.5M</b><span>UK operation supported</span></div>
     </div>
   </div>
 </section>
 
-<!-- DESIGN & CONTENT -->
-<section id="design" class="white sec-rule">
-  <div class="sec-header reveal">
-    <span class="sec-kicker">Beyond Documentation</span>
-    <h2 class="sec-title">Design & <em>Content Work</em></h2>
-    <p class="sec-desc">Documentation thinking applied to visual content, technical blogging, and public-facing articles — the same discipline of clarity, audience awareness, and structure.</p>
-  </div>
-  <div class="design-layout reveal">
-    <div class="dblock">
-      <div class="db-kick">Technical Blog Writing</div>
-      <div class="db-title">Technical Articles & Published Content</div>
-      <p class="db-desc">Author of technical and marketing-focused blog content for UTDS Optimal Choice — covering digital marketing, SEO, web development, and platform guides. Written for mixed technical and non-technical audiences, applying documentation principles of task-based writing, clear structure, and audience-first thinking.</p>
-      <div class="content-row">
-        <div><div class="col-label">Content Types</div><div class="col-list">Platform how-to guides<br>SEO explainers<br>Digital marketing articles<br>Product feature write-ups<br>Technical concept breakdowns</div></div>
-        <div><div class="col-label">Skills Applied</div><div class="col-list">Task-based writing<br>Information architecture<br>SEO-aligned formatting<br>Audience analysis<br>Technical accuracy</div></div>
+<!-- ══════════ 02 · CAPABILITIES ══════════ -->
+<section class="section section--bone" id="capabilities" aria-labelledby="cap-title">
+  <div class="wrap">
+    <header class="head">
+      <div class="head-left">
+        <span class="kicker"><i>02</i>Capabilities</span>
+        <h2 class="h2" id="cap-title" data-reveal><span class="l"><span>Six kinds of work.</span></span><span class="l"><span><em>One standard.</em></span></span></h2>
       </div>
-      <a class="view-link" href="https://utds.al/author/abdul/" target="_blank">View Published Articles →</a>
-    </div>
-    <div class="dblock">
-      <div class="db-kick">Social Media Design & Copywriting</div>
-      <div class="db-title">Instagram Visual Content & Brand Writing</div>
-      <p class="db-desc">Designed social media post graphics and wrote copy for two active client Instagram accounts — applying the same audience-first, clarity-driven principles from technical writing to visual and marketing communication.</p>
-      <div class="insta-item">
-        <div class="ii-head">
-          <div><div class="ii-name">UTDS Optimal Choice</div><div class="ii-sub">Digital Agency · Albania · Global clients</div></div>
-          <div class="ii-badge">B2B Agency</div>
-        </div>
-        <p class="ii-desc">Posts covering digital solutions, web development, CRM systems, SEO services, and client success — written for a professional B2B brand voice targeting global audiences.</p>
-        <a class="view-link" href="https://www.instagram.com/utds_optimal_choice/" target="_blank">View Instagram →</a>
-      </div>
-      <div class="insta-item">
-        <div class="ii-head">
-          <div><div class="ii-name">Onsite Contractors Plumbing</div><div class="ii-sub">Field Services · UK Market · London</div></div>
-          <div class="ii-badge">Trade / UK</div>
-        </div>
-        <p class="ii-desc">Visual content for a UK-based plumbing and drainage service — service highlights, emergency response messaging, and customer-facing copy for London audiences.</p>
-        <a class="view-link" href="https://www.instagram.com/onsite_contractors_plumbing/" target="_blank">View Instagram →</a>
-      </div>
-      <div style="background:var(--navy-light);border:1px solid var(--navy-mid);padding:1rem;margin-top:1rem;">
-        <div class="col-label" style="color:var(--navy);margin-bottom:0.45rem;">Design Tools</div>
-        <div class="tw-tags"><span class="tw-tag">Canva</span><span class="tw-tag">Venngage</span><span class="tw-tag">Visual Storytelling</span><span class="tw-tag">Brand Voice Writing</span><span class="tw-tag">B2B Content Design</span></div>
-      </div>
+      <p class="head-note" data-reveal>Most people hire one of these. I have shipped all six, often for the same company in the same week — technical accuracy and a readable sentence are not separate skills.</p>
+    </header>
+
+    <div class="caps">
+      <article class="cap" data-reveal style="--d:0">
+        <span class="cap-n">01</span>
+        <h3>Technical &amp; product documentation</h3>
+        <p>Manuals, feature guides, release notes, configuration references and in-app copy for live platforms.</p>
+        <ul class="deliverables">
+          <li>User &amp; admin manuals</li>
+          <li>Release notes</li>
+          <li>UX writing</li>
+        </ul>
+      </article>
+
+      <article class="cap" data-reveal style="--d:1">
+        <span class="cap-n">02</span>
+        <h3>API &amp; developer documentation</h3>
+        <p>References, authentication flows, schemas, error handling and integration guides — written after building the integration.</p>
+        <ul class="deliverables">
+          <li>API reference</li>
+          <li>Integration guides</li>
+          <li>Markdown docs-as-code</li>
+        </ul>
+      </article>
+
+      <article class="cap" data-reveal style="--d:2">
+        <span class="cap-n">03</span>
+        <h3>Editorial &amp; long-form</h3>
+        <p>Articles, case studies, internal learning guides, event decks and proposal editing with the fog taken out.</p>
+        <ul class="deliverables">
+          <li>Technical articles</li>
+          <li>Proposals &amp; briefs</li>
+          <li>Learning content</li>
+        </ul>
+      </article>
+
+      <article class="cap" data-reveal style="--d:3">
+        <span class="cap-n">04</span>
+        <h3>Social &amp; brand content</h3>
+        <p>Post design and copy for five accounts across B2B digital services and UK trades — built to land on a phone screen.</p>
+        <ul class="deliverables">
+          <li>Post design</li>
+          <li>Captions &amp; hooks</li>
+          <li>Brand voice</li>
+        </ul>
+      </article>
+
+      <article class="cap" data-reveal style="--d:4">
+        <span class="cap-n">05</span>
+        <h3>AI knowledge &amp; prompting</h3>
+        <p>Knowledge bases structured for retrieval, and prompting that keeps an existing agent answering from them.</p>
+        <ul class="deliverables">
+          <li>Knowledge base design</li>
+          <li>Prompt writing</li>
+          <li>Retrieval-ready IA</li>
+        </ul>
+      </article>
+
+      <article class="cap" data-reveal style="--d:5">
+        <span class="cap-n">06</span>
+        <h3>Operations &amp; executive support</h3>
+        <p>SOPs, briefings, meeting notes, release coordination, vendor and inbox management — the layer that keeps a team moving.</p>
+        <ul class="deliverables">
+          <li>SOPs &amp; playbooks</li>
+          <li>Briefings &amp; minutes</li>
+          <li>Coordination</li>
+        </ul>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- PROMPT ENGINEERING -->
-<section id="prompting" class="alt sec-rule">
-  <div class="sec-header reveal">
-    <span class="sec-kicker">AI Prompt Engineering</span>
-    <h2 class="sec-title">Prompting as a <em>AI Trainer.</em></h2>
-    <p class="sec-desc">Structured prompt design for production AI systems and zero-code applications — combining a technical writer's precision with a builder's execution instinct.</p>
+<!-- ══════════ 03 · CASEBOOK ══════════ -->
+<section class="section" id="casebook" aria-labelledby="case-title">
+  <div class="wrap">
+    <header class="head">
+      <div class="head-left">
+        <span class="kicker"><i>03</i>Casebook</span>
+        <h2 class="h2" id="case-title" data-reveal><span class="l"><span>Ten engagements,</span></span><span class="l"><span><em>in detail.</em></span></span></h2>
+      </div>
+      <p class="head-note" data-reveal>Most of this work sits behind NDAs. What is listed here is accurate: the client, the dates, what I owned, and the outcome where one was measured. Samples on request.</p>
+    </header>
+
+    <div class="filters" data-filters aria-label="Filter the casebook">
+      <button class="filter is-on" data-filter="all" aria-pressed="true">All <span>10</span></button>
+      <button class="filter" data-filter="api" aria-pressed="false">API <span>2</span></button>
+      <button class="filter" data-filter="product" aria-pressed="false">Product <span>4</span></button>
+      <button class="filter" data-filter="crm" aria-pressed="false">CRM <span>3</span></button>
+      <button class="filter" data-filter="ai" aria-pressed="false">AI <span>4</span></button>
+      <button class="filter" data-filter="security" aria-pressed="false">Security <span>1</span></button>
+      <span class="filter-count" data-count-label aria-live="polite">Showing 10 of 10</span>
+    </div>
+
+    <ol class="entries" data-entries>
+      <li class="entry" data-domain="security" data-reveal>
+        <button class="entry-head" aria-expanded="false" aria-controls="e1">
+          <span class="entry-n">01</span>
+          <span class="entry-main">
+            <span class="entry-title">Incident response playbook — phishing</span>
+            <span class="entry-client">The World Bank · Chennai, offsite · contractual</span>
+          </span>
+          <span class="entry-tags"><i>Security</i><i>NIST 800-61</i></span>
+          <span class="entry-date">Mar–Apr 2026</span>
+          <span class="entry-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="entry-body" id="e1">
+          <div class="entry-inner">
+            <p>NIST SP 800-61 aligned playbook for phishing response, written to be used by a SOC team mid-incident rather than read afterwards: detection, containment, eradication and post-incident review documented in full.</p>
+            <ul class="entry-list">
+              <li>Four response phases mapped to NIST guidance</li>
+              <li>SOC-ready procedures and escalation points</li>
+              <li>Post-incident review template</li>
+            </ul>
+            <span class="entry-note">Sample available on request</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="entry" data-domain="api" data-reveal>
+        <button class="entry-head" aria-expanded="false" aria-controls="e2">
+          <span class="entry-n">02</span>
+          <span class="entry-main">
+            <span class="entry-title">Payment gateway API documentation — Razorpay, Stripe, Wise</span>
+            <span class="entry-client">Independent · remote · contractual</span>
+          </span>
+          <span class="entry-tags"><i>API</i><i>Developer docs</i></span>
+          <span class="entry-date">Jan–Jun 2026</span>
+          <span class="entry-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="entry-body" id="e2">
+          <div class="entry-inner">
+            <p>End-to-end integration documentation for three payment gateways, produced by wiring each one into working product prototypes first. For every gateway: an API reference page and a Markdown integration guide.</p>
+            <ul class="entry-list">
+              <li>Razorpay, Stripe Payment Intents and Wise Payouts</li>
+              <li>Authentication, error codes, request and response schemas</li>
+              <li>Written from hands-on integration, not from marketing pages</li>
+            </ul>
+            <span class="entry-note">Three API references + three guides</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="entry" data-domain="product" data-reveal>
+        <button class="entry-head" aria-expanded="false" aria-controls="e3">
+          <span class="entry-n">03</span>
+          <span class="entry-main">
+            <span class="entry-title">Hotel booking system — product &amp; system documentation</span>
+            <span class="entry-client">UK client · offsite · full time</span>
+          </span>
+          <span class="entry-tags"><i>Product</i><i>SaaS</i></span>
+          <span class="entry-date">Oct–Dec 2025</span>
+          <span class="entry-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="entry-body" id="e3">
+          <div class="entry-inner">
+            <p>A multi-module booking platform documented end to end for the operational teams running live inventory: pricing logic, tax handling, booking workflows and configuration systems.</p>
+            <ul class="entry-list">
+              <li>66 pages across six system modules</li>
+              <li>Rate plans, pricing, bookings and notification centre</li>
+              <li>OTA channel-manager coverage with Booking.com and Expedia</li>
+            </ul>
+            <span class="entry-note">Still in production use</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="entry" data-domain="ai" data-reveal>
+        <button class="entry-head" aria-expanded="false" aria-controls="e4">
+          <span class="entry-n">04</span>
+          <span class="entry-main">
+            <span class="entry-title">ElevenLabs conversational AI agent — knowledge base &amp; prompting</span>
+            <span class="entry-client">UTDS Optimal Choice · Tirana, offsite · full time</span>
+          </span>
+          <span class="entry-tags"><i>AI</i><i>Knowledge base</i></span>
+          <span class="entry-date">Sep 2025–Feb 2026</span>
+          <span class="entry-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="entry-body" id="e4">
+          <div class="entry-inner">
+            <p>Worked with an existing ElevenLabs conversational AI agent deployed as customer support: built the knowledge base it answers from, then prompted the agent to use that knowledge clearly and consistently on live enquiries.</p>
+            <ul class="entry-list">
+              <li>Knowledge base written and organised for retrieval</li>
+              <li>Prompting tuned against real customer conversations</li>
+              <li>Internal reference so the team can keep answers consistent</li>
+            </ul>
+            <span class="entry-note">Production support agent</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="entry" data-domain="crm" data-reveal>
+        <button class="entry-head" aria-expanded="false" aria-controls="e5">
+          <span class="entry-n">05</span>
+          <span class="entry-main">
+            <span class="entry-title">CRM agent operations manual — Bitrix24</span>
+            <span class="entry-client">Cervo Digital · London, offsite · full time</span>
+          </span>
+          <span class="entry-tags"><i>CRM</i><i>Operations</i></span>
+          <span class="entry-date">Jun–Jul 2025</span>
+          <span class="entry-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="entry-body" id="e5">
+          <div class="entry-inner">
+            <p>An end-to-end operations manual for a London-based, 24/7 emergency field-services company turning over roughly £4.5M a year, with a distributed network of engineers responding to live calls.</p>
+            <ul class="entry-list">
+              <li>19 workflows from inbound lead to invoice and payment</li>
+              <li>Written for non-technical agents, not administrators</li>
+              <li>Roughly 40% reduction in new-starter onboarding time</li>
+            </ul>
+            <span class="entry-note">Operations manual · measured onboarding gain</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="entry" data-domain="api crm ai" data-reveal>
+        <button class="entry-head" aria-expanded="false" aria-controls="e6">
+          <span class="entry-n">06</span>
+          <span class="entry-main">
+            <span class="entry-title">Bitrix24 + ChatGPT lead-flow integration docs</span>
+            <span class="entry-client">Cervo Digital · UK, offsite · full time</span>
+          </span>
+          <span class="entry-tags"><i>API</i><i>AI</i><i>CRM</i></span>
+          <span class="entry-date">Jun–Jul 2025</span>
+          <span class="entry-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="entry-body" id="e6">
+          <div class="entry-inner">
+            <p>Documented a CRM-to-LLM lead-filtering integration for a UK D2C professional services company: architecture, authentication flows and the logic governing which enquiries are routed and which are dropped.</p>
+            <ul class="entry-list">
+              <li>Integration architecture and data flow</li>
+              <li>API authentication and payload reference</li>
+              <li>Routing rules explained for non-engineers</li>
+            </ul>
+            <span class="entry-note">Sample available on request</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="entry" data-domain="crm ai" data-reveal>
+        <button class="entry-head" aria-expanded="false" aria-controls="e7">
+          <span class="entry-n">07</span>
+          <span class="entry-main">
+            <span class="entry-title">Salesforce CRM documentation suite + AI knowledge base</span>
+            <span class="entry-client">UTDS Optimal Choice · Tirana, offsite · full time</span>
+          </span>
+          <span class="entry-tags"><i>CRM</i><i>AI</i></span>
+          <span class="entry-date">Jan 2025–present</span>
+          <span class="entry-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="entry-body" id="e7">
+          <div class="entry-inner">
+            <p>A structured Salesforce suite built to do three jobs at once: power an AI conversational agent, teach the internal team, and answer client questions during evaluation and onboarding.</p>
+            <ul class="entry-list">
+              <li>Six content domains, from setup to automation</li>
+              <li>Structured for retrieval, not just for reading</li>
+              <li>Client-facing and internal versions</li>
+            </ul>
+            <span class="entry-note">Six domains</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="entry" data-domain="product ai" data-reveal>
+        <button class="entry-head" aria-expanded="false" aria-controls="e8">
+          <span class="entry-n">08</span>
+          <span class="entry-main">
+            <span class="entry-title">Internal knowledge base — Google Ads, SEO &amp; Local SEO</span>
+            <span class="entry-client">UTDS Optimal Choice · Tirana, offsite · full time</span>
+          </span>
+          <span class="entry-tags"><i>AI</i><i>Editorial</i></span>
+          <span class="entry-date">Jan 2025–present</span>
+          <span class="entry-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="entry-body" id="e8">
+          <div class="entry-inner">
+            <p>250+ query-driven articles architected as a knowledge base rather than a library: every page answers a question a client or an agent would actually ask, across Google Ads, SEO and Local SEO.</p>
+            <ul class="entry-list">
+              <li>250+ articles, query-first information architecture</li>
+              <li>Nine Google Ads content areas</li>
+              <li>Powers an AI agent, team upskilling and client reference</li>
+            </ul>
+            <span class="entry-note">250+ articles</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="entry" data-domain="product" data-reveal>
+        <button class="entry-head" aria-expanded="false" aria-controls="e9">
+          <span class="entry-n">09</span>
+          <span class="entry-main">
+            <span class="entry-title">Google Local Service Ads — documentation collaboration</span>
+            <span class="entry-client">UTDS Optimal Choice · Brazil &amp; Milan, offsite · full time</span>
+          </span>
+          <span class="entry-tags"><i>Product</i><i>AdTech</i></span>
+          <span class="entry-date">Jul 2023–Mar 2024</span>
+          <span class="entry-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="entry-body" id="e9">
+          <div class="entry-inner">
+            <p>Worked alongside Google's Teleperformance teams in Brazil and Milan to document Local Service Ads through its UK-only beta, helping local providers understand a product nobody had used before.</p>
+            <ul class="entry-list">
+              <li>Onboarding and platform guidance for the UK beta</li>
+              <li>Two-market collaboration with Google's vendor teams</li>
+              <li>Written for non-technical local service providers</li>
+            </ul>
+            <span class="entry-note">UK beta launch</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="entry" data-domain="product" data-reveal>
+        <button class="entry-head" aria-expanded="false" aria-controls="e10">
+          <span class="entry-n">10</span>
+          <span class="entry-main">
+            <span class="entry-title">Order &amp; inventory management SaaS</span>
+            <span class="entry-client">Yaali · Chennai, onsite · full time</span>
+          </span>
+          <span class="entry-tags"><i>Product</i><i>Integrations</i></span>
+          <span class="entry-date">Feb–Nov 2017</span>
+          <span class="entry-toggle" aria-hidden="true"></span>
+        </button>
+        <div class="entry-body" id="e10">
+          <div class="entry-inner">
+            <p>The first documentation system I owned end to end: product documentation, UX writing, help-centre architecture and integration docs for a live order and inventory platform.</p>
+            <ul class="entry-list">
+              <li>Six e-commerce integrations, including Shopify and Amazon</li>
+              <li>Three logistics and fulfilment systems</li>
+              <li>Help-centre information architecture built from scratch</li>
+            </ul>
+            <span class="entry-note">Sole technical writer</span>
+          </div>
+        </div>
+      </li>
+    </ol>
   </div>
-  < class="prompt-layout reveal">
-    <div class="pfeat">
-      <div class="pf-kick">Professional — Production Deployment · UTDS Optimal Choice</div>
-      <div class="pf-title">ElevenLabs Conversational AI Agent</div>
-      <p class="pf-stack">ElevenLabs AI · System Prompt Architecture · Voice Agent Design · Customer Support Automation · 2024–Present</p>
-      <p class="pf-desc">Designed and iterated the system prompt for a production ElevenLabs conversational AI vocal agent deployed as customer support. The agent handles inbound interactions — answering service queries, qualifying leads, and routing conversations — entirely through structured prompt engineering. No traditional code involved.</p>
-      <ul class="pf-bul">
-        <li>Engineered persona, tone, and constraint layers to align the agent with company brand voice and service scope</li>
-        <li>Structured Markdown-based prompt architecture covering greeting flows, fallback logic, escalation triggers, and objection handling</li>
-        <li>Iterated across multiple versions based on live agent behaviour — reducing hallucinations and tightening topical scope</li>
-        <li>Documented the full prompt system in a structured internal reference guide for team handoff and future maintenance</li>
+</section>
+
+<!-- ══════════ 04 · AI PRACTICE ══════════ -->
+<section class="section section--bone ai" id="ai" aria-labelledby="ai-title">
+  <div class="wrap">
+    <header class="head">
+      <div class="head-left">
+        <span class="kicker"><i>04</i>AI practice</span>
+        <h2 class="h2" id="ai-title" data-reveal><span class="l"><span>AI is not a</span></span><span class="l"><span><em>side quest.</em></span></span></h2>
+      </div>
+      <p class="head-note" data-reveal>It is where the documentation has to land now: knowledge an agent can retrieve, prompts that keep a conversation on brand, and the judgement to know what should stay human.</p>
+    </header>
+
+    <div class="ai-map" data-reveal data-scene="pipeline" aria-hidden="true">
+      <div class="ai-rail"><span class="ai-dot"></span><span class="ai-dot ai-dot--back"></span></div>
+      <div class="ai-nodes">
+        <div class="ai-node">
+          <span class="ai-n">01</span>
+          <b>Source</b>
+          <span>250+ articles · six-domain CRM suite</span>
+        </div>
+        <div class="ai-node">
+          <span class="ai-n">02</span>
+          <b>Structure</b>
+          <span>Query-first IA, retrieval-ready chunks</span>
+        </div>
+        <div class="ai-node">
+          <span class="ai-n">03</span>
+          <b>Prompt</b>
+          <span>Persona, tone limits, fallback, escalation</span>
+        </div>
+        <div class="ai-node ai-node--live">
+          <span class="ai-n">04</span>
+          <b>Agent</b>
+          <span>An existing support agent, answering live</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-cols">
+      <article class="ai-col" data-reveal>
+        <h3><span>In production</span>Support that runs on documents</h3>
+        <ul class="ai-list">
+          <li><b>ElevenLabs voice agent</b> — built and maintained the knowledge base a live support agent answers from, then prompted that agent to use it clearly and consistently.</li>
+          <li><b>250+ article knowledge base</b> — written, tagged and structured so an agent can find the right answer without a human.</li>
+          <li><b>Salesforce documentation suite</b> — six content domains organised for retrieval, not just for reading.</li>
+          <li><b>Bitrix24 + ChatGPT lead flow</b> — documented the architecture, authentication and routing rules behind an automated enquiry filter.</li>
+        </ul>
+      </article>
+
+      <article class="ai-col" data-reveal style="--d:1">
+        <h3><span>Practice</span>How I work with a model</h3>
+        <ul class="ai-list">
+          <li><b>Write for retrieval first.</b> The best answer is written in the shape of the question someone will actually ask.</li>
+          <li><b>Prompt like a spec.</b> Persona, tone limits, fallback paths and escalation — not a paragraph of vibes.</li>
+          <li><b>Test on real conversations.</b> A prompt earns its place against customer transcripts, not a demo.</li>
+          <li><b>Keep the human seam visible.</b> Every flow I write knows when to hand the conversation over.</li>
+        </ul>
+      </article>
+
+      <article class="ai-col" data-reveal style="--d:2">
+        <h3><span>Personal builds</span>Built to understand the tools</h3>
+        <ul class="ai-list">
+          <li><b>DocuSnap</b> — Claude Vision plus canvas frame-diffing turns screen recordings into written steps.</li>
+          <li><b>Plain</b> — end-to-end encrypted AI messaging on ERNIE and the MeDo crypto API, built for a Devpost hackathon.</li>
+          <li><b>ReplyGenius</b> — tone-matched review replies on the Claude API, bring-your-own-key.</li>
+        </ul>
+        <a class="ai-more" href="#projects">See all seven personal projects <span aria-hidden="true">↓</span></a>
+      </article>
+    </div>
+
+    <div class="ai-foot" data-reveal>
+      <span class="ai-foot-label">Working knowledge</span>
+      <ul class="ai-chips">
+        <li>Claude API</li><li>Google AI Studio</li><li>Gemini</li><li>ElevenLabs</li><li>ERNIE LLM</li>
+        <li>MeDo crypto</li><li>Manifest V3</li><li>v0</li><li>Prompt architecture</li>
+        <li>Agent handoff design</li><li>Retrieval-ready IA</li><li>Knowledge base design</li>
       </ul>
-      <div class="tw-tags"><span class="tw-tag">ElevenLabs AI</span><span class="tw-tag">System Prompting</span><span class="tw-tag">Voice Agent Design</span><span class="tw-tag">Persona Engineering</span><span class="tw-tag">Escalation Logic</span><span class="tw-tag">Production Deployed</span></div>
     </div>
   </div>
 </section>
 
-<!-- TOOLS -->
-<section id="tools" class="white sec-rule">
-  <div class="sec-header reveal"><span class="sec-kicker grey">Documentation Stack</span><h2 class="sec-title">Tools & <em>Platforms</em></h2></div>
-  <div class="tools-inner reveal">
-    <div class="tools-left">
-      <p>My documentation stack spans professional authoring tools like <strong>MadCap Flare</strong> and <strong>Adobe FrameMaker</strong> for structured, single-source documentation — alongside Docs-as-Code workflows using <strong>Markdown and GitHub</strong>.</p>
-      <p>For e-learning and instructional design: <strong>Adobe Captivate</strong> and <strong>Articulate 360</strong>. Platform experience covers <strong>Salesforce, Bitrix24, Google Ads</strong>, and <strong>Google Cloud APIs</strong> with hands-on JSON/YAML, REST API structures, and CLI environments.</p>
-      <p>I actively build with AI tools — <strong>Claude API, Google AI Studio, ElevenLabs</strong>, and <strong>v0 / Bolt / Vercel</strong> — keeping documentation grounded in the developer environments I write about.</p>
-    </div>
-    <div class="tool-chips">
-      <div class="tool-chip"><div class="tc-icon" style="background:#1a73e8;">MCF</div><span class="tc-name">MadCap Flare</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#cc0000;">AFM</div><span class="tc-name">Adobe FrameMaker</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#00bfff;">CAP</div><span class="tc-name">Adobe Captivate</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#e8620a;">A36</div><span class="tc-name">Articulate 360</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#24292e;">GH</div><span class="tc-name">GitHub + Markdown</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#0052cc;">JIRA</div><span class="tc-name">Jira</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#00a1e0;">SF</div><span class="tc-name">Salesforce</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#6929c4;">BRX</div><span class="tc-name">Bitrix24</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#ea4335;">GAds</div><span class="tc-name">Google Ads + Cloud</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:var(--navy);">CLD</div><span class="tc-name">Claude API</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#4285f4;">GAS</div><span class="tc-name">Google AI Studio</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#ff6600;">11L</div><span class="tc-name">ElevenLabs</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:#000;">V0</div><span class="tc-name">v0 / Vercel / Bolt</span></div>
-      <div class="tool-chip"><div class="tc-icon" style="background:var(--ink);">JS</div><span class="tc-name">JavaScript / JSON / YAML</span></div>
+<!-- ══════════ 05 · EXPERIENCE ══════════ -->
+<section class="section" id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <header class="head">
+      <div class="head-left">
+        <span class="kicker"><i>05</i>Experience</span>
+        <h2 class="h2" id="exp-title" data-reveal><span class="l"><span>Two companies.</span></span><span class="l"><span><em>One throughline.</em></span></span></h2>
+      </div>
+      <p class="head-note" data-reveal>Where I have actually been employed, what I owned at each, and what changed while I was there. Client and contract engagements sit in the casebook above.</p>
+    </header>
+
+    <div class="journey" data-journey>
+      <div class="journey-rail" aria-hidden="true">
+        <span class="journey-fill" data-journey-fill></span>
+      </div>
+
+      <ol class="journey-list">
+        <li class="step" data-reveal>
+          <span class="step-year">Jun 2021–<br>present</span>
+          <div class="step-body">
+            <h3>Technical Writer <span>· UTDS Optimal Choice</span></h3>
+            <p class="step-meta">Jun 2021–present · SaaS, CRM, booking platforms and AI-enabled applications · sole technical writer</p>
+            <p>Owned documentation end to end for a company selling SaaS, CRM and marketing services into the UK and Europe — discovery, authoring, subject-matter review, publication and maintenance, with no team behind me.</p>
+            <ul class="step-list">
+              <li>Built the CRM operations knowledge base for a £4.5M UK professional services company: 19 cross-departmental Bitrix24 workflows, from call handling and engineer dispatch through job tracking, invoicing and payments — cutting new-starter onboarding time by roughly 40%.</li>
+              <li>Designed and documented the prompt architecture for a production ElevenLabs voice support agent — persona, conversation flows, escalation logic, fallback handling and guidance for team handover.</li>
+              <li>Documented the Bitrix24 and ChatGPT API lead automation: authentication, integrations, data flows, API behaviour and troubleshooting, so non-technical teams could run and support the system.</li>
+              <li>Built a Salesforce CRM documentation framework covering configuration, security, lead management, reporting, automation, integrations and data management, for internal enablement and client onboarding.</li>
+              <li>Worked with Google's Teleperformance teams in Brazil and Milan during the UK beta launch of Local Service Ads, producing onboarding and guidance documentation for service providers.</li>
+              <li>Authored and maintain a 250+ article knowledge system across Google Ads, SEO, Local SEO, Salesforce and operational workflows, structured for AI retrieval, team training and client onboarding.</li>
+              <li>Produced technical tutorials, process diagrams and video walkthroughs for product adoption, coordinating documentation updates through Jira during release cycles.</li>
+            </ul>
+            <ul class="step-tags">
+              <li>Product docs</li><li>Knowledge bases</li><li>Bitrix24 &amp; Salesforce</li><li>Prompt design</li><li>API integration docs</li><li>Release documentation</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="step" data-reveal>
+          <span class="step-year">Feb–Nov<br>2017</span>
+          <div class="step-body">
+            <h3>UX &amp; Technical Writer <span>· Yaali</span></h3>
+            <p class="step-meta">Feb–Nov 2017 · Chennai · order and inventory management SaaS</p>
+            <p>First documentation role, and the one that set the pattern: take full ownership of the product's written surface, learn the workflow from the people running it, then write it down for the customer who has to use it alone.</p>
+            <ul class="step-list">
+              <li>Took full ownership of documentation for a live SaaS order and inventory management platform, building the help centre and knowledge base architecture from scratch for customer self-service.</li>
+              <li>Documented six major e-commerce integrations — Shopify, Magento, WooCommerce, BigCommerce, Strikingly and Amazon — plus three fulfilment systems including Amazon, UPS and third-party logistics, single-sourcing every platform variant with zero handoff.</li>
+              <li>Wrote UI copy, tooltips and in-app instructional content across the product interface, pairing with design and engineering to align terminology, interface language and tone.</li>
+            </ul>
+            <ul class="step-tags">
+              <li>UX writing</li><li>Help centre architecture</li><li>Integration docs</li><li>Single sourcing</li><li>Product documentation</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="alt sec-rule">
-  <div class="sec-header reveal"><span class="sec-kicker">Core Competencies</span><h2 class="sec-title">Skills & <em>Expertise</em></h2></div>
-  <div class="skills-outer reveal">
-    <div class="skill-block"><div class="sb-title gr">Prompt Engineering</div><div class="sb-tags"><span class="sb-tag gr">System Prompt Design</span><span class="sb-tag gr">Persona Engineering</span><span class="sb-tag gr">Conversational AI</span><span class="sb-tag gr">Voice Agent Prompting</span><span class="sb-tag gr">Constraint Design</span><span class="sb-tag gr">Iterative Refinement</span><span class="sb-tag gr">ElevenLabs</span><span class="sb-tag gr">v0 · Bolt · AI Studio</span><span class="sb-tag gr">Zero-Code App Building</span></div></div>
-    <div class="skill-block"><div class="sb-title">Documentation Types</div><div class="sb-tags"><span class="sb-tag">Product Documentation</span><span class="sb-tag">SaaS Documentation</span><span class="sb-tag">API Documentation</span><span class="sb-tag">Developer Documentation</span><span class="sb-tag">User Manuals</span><span class="sb-tag">Knowledge Base</span><span class="sb-tag">Help Centre</span><span class="sb-tag">Release Notes</span><span class="sb-tag">Config Guides</span><span class="sb-tag">UX Writing</span><span class="sb-tag">IR Playbooks</span></div></div>
-    <div class="skill-block"><div class="sb-title">Documentation Systems</div><div class="sb-tags"><span class="sb-tag">Information Architecture</span><span class="sb-tag">Docs-as-Code</span><span class="sb-tag">Structured Authoring</span><span class="sb-tag">Single Sourcing</span><span class="sb-tag">Content Reuse</span><span class="sb-tag">Topic-Based Writing</span><span class="sb-tag">Microsoft Style Guide</span><span class="sb-tag">Google Dev Style Guide</span><span class="sb-tag">KB Management</span></div></div>
-    <div class="skill-block"><div class="sb-title gr">Technical Exposure</div><div class="sb-tags"><span class="sb-tag gr">REST API Docs</span><span class="sb-tag gr">JSON & YAML</span><span class="sb-tag gr">CLI Environments</span><span class="sb-tag gr">Google Cloud APIs</span><span class="sb-tag gr">JavaScript</span><span class="sb-tag gr">React Native</span><span class="sb-tag gr">Chrome / Firefox Extensions</span><span class="sb-tag gr">Manifest V3</span><span class="sb-tag gr">Canvas API</span><span class="sb-tag gr">OAuth & Auth Flows</span></div></div>
-    <div class="skill-block"><div class="sb-title">Authoring Tools</div><div class="sb-tags"><span class="sb-tag">MadCap Flare</span><span class="sb-tag">Adobe FrameMaker</span><span class="sb-tag">Adobe Captivate</span><span class="sb-tag">Articulate 360</span><span class="sb-tag">GitHub + Markdown</span><span class="sb-tag">Google Workspace</span><span class="sb-tag">Microsoft Office</span><span class="sb-tag">Canva & Venngage</span><span class="sb-tag">Jira</span></div></div>
-    <div class="skill-block"><div class="sb-title">Domain Expertise</div><div class="sb-tags"><span class="sb-tag">SaaS Platforms</span><span class="sb-tag">CRM Systems</span><span class="sb-tag">E-commerce & Fulfilment</span><span class="sb-tag">Hotel Booking Systems</span><span class="sb-tag">Cybersecurity</span><span class="sb-tag">AdTech & Google Ads</span><span class="sb-tag">Cloud Platforms</span><span class="sb-tag">AI & Voice Systems</span><span class="sb-tag">Stakeholder Management</span></div></div>
-    <div class="skill-block"><div class="sb-title">Professional Skills</div><div class="sb-tags"><span class="sb-tag">Audience Analysis</span><span class="sb-tag">Content Strategy</span><span class="sb-tag">Instructional Design</span><span class="sb-tag">Task-Based Writing</span><span class="sb-tag">SME Collaboration</span><span class="sb-tag">Technical Blog Writing</span><span class="sb-tag">Internal Learning Guides</span><span class="sb-tag">Event Presentation Writing</span><span class="sb-tag">Proposal Writing Support</span><span class="sb-tag">Social Media Copywriting</span><span class="sb-tag">Release Cycle Coordination</span></div></div>
+<!-- ══════════ 06 · PROJECTS ══════════ -->
+<section class="section section--bone projects-section" id="projects" aria-labelledby="proj-title">
+  <div class="wrap">
+    <header class="head">
+      <div class="head-left">
+        <span class="kicker"><i>06</i>Personal projects</span>
+        <h2 class="h2" id="proj-title" data-reveal><span class="l"><span>Built on my</span></span><span class="l"><span><em>own time.</em></span></span></h2>
+      </div>
+      <p class="head-note" data-reveal>Seven things I built for myself, not for a client. Browser extensions, web apps and one hackathon entry — made because I wanted to understand the tooling from the inside before writing about it.</p>
+    </header>
+
+    <div class="projects">
+      <article class="project" data-reveal>
+        <div class="project-top">
+          <span class="project-n">01</span>
+          <span class="project-kind">AI documentation tool · 2024–present</span>
+        </div>
+        <h3>DocuSnap</h3>
+        <p class="project-why">Turns a screen recording into written steps, so a workflow can be documented while it is being performed.</p>
+        <ul class="project-feats">
+          <li>Canvas frame-diffing at 10 fps filters static frames before anything reaches the model.</li>
+          <li>Claude Vision reads each captured UI state and writes the step.</li>
+          <li>Single file, zero dependencies — no build pipeline.</li>
+        </ul>
+        <ul class="project-tech"><li>Claude Vision</li><li>Canvas API</li><li>JavaScript</li></ul>
+        <div class="project-links">
+          <a href="https://github.com/abduays/docsnap" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <article class="project" data-reveal style="--d:1">
+        <div class="project-top">
+          <span class="project-n">02</span>
+          <span class="project-kind">Hackathon · Baidu AppMeDo · 2026</span>
+        </div>
+        <h3>Plain</h3>
+        <p class="project-why">Encrypted AI messaging for confidential documentation and critical incident reporting. Built for the AppMeDo Devpost hackathon.</p>
+        <ul class="project-feats">
+          <li>End-to-end encrypted architecture, not encryption bolted on afterwards.</li>
+          <li>ERNIE LLM composes and answers inside the encrypted context.</li>
+          <li>Integrated the MeDo cryptography API during the sprint and documented the build as it happened.</li>
+        </ul>
+        <ul class="project-tech"><li>ERNIE LLM</li><li>MeDo crypto</li><li>Full stack</li></ul>
+        <div class="project-links">
+          <a href="https://app-bba0xzgzbnr5.appmedo.com/" target="_blank" rel="noopener">Live ↗</a>
+          <a href="https://devpost.com/software/plain-t1d7j3" target="_blank" rel="noopener">Devpost ↗</a>
+        </div>
+      </article>
+
+      <article class="project" data-reveal style="--d:2">
+        <div class="project-top">
+          <span class="project-n">03</span>
+          <span class="project-kind">Browser extension · 2024</span>
+        </div>
+        <h3>FeedHire</h3>
+        <p class="project-why">Surfaces LinkedIn hiring posts from outside your network in a persistent side panel. No backend, no scraping account.</p>
+        <ul class="project-feats">
+          <li>Manifest V3 extension with a side-panel interface.</li>
+          <li>DOM parsing to pick hiring posts out of a noisy feed.</li>
+          <li>Entirely client-side.</li>
+        </ul>
+        <ul class="project-tech"><li>Manifest V3</li><li>Side Panel API</li><li>Firefox</li></ul>
+        <div class="project-links">
+          <a href="https://github.com/abduays/LinkedIn-Newsfeed-Jobs" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <article class="project" data-reveal>
+        <div class="project-top">
+          <span class="project-n">04</span>
+          <span class="project-kind">SaaS tool · 2025</span>
+        </div>
+        <h3>ReplyGenius</h3>
+        <p class="project-why">Writes tone-matched replies to Google, Trustpilot and TripAdvisor reviews for small businesses in under 30 seconds.</p>
+        <ul class="project-feats">
+          <li>Bring-your-own-key Claude API mode, roughly $0.001 per response.</li>
+          <li>10 business types and 4 response tones.</li>
+          <li>A Pro tier with bulk reply handling.</li>
+        </ul>
+        <ul class="project-tech"><li>Claude API</li><li>Vanilla JS</li><li>BYOK</li></ul>
+        <div class="project-links">
+          <a href="https://abduays.github.io/replygenius-ai-review-response/" target="_blank" rel="noopener">Live ↗</a>
+        </div>
+      </article>
+
+      <article class="project" data-reveal style="--d:1">
+        <div class="project-top">
+          <span class="project-n">05</span>
+          <span class="project-kind">Computer vision · 2024</span>
+        </div>
+        <h3>AI Visual Analyser</h3>
+        <p class="project-why">An experiment in whether video models can produce usable safety paperwork: construction-site footage in, structured compliance reports out.</p>
+        <ul class="project-feats">
+          <li>Multimodal video analysis on Google AI Studio.</li>
+          <li>Output shaped as a structured report rather than a transcript.</li>
+          <li>Built to test what documenting an AI output actually requires.</li>
+        </ul>
+        <ul class="project-tech"><li>Google AI Studio</li><li>Video analysis</li></ul>
+        <div class="project-links">
+          <a href="https://sitesight-865242794359.us-west1.run.app/" target="_blank" rel="noopener">Live ↗</a>
+        </div>
+      </article>
+
+      <article class="project" data-reveal style="--d:2">
+        <div class="project-top">
+          <span class="project-n">06</span>
+          <span class="project-kind">Finance dashboard · v0</span>
+        </div>
+        <h3>Wealth Guard</h3>
+        <p class="project-why">A dashboard that makes hidden financial losses visible — inefficient loans, card misuse, poor tax planning — for the Indian market.</p>
+        <ul class="project-feats">
+          <li>Built through structured prompting on v0, deployed on Vercel.</li>
+          <li>Frames advice as recoverable money rather than generic budgeting.</li>
+          <li>An exploration of prompt-to-interface workflows.</li>
+        </ul>
+        <ul class="project-tech"><li>v0</li><li>Vercel</li><li>Prompt-built</li></ul>
+        <div class="project-links">
+          <a href="https://v0-money-making-dashboard.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
+        </div>
+      </article>
+
+      <article class="project" data-reveal>
+        <div class="project-top">
+          <span class="project-n">07</span>
+          <span class="project-kind">EdTech app · v0</span>
+        </div>
+        <h3>Tamil Writing</h3>
+        <p class="project-why">An interactive app for learning Tamil script — 247 characters, tracing practice, pronunciation audio and quizzes.</p>
+        <ul class="project-feats">
+          <li>Structured lessons rather than a character dump.</li>
+          <li>Tracing practice, audio and paragraph writing in one flow.</li>
+          <li>Built with v0 and deployed on Vercel.</li>
+        </ul>
+        <ul class="project-tech"><li>v0</li><li>Vercel</li><li>Audio</li></ul>
+        <div class="project-links">
+          <a href="https://v0-tamil-writing-app.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section id="certs" class="white sec-rule">
-  <div class="sec-header reveal"><span class="sec-kicker grey">Credentials</span><h2 class="sec-title">Certifications & <em>Learning</em></h2></div>
-  <div class="certs-grid reveal">
-    <div class="cert-card">
-      <div class="cc-head"><div class="cc-icon nv">🛡️</div><div><div class="cc-title">Cybersecurity & Penetration Testing</div><div class="cc-org">2025 — TryHackMe · IBM · Fortinet · Forage</div></div></div>
-      <ul class="cc-list"><li>Jr. Penetration Tester — TryHackMe</li><li>Cybersecurity Fundamentals — IBM</li><li>Fortinet Certified Fundamentals in Cybersecurity</li><li>Cybersecurity — Mastercard (Forage)</li><li>Cybersecurity Analyst — Tata Group (Forage)</li><li>Intro to Cybersecurity — Commonwealth Bank (Forage)</li></ul>
+<!-- ══════════ 07 · SOCIAL ══════════ -->
+<section class="section social" id="social" aria-labelledby="social-title">
+  <div class="wrap">
+    <header class="head">
+      <div class="head-left">
+        <span class="kicker"><i>07</i>Social &amp; brand</span>
+        <h2 class="h2" id="social-title" data-reveal><span class="l"><span>Five accounts.</span></span><span class="l"><span><em>One voice system.</em></span></span></h2>
+      </div>
+      <p class="head-note" data-reveal>B2B digital services on one side, UK trades on the other. Different audiences, same job: a post that reads in two seconds and sounds like the company, not the template.</p>
+    </header>
+
+    <div class="channels">
+      <a class="channel" href="https://www.instagram.com/utds_optimal_choice/" target="_blank" rel="noopener" data-reveal>
+        <div class="channel-top">
+          <span class="channel-n">01</span>
+          <span class="channel-cat">B2B · digital agency</span>
+        </div>
+        <h3>UTDS Optimal Choice</h3>
+        <span class="channel-handle">@utds_optimal_choice</span>
+        <p>Digital solutions, web development, CRM and SEO — visual posts and copy for a professional B2B brand selling to global clients.</p>
+        <span class="channel-go">View account ↗</span>
+      </a>
+
+      <a class="channel" href="https://www.instagram.com/onsite_contractors_plumbing/" target="_blank" rel="noopener" data-reveal style="--d:1">
+        <div class="channel-top">
+          <span class="channel-n">02</span>
+          <span class="channel-cat">Trade · London</span>
+        </div>
+        <h3>Onsite Contractors &amp; Plumbing</h3>
+        <span class="channel-handle">@onsite_contractors_plumbing</span>
+        <p>Service highlights, emergency response messaging and customer-facing copy for a London plumbing and drainage contractor.</p>
+        <span class="channel-go">View account ↗</span>
+      </a>
+
+      <a class="channel" href="https://www.instagram.com/scaffoldingserviceskilmarnock/" target="_blank" rel="noopener" data-reveal style="--d:2">
+        <div class="channel-top">
+          <span class="channel-n">03</span>
+          <span class="channel-cat">Trade · Kilmarnock</span>
+        </div>
+        <h3>Scaffolding Services Kilmarnock</h3>
+        <span class="channel-handle">@scaffoldingserviceskilmarnock</span>
+        <p>Post design and captions for a Scottish scaffolding contractor: the work itself, made to look like the work itself.</p>
+        <span class="channel-go">View account ↗</span>
+      </a>
+
+      <a class="channel" href="https://www.instagram.com/greatbritainservices/" target="_blank" rel="noopener" data-reveal style="--d:3">
+        <div class="channel-top">
+          <span class="channel-n">04</span>
+          <span class="channel-cat">Services · UK</span>
+        </div>
+        <h3>Great Britain Services</h3>
+        <span class="channel-handle">@greatbritainservices</span>
+        <p>Multi-service brand content built on clarity and trust, with copy that works for a customer comparing three quotes.</p>
+        <span class="channel-go">View account ↗</span>
+      </a>
+
+      <a class="channel" href="https://www.instagram.com/plumbingimmediately24/" target="_blank" rel="noopener" data-reveal style="--d:4">
+        <div class="channel-top">
+          <span class="channel-n">05</span>
+          <span class="channel-cat">Emergency trade · UK</span>
+        </div>
+        <h3>Plumbing Immediately</h3>
+        <span class="channel-handle">@plumbingimmediately24</span>
+        <p>Urgency-led posts and call-out messaging for a 24-hour service where the first line has to do the selling.</p>
+        <span class="channel-go">View account ↗</span>
+      </a>
     </div>
-    <div class="cert-card">
-      <div class="cc-head"><div class="cc-icon gr">📈</div><div><div class="cc-title">Marketing & Platform Certifications</div><div class="cc-org">2023–2024 — Google · Semrush · HubSpot</div></div></div>
-      <ul class="cc-list"><li>Google Ads Certified — Display, Mobile, Search, Video</li><li>Semrush Certification — Workflow & SEO</li><li>HubSpot SEO Certification</li><li>LinkedIn & Instagram Marketing Fundamentals</li></ul>
+
+    <p class="social-note" data-reveal>Editorial work runs alongside this: technical articles for utds.al, internal learning guides, AI-at-work event decks and proposal editing for client-facing teams.</p>
+  </div>
+</section>
+
+<!-- ══════════ 08 · CREDENTIALS ══════════ -->
+<section class="section section--bone credentials" id="credentials" aria-labelledby="cred-title">
+  <div class="wrap">
+    <header class="head">
+      <div class="head-left">
+        <span class="kicker"><i>08</i>Credentials</span>
+        <h2 class="h2" id="cred-title" data-reveal><span class="l"><span>What is</span></span><span class="l"><span><em>verified.</em></span></span></h2>
+      </div>
+      <p class="head-note" data-reveal>Platform records, not adjectives. Each block below is linked to the public profile it comes from, so anyone can check it.</p>
+    </header>
+
+    <div class="platforms">
+      <article class="platform" data-reveal>
+        <div class="platform-head">
+          <a class="platform-logo" href="https://tryhackme.com/p/AbdulBasithh" target="_blank" rel="noopener" aria-label="TryHackMe profile">
+            <img src="assets/logos/tryhackme.svg" alt="TryHackMe" width="180" height="101" loading="lazy">
+          </a>
+          <div>
+            <h3>TryHackMe</h3>
+            <span class="platform-meta">Cybersecurity · since Mar 2025</span>
+          </div>
+        </div>
+        <dl class="platform-stats">
+          <div><dt>Ranking</dt><dd>Top 5%</dd></div>
+          <div><dt>Paths completed</dt><dd>2</dd></div>
+        </dl>
+        <ul class="platform-list">
+          <li>Jr Penetration Tester (Legacy)</li>
+          <li>Pre Security (Legacy)</li>
+          <li>First Four badge</li>
+          <li>Networking Nerd badge</li>
+          <li>Webbed badge</li>
+          <li>World Wide Web badge</li>
+          <li>cat linux.txt badge</li>
+        </ul>
+        <p class="platform-note">Tools in profile: Burp Suite, Wireshark, Nmap, PhishTool, URLScan.io, Linux, Windows, macOS.</p>
+        <a class="platform-link" href="https://tryhackme.com/p/AbdulBasithh" target="_blank" rel="noopener">tryhackme.com/p/AbdulBasithh ↗</a>
+      </article>
+
+      <article class="platform" data-reveal style="--d:1">
+        <div class="platform-head">
+          <a class="platform-logo" href="https://g.dev/abdul-basithh" target="_blank" rel="noopener" aria-label="Google Developer profile">
+            <img src="assets/logos/google-developers.svg" alt="Google Developers" width="180" height="77" loading="lazy">
+          </a>
+          <div>
+            <h3>Google Developer Program</h3>
+            <span class="platform-meta">10 badges · 2024–2026</span>
+          </div>
+        </div>
+        <dl class="platform-stats">
+          <div><dt>Google Cloud Innovator</dt><dd>Jun 2025</dd></div>
+          <div><dt>Gemini Agent Ready</dt><dd>2026</dd></div>
+        </dl>
+        <ul class="platform-list">
+          <li>Google Cloud Innovator</li>
+          <li>Gemini Agent Ready</li>
+          <li>Firebase Studio community</li>
+          <li>Google Cloud &amp; NVIDIA</li>
+          <li>Code Wiki</li>
+          <li>Learning</li>
+          <li>Chrome DevTools User</li>
+          <li>Android Studio User</li>
+          <li>I/O 2026 registered</li>
+          <li>Get Certified application</li>
+        </ul>
+        <a class="platform-link" href="https://g.dev/abdul-basithh" target="_blank" rel="noopener">g.dev/abdul-basithh ↗</a>
+      </article>
+
+      <article class="platform" data-reveal style="--d:2">
+        <div class="platform-head">
+          <a class="platform-logo" href="https://www.salesforce.com/trailblazer/abdulabdu" target="_blank" rel="noopener" aria-label="Salesforce Trailblazer profile">
+            <img src="assets/logos/salesforce.svg" alt="Salesforce" width="180" height="126" loading="lazy">
+          </a>
+          <div>
+            <h3>Salesforce Trailblazer</h3>
+            <span class="platform-meta">Technical Writer · UTDS Optimal Choice</span>
+          </div>
+        </div>
+        <dl class="platform-stats">
+          <div><dt>Trailblazer role</dt><dd>Educator</dd></div>
+          <div><dt>Profile</dt><dd>Public</dd></div>
+        </dl>
+        <p class="platform-note">Trailhead badges, points and certification status live on the public Trailblazer profile — the record there is the source of truth.</p>
+        <a class="platform-link" href="https://www.salesforce.com/trailblazer/abdulabdu" target="_blank" rel="noopener">salesforce.com/trailblazer/abdulabdu ↗</a>
+      </article>
     </div>
-    <div class="cert-card">
-      <div class="cc-head"><div class="cc-icon dk">🎓</div><div><div class="cc-title">Qualifi Level 5 TEFL Diploma</div><div class="cc-org">2026 — Ofqual-Regulated · 168 Hours</div></div></div>
-      <ul class="cc-list"><li>Ofqual-regulated formal qualification in structured learning content and instructional methodology</li><li>Directly informs how I approach audience analysis, task decomposition, and documentation structure for technical audiences</li><li>English (Professional) · Tamil (Native) · Malayalam · Hindi</li></ul>
-    </div>
-    <div class="cert-card">
-      <div class="cc-head"><div class="cc-icon" style="background:#fff3e0;">🤖</div><div><div class="cc-title">AI & Developer Exploration</div><div class="cc-org">Ongoing — Self-directed</div></div></div>
-      <ul class="cc-list"><li>Self-built 6 AI tools using Claude API, Google AI Studio, ElevenLabs, and ERNIE LLM — built independently to understand developer workflows and API documentation firsthand</li><li>Production ElevenLabs vocal agent for UTDS — designed, deployed, and documented full system prompt architecture</li><li>Docs-as-Code via GitHub and Markdown — version-controlled documentation workflows</li><li>REST API and CLI hands-on exploration for documentation accuracy and developer empathy</li></ul>
+
+    <div class="certs" data-reveal>
+      <div class="certs-head">
+        <h3 class="certs-title">Certifications<br><span>&amp; credentials</span></h3>
+        <p class="certs-note">Fourteen certificates across security, marketing and teaching, listed with the issuer's own mark. Where the certificate was awarded through a job simulation, the sponsoring company is named alongside Forage.</p>
+      </div>
+
+      <div class="cert-groups">
+        <section class="cert-group" aria-label="Cybersecurity and technical awareness certifications">
+          <h4 class="cert-group-title">
+            <span>01</span>Cybersecurity &amp; technical awareness
+            <span class="cert-group-year">2025</span>
+          </h4>
+          <ul class="cert-list">
+            <li>
+              <span class="cert-mark"><img src="assets/logos/tryhackme.svg" alt="TryHackMe" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>Jr Penetration Tester</b><span>TryHackMe · completed path</span></span>
+            </li>
+            <li>
+              <span class="cert-mark"><img src="assets/logos/tryhackme.svg" alt="TryHackMe" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>Pre Security</b><span>TryHackMe · completed path</span></span>
+            </li>
+            <li>
+              <span class="cert-mark"><img src="assets/logos/ibm.svg" alt="IBM" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>Cybersecurity Fundamentals</b><span>IBM SkillsBuild</span></span>
+            </li>
+            <li>
+              <span class="cert-mark"><img src="assets/logos/fortinet.svg" alt="Fortinet" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>Certified Fundamentals in Cybersecurity</b><span>Fortinet Training Institute</span></span>
+            </li>
+            <li>
+              <span class="cert-mark"><img src="assets/logos/fortinet.svg" alt="Fortinet" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>Getting Started in Cybersecurity 2.0</b><span>Fortinet Training Institute</span></span>
+            </li>
+            <li>
+              <span class="cert-mark"><img src="assets/logos/fortinet.svg" alt="Fortinet" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>Introduction to the Threat Landscape 2.0</b><span>Fortinet Training Institute</span></span>
+            </li>
+            <li>
+              <span class="cert-mark"><img src="assets/logos/mastercard.svg" alt="Mastercard" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>Cybersecurity</b><span>Mastercard · via Forage</span></span>
+            </li>
+            <li>
+              <span class="cert-mark"><img src="assets/logos/tata.svg" alt="Tata" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>Cybersecurity Analyst</b><span>Tata Group · via Forage</span></span>
+            </li>
+            <li>
+              <span class="cert-mark cert-mark--mono" aria-hidden="true">CBA</span>
+              <span class="cert-body"><b>Introduction to Cybersecurity</b><span>Commonwealth Bank · via Forage</span></span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="cert-group" aria-label="Marketing and design certifications">
+          <h4 class="cert-group-title">
+            <span>02</span>Marketing &amp; design
+            <span class="cert-group-year">2023–24</span>
+          </h4>
+          <ul class="cert-list">
+            <li>
+              <span class="cert-mark"><img src="assets/logos/googleads.svg" alt="Google Ads" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>Google Ads Certified</b><span>Search, Display, Mobile &amp; Video</span></span>
+            </li>
+            <li>
+              <span class="cert-mark"><img src="assets/logos/semrush.svg" alt="Semrush" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>Semrush Certification</b><span>Workflow &amp; SEO</span></span>
+            </li>
+            <li>
+              <span class="cert-mark"><img src="assets/logos/hubspot.svg" alt="HubSpot" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>HubSpot SEO Certification</b><span>HubSpot Academy</span></span>
+            </li>
+            <li>
+              <span class="cert-mark"><img src="assets/logos/linkedin.svg" alt="LinkedIn" width="36" height="20" loading="lazy"></span>
+              <span class="cert-body"><b>LinkedIn &amp; Instagram Marketing</b><span>Marketing fundamentals</span></span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="cert-group" aria-label="Teaching and language credentials">
+          <h4 class="cert-group-title">
+            <span>03</span>Teaching &amp; language
+            <span class="cert-group-year">2026</span>
+          </h4>
+          <ul class="cert-list">
+            <li>
+              <span class="cert-mark cert-mark--mono" aria-hidden="true">Q5</span>
+              <span class="cert-body"><b>Qualifi Level 5 TEFL Diploma</b><span>Ofqual-regulated · 168 hours</span></span>
+            </li>
+            <li>
+              <span class="cert-mark cert-mark--mono" aria-hidden="true">EN</span>
+              <span class="cert-body"><b>Languages</b><span>English (B2) · Tamil · Malayalam · Hindi</span></span>
+            </li>
+          </ul>
+        </section>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div style="position:relative;z-index:1;">
-    <span class="c-kicker">Open to Opportunities — Remote &amp; Global</span>
-    <h2 class="c-title">Let's build documentation<br>that <em>actually works.</em></h2>
-    <p class="c-sub">Available for Senior Technical Writer, Lead Technical Writer, API Documentation Specialist, Documentation Lead, and Developer Advocate roles — remote, hybrid, or on-site with international teams worldwide. Based in Salem, Tamil Nadu, India.</p>
-    <div class="c-btns">
-      <a class="btn btn-white" href="mailto:abduays2@gmail.com">Email Me →</a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/abdul-basith/" target="_blank">LinkedIn →</a>
-      <a class="btn btn-ghost" href="https://abduays.github.io/technical-writer-portfolio" target="_blank">Share Portfolio →</a>
+<!-- ══════════ 09 · TOOLKIT ══════════ -->
+<section class="section" id="toolkit" aria-labelledby="toolkit-title">
+  <div class="wrap">
+    <header class="head">
+      <div class="head-left">
+        <span class="kicker"><i>09</i>Toolkit</span>
+        <h2 class="h2" id="toolkit-title" data-reveal><span class="l"><span>The kit, and</span></span><span class="l"><span><em>the proof.</em></span></span></h2>
+      </div>
+      <p class="head-note" data-reveal>Tools change. What does not: a style guide applied consistently, a schema read correctly, and a sentence that says one thing.</p>
+    </header>
+
+    <div class="stats-row">
+      <div class="stat" data-reveal><b data-count="250" data-suffix="+">250+</b><span>knowledge base articles</span></div>
+      <div class="stat" data-reveal style="--d:1"><b data-count="19">19</b><span>CRM workflows documented</span></div>
+      <div class="stat" data-reveal style="--d:2"><b data-count="10">10</b><span>documented engagements</span></div>
+      <div class="stat" data-reveal style="--d:3"><b data-count="7">7</b><span>personal builds</span></div>
+      <div class="stat" data-reveal style="--d:4"><b data-count="40" data-prefix="−" data-suffix="%">−40%</b><span>new-starter onboarding time</span></div>
     </div>
-    <div class="c-roles">
-      <span class="c-role">Senior Technical Writer</span><span class="c-role">Lead Technical Writer</span>
-      <span class="c-role">API Documentation Specialist</span><span class="c-role">Documentation Lead</span>
-      <span class="c-role">Developer Advocate</span><span class="c-role">Knowledge Base Manager</span>
-      <span class="c-role">Prompt Engineer</span><span class="c-role">Technical Content Engineer</span>
+
+    <div class="kit">
+      <div class="kit-col" data-reveal>
+        <h3>Documentation</h3>
+        <ul><li>MadCap Flare</li><li>Adobe FrameMaker</li><li>Adobe Captivate</li><li>Articulate 360</li><li>Markdown</li><li>GitHub</li><li>Docs-as-code</li><li>Single sourcing</li><li>Topic-based authoring</li><li>Information architecture</li></ul>
+      </div>
+      <div class="kit-col" data-reveal style="--d:1">
+        <h3>Platforms &amp; APIs</h3>
+        <ul><li>Salesforce</li><li>Bitrix24</li><li>Google Ads</li><li>Google Cloud</li><li>REST · JSON · YAML</li><li>OAuth</li><li>Stripe</li><li>Razorpay</li><li>Wise</li><li>CLI environments</li></ul>
+      </div>
+      <div class="kit-col" data-reveal style="--d:2">
+        <h3>AI &amp; build</h3>
+        <ul><li>Claude API</li><li>Google AI Studio</li><li>Gemini</li><li>ElevenLabs</li><li>ERNIE LLM</li><li>MeDo crypto</li><li>Manifest V3</li><li>Canvas API</li><li>React Native</li><li>v0 · Vercel</li></ul>
+      </div>
+      <div class="kit-col" data-reveal style="--d:3">
+        <h3>Editorial &amp; operations</h3>
+        <ul><li>Microsoft Style Guide</li><li>Google developer style</li><li>Canva</li><li>Venngage</li><li>Google Workspace</li><li>Microsoft Office</li><li>Jira</li><li>SOP writing</li><li>Proposal editing</li><li>Release coordination</li></ul>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>
-  <span class="f-copy">Abdul Basith — Senior Technical Writer & AI Builder — Salem, Tamil Nadu, India — 2026</span>
-  <div class="f-links">
-    <a href="mailto:abduays2@gmail.com">Email</a>
-    <a href="https://www.linkedin.com/in/abdul-basith/" target="_blank">LinkedIn</a>
-    <a href="https://abduays.github.io/technical-writer-portfolio" target="_blank">Portfolio</a>
-    <a href="https://github.com/abduays" target="_blank">GitHub</a>
+<!-- ══════════ 10 · CONTACT ══════════ -->
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <span class="kicker kicker--light"><i>10</i>Contact</span>
+    <h2 class="display display--contact" id="contact-title" data-reveal><span class="l"><span>Let's make something clear.</span></span></h2>
+
+    <div class="contact-grid">
+      <div class="contact-left">
+        <p class="contact-lede" data-reveal>Available for senior and lead technical writing, API documentation, knowledge base work, developer advocacy, editorial and operations support — remote, hybrid or on-site, worldwide.</p>
+        <div class="contact-actions" data-reveal>
+          <button class="btn btn--ink btn--lg" data-copy="abduays2@gmail.com">
+            <span data-copy-label>Copy email address</span>
+          </button>
+          <a class="btn btn--line btn--lg" href="mailto:abduays2@gmail.com">Email me <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <dl class="contact-facts">
+          <div><dt>Based</dt><dd>Salem, Tamil Nadu, India</dd></div>
+          <div><dt>Working</dt><dd>Remote · hybrid · on-site</dd></div>
+          <div><dt>Elsewhere</dt><dd>
+            <a href="https://www.linkedin.com/in/abdul-basith/">LinkedIn ↗</a>
+            <a href="https://github.com/abduays">GitHub ↗</a>
+          </dd></div>
+          <div><dt>Profiles</dt><dd>
+            <a href="https://devpost.com/abduays2">Devpost ↗</a>
+            <a href="https://tryhackme.com/p/AbdulBasithh">TryHackMe ↗</a>
+          </dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <ul class="role-list" data-reveal>
+      <li>Senior technical writer</li>
+      <li>Lead technical writer</li>
+      <li>API documentation specialist</li>
+      <li>Knowledge base manager</li>
+      <li>Developer advocate</li>
+      <li>Documentation lead</li>
+      <li>Editorial &amp; content lead</li>
+      <li>Prompt engineer</li>
+      <li>Executive assistant</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span class="footer-name">Abdul Basith</span>
+    <p class="footer-note">Static HTML, CSS and vanilla JavaScript. No frameworks, no build step, no dependencies.</p>
+    <span class="footer-meta">Salem, India · 2026</span>
   </div>
 </footer>
+</main>
 
-<script>
-function showTab(id, btn, cls) {
-  document.querySelectorAll('.proj-section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.proj-tab').forEach(t => { t.classList.remove('atw','ab'); });
-  document.getElementById('tab-' + id).classList.add('active');
-  btn.classList.add(cls);
-}
-function toggleNav() {
-  document.getElementById('mobileNav').classList.toggle('open');
-}
-function closeNav() {
-  document.getElementById('mobileNav').classList.remove('open');
-}
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-  });
-}, { threshold: 0.07 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-const sections = document.querySelectorAll('section[id]');
-const links = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let cur = '';
-  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
-  links.forEach(a => { a.style.color = a.getAttribute('href') === '#'+cur ? 'var(--ink)' : ''; });
-}, {passive:true});
-</script>
+<script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

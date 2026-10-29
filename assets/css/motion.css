@@ -1,0 +1,856 @@
+/* ============================================================
+   motion.css — the movement layer.
+
+   One language, three moves, so the page reads as a single
+   orchestrated piece rather than a pile of effects:
+
+     1  setting type   — display lines rise out of a mask
+     2  drawing rules  — hairlines extend from their origin
+     3  handling paper — rows, cards and the pipeline arrive
+
+   Everything that is hidden before it animates lives behind
+   `.motion`, which only JavaScript adds — and never when the
+   visitor prefers reduced motion. A failure or a preference
+   therefore yields a complete page, still from the first paint.
+   ============================================================ */
+
+/* ── keyframes ───────────────────────────────────────────── */
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+  }
+}
+
+@keyframes titleIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+    clip-path: inset(0 0 96% 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+    clip-path: inset(-8% -6% -16% -6%);
+  }
+}
+
+@keyframes gridIn {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes draw {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scan {
+  0% {
+    background-position: 0 -160px;
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 0.5;
+  }
+
+  88% {
+    opacity: 0.25;
+  }
+
+  100% {
+    background-position: 0 104%;
+    opacity: 0;
+  }
+}
+
+@keyframes rowIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 9px, 0);
+  }
+}
+
+@keyframes receive {
+  0% {
+    color: var(--signal-deep);
+    transform: none;
+  }
+
+  4% {
+    color: var(--b1);
+    transform: translateY(-3px);
+  }
+
+  11% {
+    color: var(--signal-deep);
+    transform: none;
+  }
+
+  100% {
+    color: var(--signal-deep);
+    transform: none;
+  }
+}
+
+@keyframes ping {
+  from {
+    box-shadow: 0 0 0 0 rgba(255, 77, 24, 0.45);
+  }
+
+  to {
+    box-shadow: 0 0 0 13px rgba(255, 77, 24, 0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  38% {
+    transform: scale(1.035);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ── 1 · the base reveal ─────────────────────────────────── */
+
+.motion [data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--base) var(--out)
+      calc(var(--d, 0) * var(--stagger)),
+    transform var(--base) var(--out) calc(var(--d, 0) * var(--stagger));
+}
+
+.motion [data-reveal].is-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── 2 · setting type ────────────────────────────────────── */
+
+/* The mask is inert unless `.motion` is present, so with no script
+   the headline is simply a headline. The padding/margin pair keeps
+   descenders clear of the clip. */
+.l {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
+}
+
+.motion .h2 .l > span,
+.motion .display--contact .l > span {
+  display: block;
+  transform: translate3d(0, 108%, 0);
+  transition: transform 900ms var(--out);
+}
+
+.motion .h2 .l:nth-child(2) > span,
+.motion .display--contact .l:nth-child(2) > span {
+  transition-delay: 110ms;
+}
+
+.motion .h2 .l:nth-child(3) > span,
+.motion .display--contact .l:nth-child(3) > span {
+  transition-delay: 220ms;
+}
+
+.motion .h2.is-in .l > span,
+.motion .display--contact.is-in .l > span {
+  transform: none;
+}
+
+/* A masked line does not need a fade as well. */
+.motion .h2[data-reveal],
+.motion .display--contact[data-reveal] {
+  opacity: 1;
+  transform: none;
+}
+
+/* The contact headline rules itself in underneath. */
+.motion .display--contact {
+  position: relative;
+}
+
+.motion .display--contact::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.16em;
+  height: 2px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 960ms var(--cut) 620ms;
+}
+
+.motion .display--contact.is-in::after {
+  transform: scaleX(1);
+}
+
+/* ── 3 · the hero, set and scanned ───────────────────────── */
+
+.motion .hero-grid {
+  animation: gridIn 1500ms var(--out) 160ms backwards;
+}
+
+/* one pass of the scanner over the first screen, then never again */
+.motion .hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 77, 24, 0.32) 50%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 100% 160px;
+  background-position: 0 -160px;
+  animation: scan 2100ms 380ms var(--cut) 1;
+}
+
+.motion .hero-meta {
+  position: relative;
+  border-bottom-color: transparent;
+}
+
+.motion .hero-meta::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--line);
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: draw 1000ms var(--cut) 240ms forwards;
+}
+
+.motion .hero-strip {
+  position: relative;
+  border-color: transparent;
+}
+
+.motion .hero-strip::before,
+.motion .hero-strip::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--line);
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: draw 1100ms var(--cut) 640ms forwards;
+}
+
+.motion .hero-strip::before {
+  top: 0;
+}
+
+.motion .hero-strip::after {
+  bottom: 0;
+  animation-delay: 700ms;
+}
+
+/* the load sequence itself — every element in reading order */
+.motion .hero-meta > *,
+.motion .role-label,
+.motion .role,
+.motion .hero-sub,
+.motion .hero-actions,
+.motion .hero-evidence > *,
+.motion .strip-item {
+  animation: riseIn 720ms var(--out) backwards;
+}
+
+.motion .hero-copy .display {
+  animation: titleIn 980ms var(--out) 180ms backwards;
+}
+
+.motion .hero-meta > *:nth-child(1) {
+  animation-delay: 60ms;
+}
+
+.motion .hero-meta > *:nth-child(2) {
+  animation-delay: 110ms;
+}
+
+.motion .hero-meta > *:nth-child(3) {
+  animation-delay: 160ms;
+}
+
+.motion .role-label {
+  animation-delay: 260ms;
+}
+
+.motion .roles .role:nth-child(1) {
+  animation-delay: 320ms;
+}
+
+.motion .roles .role:nth-child(2) {
+  animation-delay: 375ms;
+}
+
+.motion .roles .role:nth-child(3) {
+  animation-delay: 430ms;
+}
+
+.motion .roles .role:nth-child(4) {
+  animation-delay: 485ms;
+}
+
+.motion .roles .role:nth-child(5) {
+  animation-delay: 540ms;
+}
+
+.motion .hero-sub {
+  animation-delay: 370ms;
+}
+
+.motion .hero-actions {
+  animation-delay: 450ms;
+}
+
+.motion .hero-evidence > *:nth-child(1) {
+  animation-delay: 420ms;
+}
+
+.motion .hero-evidence > *:nth-child(2) {
+  animation-delay: 490ms;
+}
+
+.motion .strip-item:nth-child(1) {
+  animation-delay: 620ms;
+}
+
+.motion .strip-item:nth-child(2) {
+  animation-delay: 680ms;
+}
+
+.motion .strip-item:nth-child(3) {
+  animation-delay: 740ms;
+}
+
+.motion .strip-item:nth-child(4) {
+  animation-delay: 800ms;
+}
+
+/* the hero lens swap keeps its quick crossfade */
+.motion #hero-title,
+.motion .hero-sub,
+.motion .evidence {
+  transition: opacity 170ms var(--out), transform 170ms var(--out);
+}
+
+.motion .is-swapping {
+  opacity: 0;
+  transform: translateY(7px);
+}
+
+/* A new lens brings its evidence in one line at a time rather than
+   swapping the whole column in a single frame. */
+@keyframes evidenceIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.motion .evidence li.is-fresh {
+  animation: evidenceIn 440ms var(--out) backwards;
+  animation-delay: calc(var(--i, 0) * 45ms);
+}
+
+/* ── 4 · the pipeline, running ───────────────────────────── */
+
+/* the rail draws from its origin when the scene is reached */
+.motion .ai-rail::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--b1);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1100ms var(--cut) 120ms;
+}
+
+.motion .ai-map.is-in .ai-rail::after {
+  transform: scaleX(1);
+}
+
+/* the four drops to the nodes follow it down the line */
+.motion .ai-node::before {
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: transform 460ms var(--out);
+}
+
+.motion .ai-node:nth-child(1)::before {
+  transition-delay: 380ms;
+}
+
+.motion .ai-node:nth-child(2)::before {
+  transition-delay: 520ms;
+}
+
+.motion .ai-node:nth-child(3)::before {
+  transition-delay: 660ms;
+}
+
+.motion .ai-node:nth-child(4)::before {
+  transition-delay: 800ms;
+}
+
+.motion .ai-map.is-in .ai-node::before {
+  transform: scaleY(1);
+}
+
+/* The request travels right and settles at the live agent; the
+   answer comes back. The loop only runs while the scene is on
+   screen — see scenes.js. */
+.motion .ai-dot {
+  animation: travel 7.5s var(--cut) infinite both;
+  animation-play-state: paused;
+  box-shadow: 0 0 12px 1px rgba(255, 77, 24, 0.45);
+}
+
+.motion .ai-dot--back {
+  background: var(--b1);
+  animation-name: travelBack;
+  box-shadow: 0 0 10px 1px rgba(11, 11, 12, 0.25);
+}
+
+.motion .ai-map.is-live .ai-dot {
+  animation-play-state: running;
+}
+
+.motion .ai-map.is-live .ai-n {
+  animation: receive 7.5s var(--cut) infinite;
+}
+
+.motion .ai-map.is-live .ai-node:nth-child(1) .ai-n {
+  animation-delay: 0ms;
+}
+
+.motion .ai-map.is-live .ai-node:nth-child(2) .ai-n {
+  animation-delay: 1550ms;
+}
+
+.motion .ai-map.is-live .ai-node:nth-child(3) .ai-n {
+  animation-delay: 3100ms;
+}
+
+.motion .ai-map.is-live .ai-node:nth-child(4) .ai-n {
+  animation-delay: 4650ms;
+}
+
+/* Below this width the rail is stacked and the packet is hidden, so a
+   number ticking on its own would claim something that is not there. */
+@media (max-width: 960px) {
+  .motion .ai-map.is-live .ai-n {
+    animation: none;
+  }
+}
+
+@keyframes travel {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  62% {
+    left: 75%;
+    opacity: 1;
+  }
+
+  86% {
+    left: 75%;
+    opacity: 1;
+  }
+
+  100% {
+    left: 75%;
+    opacity: 0;
+  }
+}
+
+@keyframes travelBack {
+  0% {
+    left: 75%;
+    opacity: 0;
+  }
+
+  70% {
+    left: 75%;
+    opacity: 0;
+  }
+
+  76% {
+    opacity: 1;
+  }
+
+  93% {
+    left: 0;
+    opacity: 1;
+  }
+
+  100% {
+    left: 0;
+    opacity: 0;
+  }
+}
+
+/* ── 5 · the journey rail ────────────────────────────────── */
+
+.motion .journey-fill::after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  bottom: -3px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--signal);
+  box-shadow: 0 0 0 4px rgba(255, 77, 24, 0.14);
+}
+
+.motion .step.is-near::before {
+  animation: ping 1300ms var(--out) 1;
+}
+
+/* ── 6 · the rule that travels ───────────────────────────── */
+
+/* One indicator moves between the links instead of a border blinking on
+   and off in two places at once. */
+.motion .nav-line {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: var(--signal);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 520ms var(--spring), width 520ms var(--spring),
+    opacity 240ms var(--out);
+}
+
+.motion .nav-links a.is-active {
+  border-bottom-color: transparent;
+}
+
+/* ── 7 · the menu ────────────────────────────────────────── */
+
+@keyframes menuIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+.motion .menu.is-open nav a {
+  animation: menuIn 540ms var(--spring) both;
+}
+
+.motion .menu.is-open nav a:nth-child(1) {
+  animation-delay: 20ms;
+}
+
+.motion .menu.is-open nav a:nth-child(2) {
+  animation-delay: 55ms;
+}
+
+.motion .menu.is-open nav a:nth-child(3) {
+  animation-delay: 90ms;
+}
+
+.motion .menu.is-open nav a:nth-child(4) {
+  animation-delay: 125ms;
+}
+
+.motion .menu.is-open nav a:nth-child(5) {
+  animation-delay: 160ms;
+}
+
+.motion .menu.is-open nav a:nth-child(6) {
+  animation-delay: 195ms;
+}
+
+.motion .menu.is-open nav a:nth-child(7) {
+  animation-delay: 230ms;
+}
+
+.motion .menu.is-open nav a:nth-child(8) {
+  animation-delay: 265ms;
+}
+
+.motion .menu.is-open nav a:nth-child(9) {
+  animation-delay: 300ms;
+}
+
+.motion .menu.is-open .btn {
+  animation: menuIn 540ms var(--spring) 340ms both;
+}
+
+/* ── 8 · handling paper: rows, cards, channels ───────────── */
+
+.motion .entry-n {
+  transition: color var(--fast) var(--out), transform var(--base) var(--out);
+}
+
+.motion .entry-head:hover .entry-n,
+.motion .entry-head:focus-visible .entry-n {
+  transform: translateX(4px);
+  color: var(--signal);
+}
+
+/* an opened row sets its own contents down in order */
+.motion .entry[data-open="true"] .entry-inner > *:nth-child(2) {
+  transition-delay: 130ms;
+}
+
+.motion .entry[data-open="true"] .entry-inner > *:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+/* a filter change restaggers the rows that survive it */
+.motion .entry.is-filtered {
+  animation: rowIn 380ms var(--out) backwards;
+  animation-delay: calc(var(--k, 0) * 26ms);
+}
+
+/* each project card draws its own top rule on hover */
+.motion .project::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--signal);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 520ms var(--cut);
+}
+
+.motion .project:hover::after,
+.motion .project:focus-within::after {
+  transform: scaleX(1);
+}
+
+.motion .project h3 {
+  transition: color var(--fast) var(--out);
+}
+
+.motion .project:hover h3 {
+  color: var(--signal-deep);
+}
+
+/* channel cards get the same rule along their bottom edge */
+.motion .channel::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--signal);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 520ms var(--cut);
+}
+
+.motion .channel:hover::after,
+.motion .channel:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.motion .project-tech li,
+.motion .deliverables li {
+  transition: border-color var(--fast) var(--out),
+    color var(--fast) var(--out);
+}
+
+/* ── 9 · the controls ────────────────────────────────────── */
+
+/* The magnetic pull is drawn with the individual translate/scale
+   properties, so it composes with any transform the component already
+   uses. Under a pointer the follow is instant and the release springs. */
+.motion .btn[data-magnetic],
+.motion .nav-cta[data-magnetic] {
+  transition: background var(--fast) var(--out), color var(--fast) var(--out),
+    border-color var(--fast) var(--out), translate 560ms var(--spring),
+    scale 240ms var(--out);
+}
+
+.motion .btn[data-magnetic].is-tracking,
+.motion .nav-cta[data-magnetic].is-tracking {
+  transition: background var(--fast) var(--out), color var(--fast) var(--out),
+    border-color var(--fast) var(--out), translate 0s, scale 140ms var(--out);
+}
+
+.motion .nav-cta span {
+  transition: transform var(--base) var(--out);
+}
+
+.motion .nav-cta:hover span {
+  transform: translate(2px, -2px);
+}
+
+@keyframes tick {
+  0% {
+    transform: scale(1);
+  }
+
+  34% {
+    transform: scale(1.045);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+/* a number lands with a small give, rather than just stopping */
+.motion [data-count].is-landed {
+  transform-origin: left bottom;
+  animation: tick 440ms var(--spring);
+}
+
+/* ── 10 · confirmation ───────────────────────────────────── */
+
+.motion .btn.is-copied {
+  animation: pop 460ms var(--out) 1;
+  background: var(--bone);
+  border-color: var(--bone);
+  color: var(--ink);
+}
+
+/* ── 11 · the still page ─────────────────────────────────── */
+
+.reduce {
+  scroll-behavior: auto;
+}
+
+.reduce .ai-dot {
+  display: none;
+}
+
+.reduce .entry-inner > * {
+  transform: none;
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-delay: 0ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-delay: 0ms !important;
+    transition-duration: 1ms !important;
+  }
+
+  [data-reveal],
+  .l > span,
+  .h2 .l > span,
+  .display--contact .l > span {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .ai-dot,
+  .hero::after {
+    display: none !important;
+  }
+
+  .hero-meta,
+  .hero-strip {
+    border-color: var(--line) !important;
+  }
+
+  .hero-meta::after,
+  .hero-strip::before,
+  .hero-strip::after {
+    display: none !important;
+  }
+
+  .ai-rail::after,
+  .ai-node::before,
+  .display--contact::after {
+    transform: none !important;
+  }
+}
+
+/* ── print ───────────────────────────────────────────────── */
+
+@media print {
+  .nav,
+  .menu,
+  .ai-dot,
+  .hero-grid,
+  .hero::after {
+    display: none !important;
+  }
+
+  body,
+  .section,
+  .section--bone,
+  .contact,
+  .footer {
+    background: #fff !important;
+    color: #000 !important;
+    padding-block: 20px;
+  }
+
+  .section *,
+  .contact *,
+  .footer * {
+    color: #111 !important;
+    border-color: #bbb !important;
+  }
+
+  .entry-body {
+    grid-template-rows: 1fr !important;
+  }
+
+  .entry-inner > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .l > span {
+    transform: none !important;
+  }
+}
